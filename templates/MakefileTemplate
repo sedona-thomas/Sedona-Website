@@ -1,0 +1,78 @@
+# compilers
+CC  = gcc # for C++ only use g++-8
+CXX = g++-8 # -fno-elide-constructors # disables smart optimization in copies
+AR  = ar
+JC  = javac
+
+# directories
+INCLUDES = 
+#INCLUDES = -DBASIC4TRACE 
+
+# compilation options
+CFLAGS   = -g -Wall $(INCLUDES)            # debugging info, all warnings
+CXXFLAGS = -g -Wall -std=c++14 $(INCLUDES) # debugging info, all warnings
+ARFLAGS  = -rcs $(INCLUDES)
+JFLAGS   = -g $(INCLUDES)
+
+# linking options
+LDFLAGS = -g          # debugging information
+LDLIBS  = -lm -lmylib # math library, custom made library
+
+# program
+MAIN = 
+DEPENDENT_O_FILES = 
+ARGS = 
+
+.PHONY: default
+default: $(MAIN)
+
+.SUFFIXES: .java .class
+.java.class:
+	$(JC) $(JFLAGS) $*.java
+
+# C++
+# implicit rule: $(CC) $(LDFLAGS) <all-dependent-.o-files> $(LDLIBS)
+$(MAIN): $(MAIN).o
+	$(CXX) $(LDFLAGS) $(DEPENDENT_O_FILES) $(LDLIBS) # if CC = gcc
+# implicit rule: $(CXX) -c $(CXXFLAGS) <the-.cpp-file>
+$(MAIN).o: $(MAIN).cpp $(MAIN).h
+
+# C
+# implicit rule: $(CC) $(LDFLAGS) <all-dependent-.o-files> $(LDLIBS)
+$(MAIN): $(MAIN).o
+# implicit rule: $(CC) -c $(CFLAGS) <the-.c-file>
+$(MAIN).o: $(MAIN).c $(MAIN).h
+
+# Library
+# create library
+libmylib.a: mylib.o
+	$(AR) $(ARFLAGS) libmylib.a mylib.o
+mylib.o: mylib.c mylib.h
+
+.PHONY: clean
+clean:
+	$(RM) *.o *.class a.out core $(MAIN)
+
+.PHONY: all
+all: clean $(MAIN)
+
+.PHONY: runC
+runC: $(MAIN)
+	./$(MAIN) $(ARGS)
+
+# virtual machines
+JVM= java 
+.PHONY: runJava
+runJava: $(MAIN)
+	$(JVM) $(MAIN).class $(ARGS)
+
+.PHONY: vg
+vg: $(MAIN)
+	valgrind --leak-check=yes ./$(MAIN) $(ARGS)
+
+.PHONY: diff
+diff: all
+	./$(MAIN) > $(MAIN)-output.txt
+	diff $(MAIN)-output.txt $(MAIN)-expected-output.txt
+	rm -f $(MAIN).txt
+
