@@ -8,7 +8,7 @@ done
 unset IGNORE
 
 find ~/public_html/ -type d | xargs chmod 711
-find ~/public_html/ -type f | xargs chmod 7644
+find ~/public_html/ -type f | xargs chmod 644
 
 # FOLDERS = 'config img resume shell_scripts social_media templates'
 # for folder in $FOLDERS; do
