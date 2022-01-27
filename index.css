@@ -44,12 +44,6 @@ ul {
     list-style-type: none;
 }
 
-table, tr, td {
-    width: auto;
-    height: auto;
-    white-space:nowrap;
-}
-
 .profile_pic {
     width: 150px;
 }
