@@ -1,41 +1,35 @@
 /* 
  * Sedona Thomas
- * css style sheet: http://www.columbia.edu/~snt2127/index.css
+ * css style sheet: Style Sheet for Sedona Thomas's Resume
  */
 
-body
-{
+body {
     background-color: #A4BED8; 
     margin:30;
     padding:0;
-    font-family: TimesNewRoman;
+    font-family: "Times New Roman", Times, serif;
     text-align: left;
     font-size: 17px;
     color: #000000;
 }
 
-h1 
-{
+h1 {
     font-size:50px;
 }
 
-h2
-{
+h2 {
     font-size: 40px;
 }
 
-h3 
-{
+h3 {
     font-size: 25px;
 }
 
-h4
-{
+h4 {
     font-size: 20px;
 }
 
-hr
-{
+hr {
     background-color: #000000;
     display: block; 
     height: 1px;
@@ -45,46 +39,49 @@ hr
     padding: 0; 
 }
 
-#navigation 
-{
-    width:99%;
-    border:solid 1px #3333FF;
-    background-color:#A4BED8;
-    padding:3px;
+img.contact_img {
+    float: left;
+    border-radius: 15px; 
+    margin-right: 15px;
+    width: 140;
 }
 
-#navigation h2
+#nav  {
+    width:95%;
+    border:solid 1px #3333FF;
+    background-color:#A4BED8;
+    padding: 1%;
+    margin: 2%;
+}
+
+#nav h2
 {
     display:none;
 }
 
-#navigation a 
+#nav a 
 {
     color:#000000;
     text-decoration:none;
     font-weight:bold;
 }
 
-#navigation a:hover 
+#nav a:hover 
 {
     color:#003DF5;
 }
 
-#navigation ul 
+#nav ul 
 {
     text-align:center;
     margin: 0px;
     list-style-type:none;
 }
 
-#navigation ul li 
+#nav ul li 
 {
     display:inline;
     margin: 0px 10px;
 }
 
-#nav 
-{
-    text-align: center;
-}
 
