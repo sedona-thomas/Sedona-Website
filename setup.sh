@@ -1,3 +1,4 @@
+rm -rf ~/public_html/*
 cp -r ~/Personal-Website/* ~/public_html/
 
 IGNORE='README.md setup.sh'
