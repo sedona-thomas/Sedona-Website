@@ -44,11 +44,20 @@ ul {
     list-style-type: none;
 }
 
+table, tr, td {
+    width: auto;
+    height: auto;
+    white-space:nowrap;
+}
+
+.profile_pic {
+    width: 150px;
+}
+
 img.profile_pic {
     float: left;
-    border-radius: 15px; 
+    border-radius: 15px;
     margin-right: 15px;
-    width: 140;
 }
 
 #dot_list {
