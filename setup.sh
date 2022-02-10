@@ -1,7 +1,7 @@
 echo ""
 
 rm -rf ~/public_html/*
-cp -r ~/Personal-Website/* ~/public_html/
+cp -r ~/Sedona-Website/* ~/public_html/
 echo "Clear Directory: ~/public_html/"
 
 IGNORE='README.md setup.sh'
