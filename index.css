@@ -50,14 +50,14 @@ hr {
 
 #header_left {
     width: 10%; 
+    border-radius: 2%;
+    margin-right: 2%;
     float: left;
-    background: blue;
 }
 
 #header_right {
-    width: 90%; 
+    width: 70%; 
     float: left;
-    background: green;
 }
 
 #pronouns { font-size: 30px; }
