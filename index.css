@@ -30,7 +30,7 @@ ul { list-style-type: none; }
 
 #pronouns { font-size: 30px; }
 
-#content { top: 20%; }
+#content { top: 5%; }
 
 hr {
     background-color: #000000;
@@ -49,15 +49,18 @@ img.profile_pic {
 }
 
 #nav {
+    position: fixed;
+    top: 0;
+    height: 5%;
+}
+
+#nav_bar {
     width: 100%;
     border: 0%;
     background-color: #A4BED8;
-    padding-top: 0%;
+    padding: 1%;
     margin: 0%;
-    
-    position: fixed;
-    top: 2%;
-    height: 5%;
+    margin-bottom: 10%;
 }
 
 #nav a {
