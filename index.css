@@ -36,27 +36,27 @@ hr {
     padding: 0; 
 }
 
-#header {
+#box {
     display: inline;
     height: 100%; 
     width: 100%; 
 }
 
-#header_left, #header_right {
+#box_left, #box_right {
     display: inline-block; 
     zoom: 1; 
     vertical-align: top;
     margin-bottom: 2%;
 }
 
-#header_left {
+#box_left {
     width: 150px;
     float: left;
     margin-right: 5%;
 }
 
-#header_right {
-    width: 85%; 
+#box_right {
+    width: 80%; 
     float: left;
     display: inline-flex;
 }
