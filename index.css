@@ -33,7 +33,9 @@ h3 { font-size: 20px; }
 }
 
 #header_left, #header_right {
-    display: inline-block;
+    display: inline-block; 
+    zoom: 1; 
+    vertical-align: top;
 }
 
 #header_left {
