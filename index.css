@@ -36,6 +36,10 @@ hr {
     padding: 0; 
 }
 
+#header {
+    width: 100%;
+}
+
 #box {
     display: inline;
     height: 100%; 
