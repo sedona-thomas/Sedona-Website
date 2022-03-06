@@ -28,20 +28,26 @@ h3 { font-size: 20px; }
 #header {
     display: inline;
     height: 100%; 
-    width:100%; 
+    width: 100%; 
     font-size: 0;
 }
 
 #header_left, #header_right {
     display: inline-block; 
     zoom: 1; 
-    vertical-align: top; 
-    font-size: 12px;
+    vertical-align: top;
 }
 
-#header_left {width: 10%; background: blue;}
+#header_left {
+    width: 10%; 
+    float: left;
+    background: blue;}
 
-#header_right {width: 90%; background: green;}
+#header_right {
+    display: flex;
+    width: 90%; 
+    float: left;
+    background: green;}
 
 
 #dot_list { list-style-type: disc; }
