@@ -30,7 +30,11 @@ ul { list-style-type: none; }
 
 #pronouns { font-size: 30px; }
 
-#content { top: 10%; height: inherit; }
+#content { top: 10%;}
+
+#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
+    top: 10%;
+}
 
 hr {
     background-color: #000000;
