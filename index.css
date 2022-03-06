@@ -29,7 +29,7 @@ h3 { font-size: 20px; }
     display: inline;
     height: 100%; 
     width: 100%; 
-    font-size: 0;
+    float: left;
 }
 
 #header_left, #header_right {
@@ -40,14 +40,14 @@ h3 { font-size: 20px; }
 
 #header_left {
     width: 10%; 
-    float: left;
+    
     background: blue;
 }
 
 #header_right {
     width: 90%; 
-    float: left;
-    background: green;}
+    background: green;
+}
 
 
 #dot_list { list-style-type: disc; }
