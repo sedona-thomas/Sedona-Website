@@ -3,7 +3,6 @@
  * css style sheet: Style Sheet for Sedona Thomas's Resume
  */
 
-
 body {
     background-color: #A4BED8; 
     margin: 3%;
@@ -20,6 +19,22 @@ h1 { font-size: 40px; }
 h2 { font-size: 25px; }
 
 h3 { font-size: 20px; }
+
+#dot_list { list-style-type: disc; }
+
+#dashed_list { list-style-type: '- '; }
+
+ul { list-style-type: none; }
+
+hr {
+    background-color: #000000;
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #3333FF;
+    margin: 1em 0; 
+    padding: 0; 
+}
 
 #header {
     display: inline;
@@ -45,36 +60,20 @@ h3 { font-size: 20px; }
     background: green;
 }
 
-#dot_list { list-style-type: disc; }
-
-#dashed_list { list-style-type: '- '; }
-
-ul { list-style-type: none; }
-
-.profile_pic { width: 150px; }
-
 #pronouns { font-size: 30px; }
 
-#content { top: 10%;}
-
-#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
-    top: 20%;
-}
-
-hr {
-    background-color: #000000;
-    display: block; 
-    height: 1px;
-    border: 0; 
-    border-top: 1px solid #3333FF;
-    margin: 1em 0; 
-    padding: 0; 
-}
+.profile_pic { width: 150px; }
 
 img.profile_pic {
     float: left;
     border-radius: 15px;
     margin-right: 15px;
+}
+
+#content { top: 10%;}
+
+#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
+    top: 20%;
 }
 
 #nav {
