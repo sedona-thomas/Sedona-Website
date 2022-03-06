@@ -51,14 +51,13 @@ hr {
 
 #header_left {
     width: 10%; 
-    border-radius: 5%;
-    margin-right: 5%;
     float: left;
 }
 
 #header_right {
     width: 86%; 
     float: left;
+    display: inline-flex;
 }
 
 #pronouns { font-size: 30px; }
