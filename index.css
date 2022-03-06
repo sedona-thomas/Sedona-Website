@@ -29,7 +29,6 @@ h3 { font-size: 20px; }
     display: inline;
     height: 100%; 
     width: 100%; 
-    float: left;
 }
 
 #header_left, #header_right {
@@ -40,12 +39,13 @@ h3 { font-size: 20px; }
 
 #header_left {
     width: 10%; 
-    
+    float: left;
     background: blue;
 }
 
 #header_right {
     width: 90%; 
+    float: left;
     background: green;
 }
 
