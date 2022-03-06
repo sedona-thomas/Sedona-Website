@@ -50,13 +50,12 @@ hr {
 }
 
 #header_left {
-    width:15%; 
+    width: 150px;
     float: left;
     margin-right: 5%;
 }
 
 #header_right {
-    width: 80%; 
     float: left;
     display: inline-flex;
 }
