@@ -3,10 +3,6 @@
  * css style sheet: Style Sheet for Sedona Thomas's Resume
  */
 
-* {
-    margin: 0; 
-    padding: 0;
-}
 
 body {
     background-color: #A4BED8; 
@@ -48,7 +44,6 @@ h3 { font-size: 20px; }
     float: left;
     background: green;
 }
-
 
 #dot_list { list-style-type: disc; }
 
