@@ -26,14 +26,14 @@ h2 { font-size: 25px; }
 h3 { font-size: 20px; }
 
 #header {
-    display: inline;
+    /*display: inline;*/
     height: 100%; 
     width: 100%; 
     font-size: 0;
 }
 
 #header_left, #header_right {
-    /*display: inline-block; */
+    display: inline-block;
 }
 
 #header_left {
