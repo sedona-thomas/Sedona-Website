@@ -48,10 +48,14 @@ img.profile_pic {
 
 #nav {
     width: 99%;
-    border: solid 1px #3333FF;
+    border: solid 0px #3333FF;
     background-color: #A4BED8;
     padding: 1%;
     margin: 0%;
+    margin-bottom: 10%;
+    
+    position: fixed;
+    top: 0;
 }
 
 #nav a {
