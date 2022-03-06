@@ -30,7 +30,7 @@ ul { list-style-type: none; }
 
 #pronouns { font-size: 30px; }
 
-#content { position:fixed; }
+#content { display: flex; }
 
 hr {
     background-color: #000000;
