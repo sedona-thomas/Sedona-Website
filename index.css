@@ -46,7 +46,7 @@ hr {
     display: inline-block; 
     zoom: 1; 
     vertical-align: top;
-    margin: 6%;
+    margin-bottom: 2%;
 }
 
 #header_left {
@@ -57,7 +57,7 @@ hr {
 }
 
 #header_right {
-    width: 80%; 
+    width: 86%; 
     float: left;
 }
 
