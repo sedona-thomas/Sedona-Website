@@ -33,18 +33,16 @@ h3 { font-size: 20px; }
 }
 
 #header_left, #header_right {
-    display: inline-block; 
-    zoom: 1; 
-    vertical-align: top;
+    /*display: inline-block; */
 }
 
 #header_left {
     width: 10%; 
     float: left;
-    background: blue;}
+    background: blue;
+}
 
 #header_right {
-    display: flex;
     width: 90%; 
     float: left;
     background: green;}
