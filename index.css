@@ -75,7 +75,10 @@ img.profile_pic {
     margin-right: 15px;
 }
 
-#content { top: 10%;}
+#content { 
+    top: 10%;
+    width: 100%
+}
 
 #contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
     top: 20%;
