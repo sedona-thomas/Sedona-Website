@@ -52,12 +52,14 @@ hr {
     zoom: 1; 
     vertical-align: top;
     margin-bottom: 2%;
+    background-color: blue;
 }
 
 #box_left {
     width: 150px;
     float: left;
     margin-right: 5%;
+    background-color: green
 }
 
 #box_right {
