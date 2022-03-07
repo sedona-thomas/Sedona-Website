@@ -84,7 +84,8 @@ img.profile_pic {
 
 #content { 
     top: 10%;
-    width: 100%
+    width: 100%;
+    position: absolute
 }
 
 #contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
