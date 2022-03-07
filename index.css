@@ -65,7 +65,7 @@ hr {
 #box_right {
     width: 80%; 
     float: left;
-    display: inline-flex;
+    display: inline-block;
 }
 
 #pronouns { font-size: 30px; }
