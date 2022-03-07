@@ -85,11 +85,10 @@ img.profile_pic {
 #content { 
     top: 10%;
     width: 100%;
-    position: absolute
+    position: absolute;
 }
 
 #contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
-    top: 20%;
     position: relative;
 }
 
