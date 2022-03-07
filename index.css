@@ -70,7 +70,7 @@ hr {
 
 #pronouns { font-size: 30px; }
 
-.profile_pic { width: 10%/*150px*/; }
+.profile_pic { width: 100%/*150px*/; }
 
 img.profile_pic {
     /*float: left;
