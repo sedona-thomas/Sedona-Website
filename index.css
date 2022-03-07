@@ -70,11 +70,11 @@ hr {
 
 #pronouns { font-size: 30px; }
 
-.profile_pic { width: 150px; }
+.profile_pic { width: 10%/*150px*/; }
 
 img.profile_pic {
-    float: left;
-    /*border-radius: 15px;
+    /*float: left;
+    border-radius: 15px;
     margin-right: 15px;*/
 }
 
