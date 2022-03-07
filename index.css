@@ -68,6 +68,10 @@ hr {
     display: inline-block;
 }
 
+#resume {
+    margin-top: 2%;
+}
+
 #pronouns { font-size: 30px; }
 
 .profile_pic { width: 100%/*150px*/; }
