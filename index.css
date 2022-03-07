@@ -50,7 +50,6 @@ hr {
 
 #box_left, #box_right {
     display: inline-block;
-    zoom: 1; 
     vertical-align: top;
     margin-bottom: 2%;
 }
