@@ -53,14 +53,12 @@ hr {
     zoom: 1; 
     vertical-align: top;
     margin-bottom: 2%;
-    background-color: blue;
 }
 
 #box_left {
     width: 12%;
     float: left;
     margin-right: 2%;
-    background-color: green
 }
 
 #box_right {
@@ -85,12 +83,9 @@ img.profile_pic {
 #content { 
     top: 10%;
     width: 100%;
-    position: absolute;
 }
 
-#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {
-    position: relative;
-}
+#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards {}
 
 #nav {
     background-color: #A4BED8;
