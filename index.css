@@ -42,7 +42,7 @@ hr {
 }
 
 #box {
-    display: inline;
+    display:block;
     height: 100%; 
     width: 100%; 
 }
