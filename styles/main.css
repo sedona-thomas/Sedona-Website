@@ -39,7 +39,6 @@ footer {
 .main_body {
   top: 5%;
   bottom: 95%;
-  width: 100%;
   overflow-y: scroll;
   padding: 3%;
 }
