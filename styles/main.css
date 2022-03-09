@@ -34,13 +34,9 @@ footer {
   width: 100%;
 }
 
-main {
+.main_body {
   top: 5%;
   bottom: 95%;
-  margin: 0%;
-  border: 0%;
-  padding: 0%;
-  width: 100%;
 }
 
 h1 {
