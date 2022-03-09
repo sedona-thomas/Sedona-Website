@@ -8,6 +8,10 @@
   font-size: 30px;
 }
 
+.profile {
+  width: 100%;
+}
+
 figure.headshot {
   width: 12%;
   margin: 0%;
