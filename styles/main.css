@@ -17,14 +17,18 @@ body {
 }
 
 header {
-  top: 0;
+  top: 0%;
+  height: 5%;
+}
+
+footer {
+  bottom: 95%;
+  height: 5%;
 }
 
 .fixed_bar {
   background-color: #7292b3;
   position: fixed;
-
-  height: 5%;
   width: 100%;
 }
 
