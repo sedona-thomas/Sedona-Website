@@ -34,15 +34,13 @@ footer {
   position: fixed;
   width: 100%;
   padding: 0.5%;
-  overflow-x: scroll;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main_body {
   top: 5%;
   bottom: 95%;
-  overflow-y: scroll;
-  overflow: hidden;
+  overflow-y: hidden;
   padding: 3%;
 }
 
