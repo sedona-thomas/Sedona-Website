@@ -8,10 +8,6 @@
   font-size: 30px;
 }
 
-.profile {
-  width: 100%;
-}
-
 figure.headshot {
   width: 12%;
   margin: 0%;
@@ -24,7 +20,7 @@ img.profile_pic {
 }
 
 .headshot,
-.links {
+.profile {
   display: inline-block;
   float: left;
   margin-bottom: 2%;
@@ -35,7 +31,7 @@ img.profile_pic {
   vertical-align: middle;
 }
 
-.links {
+.profile {
   width: 86%;
   vertical-align: middle;
 }
