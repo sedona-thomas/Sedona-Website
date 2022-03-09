@@ -17,11 +17,11 @@ nav a:hover {
 
 nav ul {
   text-align: center;
-  margin: 0px;
+  margin: 0%;
   list-style-type: none;
 }
 
 nav ul li {
   display: inline;
-  margin: 0px 10px;
+  margin: 0% 10px;
 }
