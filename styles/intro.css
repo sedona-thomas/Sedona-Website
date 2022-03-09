@@ -9,7 +9,7 @@
 }
 
 figure.headshot {
-  width: 100%;
+  width: 12%%;
   margin: 0%;
   border: 0%;
   padding: 5%;
@@ -27,7 +27,6 @@ img.profile_pic {
 }
 
 .headshot {
-  width: 12%;
   margin-right: 2%;
   vertical-align: middle;
 }
