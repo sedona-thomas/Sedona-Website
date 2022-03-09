@@ -39,8 +39,9 @@ footer {
 }
 
 .main_body {
+  top: 5%;
+  bottom: 95%;
   padding: 3%;
-  position: relative;
 }
 
 h1 {
