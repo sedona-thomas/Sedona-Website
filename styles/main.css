@@ -19,7 +19,6 @@ footer {
   display: block;
   height: 5%;
   font-size: 18px;
-  font-weight: italic;
 }
 
 header {
@@ -35,7 +34,6 @@ footer {
   position: fixed;
   width: 100%;
   padding: 0.5%;
-  text-decoration: none;
 }
 
 .main_body {
