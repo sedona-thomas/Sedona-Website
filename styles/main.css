@@ -24,6 +24,7 @@ header {
 footer {
   bottom: 95%;
   height: 5%;
+  border 1px red;
 }
 
 .fixed_bar {
