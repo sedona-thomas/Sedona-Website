@@ -44,11 +44,11 @@ footer {
 }
 
 hr {
-  background-color: #000000;
+  background-color: #0000ff;
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #3333ff;
+  border-top: 1px solid #0000ff;
   margin: 1em 0;
   padding: 0;
 }
