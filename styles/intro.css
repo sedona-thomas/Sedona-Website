@@ -1,6 +1,7 @@
 main {
   display: block;
   background-color: #c6dbf0;
+  border: 1px red;
 }
 
 #pronouns {
