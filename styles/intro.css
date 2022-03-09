@@ -8,10 +8,31 @@
   font-size: 30px;
 }
 
-.profile_pic {
+figure.headshot {
   width: 100%;
+  margin: 0%;
+  border: 0%;
+  padding: 5%;
 }
 
 img.profile_pic {
   border-radius: 10%;
+}
+
+.headshot,
+.links {
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
+}
+
+.headshot {
+  width: 12%;
+  margin-right: 2%;
+  vertical-align: middle;
+}
+
+.links {
+  width: 86%;
+  vertical-align: middle;
 }

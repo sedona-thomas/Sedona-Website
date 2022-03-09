@@ -28,20 +28,14 @@ footer {
   font-weight: italic;
 }
 
-figure {
-  margin: 0%;
-  border: 0%;
-  padding: 5%;
-}
-
 .fixed_bar {
   background-color: #7e9ebe;
   position: fixed;
   width: 100%;
 }
 
-.main_body {
-  top: 0%;
+main {
+  top: 5%;
   bottom: 95%;
 }
 
