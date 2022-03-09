@@ -3,7 +3,6 @@ nav {
   padding: 1%;
   margin: 0%;
   margin-bottom: 10%;
-  vertical-align: middle;
 }
 
 nav a {
@@ -17,7 +16,8 @@ nav a:hover {
 }
 
 nav ul {
-  text-align: center;
+  text-align: left;
+  vertical-align: middle;
   margin: 0%;
   list-style-type: none;
 }
