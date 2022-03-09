@@ -40,7 +40,7 @@ footer {
 
 .main_body {
   top: 5%;
-  height: 50%;
+  height: auto;
   padding: 3%;
 }
 
