@@ -40,6 +40,7 @@ footer {
 
 .main_body {
   top: 5%;
+  bottom: 100%;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
