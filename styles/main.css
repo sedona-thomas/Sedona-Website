@@ -39,9 +39,9 @@ footer {
 }
 
 .main_body {
-  position: fixed;
+  top: 5%;
+  bottom: 95%;
   overflow-y: scroll;
-  overflow-x: hidden;
   padding: 3%;
 }
 
