@@ -10,6 +10,10 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: left;
   font-size: 17px;
+
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
 }
 
 header {
@@ -26,6 +30,11 @@ footer {
   background-color: #7292b3;
   position: fixed;
   width: 100%;
+}
+
+.main_body {
+  top: 0%;
+  bottom: 95%;
 }
 
 h1 {
