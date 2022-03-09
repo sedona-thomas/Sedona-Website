@@ -22,8 +22,10 @@ header {
 }
 
 footer {
-  top: 90%;
+  top: 95%;
   height: 5%;
+  text-decoration: none;
+  font-weight: italic;
 }
 
 .fixed_bar {
