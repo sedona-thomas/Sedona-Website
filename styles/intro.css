@@ -8,34 +8,18 @@
   font-size: 30px;
 }
 
-figure {
-  margin: 0%;
-  border: 0%;
-  padding: 0%;
-  display: block;
-}
-
-.headshot {
-  margin: 0%;
-  border: 0%;
-  padding: 5%;
-}
-
 img.profile_pic {
+  float: left;
+  vertical-align: middle;
   border-radius: 10%;
+  margin-right: 2%;
   width: 12%;
 }
 
-.headshot,
 .profile {
   display: inline-block;
   float: left;
   margin-bottom: 2%;
-}
-
-.headshot {
-  margin-right: 2%;
-  vertical-align: middle;
 }
 
 .profile {
