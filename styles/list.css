@@ -3,9 +3,14 @@ ul {
 }
 
 .inline_list {
-  display: inline;
   text-align: center;
   margin: 0%;
+  list-style-type: none;
+}
+
+.inline_list li {
+  display: inline;
+  margin: 0% 10px;
 }
 
 .dot_list {
