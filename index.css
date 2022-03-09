@@ -4,118 +4,145 @@
  */
 
 body {
-    background-color: #A4BED8; 
-    margin: 0%;
-    border: 0%;
-    padding: 0%;
-    font-family: "Times New Roman", Times, serif;
-    text-align: left;
-    font-size: 17px;
-    color: #000000;
+  background-color: #a4bed8;
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  font-size: 17px;
+  color: #000000;
 }
 
-h1 { font-size: 40px; }
+h1 {
+  font-size: 40px;
+}
 
-h2 { font-size: 25px; }
+h2 {
+  font-size: 25px;
+}
 
-h3 { font-size: 20px; }
+h3 {
+  font-size: 20px;
+}
 
-#dot_list { list-style-type: disc; }
+#dot_list {
+  list-style-type: disc;
+}
 
-#dashed_list { list-style-type: '- '; }
+#dashed_list {
+  list-style-type: "- ";
+}
 
-ul { list-style-type: none; }
+ul {
+  list-style-type: none;
+}
 
 hr {
-    background-color: #000000;
-    display: block; 
-    height: 1px;
-    border: 0; 
-    border-top: 1px solid #3333FF;
-    margin: 1em 0; 
-    padding: 0; 
+  background-color: #000000;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #3333ff;
+  margin: 1em 0;
+  padding: 0;
 }
 
 #header {
-    width: 98%;
-    display: block;
-    margin-bottom: 2%;
+  width: 98%;
+  display: block;
+  margin-bottom: 2%;
 }
 
 #box {
-    display:block;
+  display: block;
 }
 
-#box_left, #box_right {
-    display: inline-block;
-    margin-bottom: 2%;
+#box_left,
+#box_right {
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
 }
 
 #box_left {
-    width: 12%;
-    float: left;
-    margin-right: 2%;
+  width: 12%;
+  margin-right: 2%;
 }
 
 #box_right {
-    width: 86%; 
-    float: left;
-    display: inline-block;
+  width: 86%;
 }
 
 #resume {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
-#pronouns { font-size: 30px; }
+#pronouns {
+  font-size: 30px;
+}
 
-.profile_pic { width: 100%/*150px*/; }
+.profile_pic {
+  width: 100% /*150px*/;
+}
 
 img.profile_pic {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
-#content { 
-    top: 10%;
-    width: 100%;
-    margin: 3%;
+#content {
+  top: 10%;
+  width: 100%;
+  margin: 3%;
 }
 
-#contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards, #certifications {}
+#contact,
+#education,
+#work,
+#skills,
+#courses,
+#extracurriculars,
+#projects,
+#awards,
+#certifications {
+}
+
+header {
+  background-color: #7292b3;
+  position: fixed;
+  top: 0;
+  height: 5%;
+}
 
 #nav {
-    background-color: #A4BED8;
-    position: fixed;
-    top: 0;
-    height: 5%;
 }
 
 #nav_bar {
-    width: 100%;
-    border: 0%;
-    padding: 1%;
-    margin: 0%;
-    margin-bottom: 10%;
+  width: 100%;
+  border: 0%;
+  padding: 1%;
+  margin: 0%;
+  margin-bottom: 10%;
 }
 
 #nav a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #nav a:hover {
-    color:#003DF5;
+  color: #003df5;
 }
 
 #nav ul {
-    text-align: center;
-    margin: 0px;
-    list-style-type: none;
+  text-align: center;
+  margin: 0px;
+  list-style-type: none;
 }
 
 #nav ul li {
-    display: inline;
-    margin: 0px 10px;
+  display: inline;
+  margin: 0px 10px;
 }
