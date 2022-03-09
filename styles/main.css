@@ -24,7 +24,6 @@ header {
 footer {
   top: 95%;
   height: 5%;
-  border: 1px red;
 }
 
 .fixed_bar {
@@ -43,18 +42,6 @@ h2 {
 
 h3 {
   font-size: 20px;
-}
-
-#dot_list {
-  list-style-type: disc;
-}
-
-#dashed_list {
-  list-style-type: "- ";
-}
-
-ul {
-  list-style-type: none;
 }
 
 hr {

@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.dot_list {
+  list-style-type: disc;
+}
+
+.dashed_list {
+  list-style-type: "- ";
+}
