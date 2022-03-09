@@ -5,7 +5,7 @@
 
 body {
     background-color: #A4BED8; 
-    margin: 3%;
+    margin: 0%;
     border: 0%;
     padding: 0%;
     font-family: "Times New Roman", Times, serif;
@@ -81,6 +81,7 @@ img.profile_pic {
 #content { 
     top: 10%;
     width: 100%;
+    margin: 3%;
 }
 
 #contact, #education, #work, #skills, #courses, #extracurriculars, #projects, #awards, #certifications {}
