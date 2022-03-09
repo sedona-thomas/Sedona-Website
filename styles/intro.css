@@ -8,8 +8,13 @@
   font-size: 30px;
 }
 
+figure {
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
+}
+
 .headshot {
-  width: 12%;
   margin: 0%;
   border: 0%;
   padding: 5%;
@@ -17,6 +22,7 @@
 
 img.profile_pic {
   border-radius: 10%;
+  width: 12%;
 }
 
 .headshot,
