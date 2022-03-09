@@ -1,0 +1,19 @@
+#box {
+  display: block;
+}
+
+#box_left,
+#box_right {
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
+}
+
+#box_left {
+  width: 12%;
+  margin-right: 2%;
+}
+
+#box_right {
+  width: 86%;
+}

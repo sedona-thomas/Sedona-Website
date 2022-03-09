@@ -5,19 +5,25 @@
 
 body {
   background-color: #a4bed8;
-  margin: 0%;
-  border: 0%;
-  padding: 0%;
+
+  color: #000000;
   font-family: "Times New Roman", Times, serif;
   text-align: left;
   font-size: 17px;
-  color: #000000;
+
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
 }
 
 header {
+  top: 0;
+}
+
+.fixed_bar {
   background-color: #7292b3;
   position: fixed;
-  top: 0;
+
   height: 5%;
   width: 100%;
 }
@@ -56,62 +62,8 @@ hr {
   padding: 0;
 }
 
-#header {
-  width: 98%;
-  display: block;
-  margin-bottom: 2%;
-}
-
-#box {
-  display: block;
-}
-
-#box_left,
-#box_right {
-  display: inline-block;
-  float: left;
-  margin-bottom: 2%;
-}
-
-#box_left {
-  width: 12%;
-  margin-right: 2%;
-}
-
-#box_right {
-  width: 86%;
-}
-
-#resume {
-  display: block;
-  float: left;
-}
-
-#pronouns {
-  font-size: 30px;
-}
-
-.profile_pic {
-  width: 100% /*150px*/;
-}
-
-img.profile_pic {
-  border-radius: 10%;
-}
-
 #content {
   top: 10%;
   width: 100%;
   margin: 3%;
-}
-
-#contact,
-#education,
-#work,
-#skills,
-#courses,
-#extracurriculars,
-#projects,
-#awards,
-#certifications {
 }

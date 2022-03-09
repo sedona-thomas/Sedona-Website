@@ -1,0 +1,17 @@
+#intro {
+  width: 100%;
+  display: block;
+  margin-bottom: 2%;
+}
+
+#pronouns {
+  font-size: 30px;
+}
+
+.profile_pic {
+  width: 95%;
+}
+
+img.profile_pic {
+  border-radius: 10%;
+}

@@ -1,0 +1,15 @@
+#resume {
+  display: block;
+  float: left;
+}
+
+#contact,
+#education,
+#work,
+#skills,
+#courses,
+#extracurriculars,
+#projects,
+#awards,
+#certifications {
+}
