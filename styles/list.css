@@ -3,7 +3,6 @@ ul {
 }
 
 .inline_list {
-  text-align: center;
   margin: 0%;
   list-style-type: none;
 }
@@ -19,4 +18,8 @@ ul {
 
 .dashed_list {
   list-style-type: "- ";
+}
+
+.blank_list {
+  list-style-type: none;
 }
