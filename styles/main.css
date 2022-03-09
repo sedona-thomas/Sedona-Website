@@ -45,18 +45,6 @@ footer {
   padding: 3%;
 }
 
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 25px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
 hr {
   background-color: #000000;
   display: block;
@@ -65,10 +53,4 @@ hr {
   border-top: 1px solid #3333ff;
   margin: 1em 0;
   padding: 0;
-}
-
-article {
-}
-
-section {
 }
