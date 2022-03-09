@@ -34,13 +34,14 @@ footer {
   background-color: #7e9ebe;
   position: fixed;
   width: 100%;
+  margin: 1%;
   text-decoration: none;
   font-weight: italic;
 }
 
 .main_body {
-  top: 5%;
-  bottom: 95%;
+  top: 6%;
+  bottom: 93%;
   overflow-y: scroll;
   padding: 3%;
 }
