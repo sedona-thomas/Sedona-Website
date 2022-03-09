@@ -10,6 +10,7 @@ ul {
 
 .inline_list li {
   display: inline;
+  margin: 0px 10px;
 }
 
 .dot_list {
