@@ -11,13 +11,13 @@ img.profile_pic {
   vertical-align: middle;
   border-radius: 10%;
   margin-right: 2%;
-  width: 18%;
+  width: 12%;
 }
 
 .profile {
   display: inline-block;
   float: left;
   margin-bottom: 2%;
-  width: 80%;
+  width: 86%;
   vertical-align: middle;
 }
