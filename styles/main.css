@@ -17,16 +17,17 @@ body {
 header,
 footer {
   display: block;
-  height: 5%;
   font-size: 18px;
 }
 
 header {
   top: 0%;
+  height: 5%;
 }
 
 footer {
   top: 95%;
+  height: 10%;
 }
 
 .fixed_bar {
