@@ -1,6 +1,7 @@
 echo ""
 
 rm -rf ~/public_html/*
+mv ~/Users/sedonathomas/Documents/GitHub/Sedona-Website/ ~/Sedona-Website/
 cp -r ~/Sedona-Website/* ~/public_html/
 echo "Clear Directory: ~/public_html/"
 
