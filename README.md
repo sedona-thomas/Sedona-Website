@@ -62,3 +62,5 @@ Upload the contents of the `dist/` directory to any static hosting provider.
 ### (Optional) CUNIX Upload
 
 For Columbia University students with an active CUNIX account, run `CUNIX/upload_dist.sh $UNI` from the project root to upload your webpage to your public CUNIX page.
+
+After uploading, run `CUNIX/set_CUNIX_permissions.sh` to fix file permissions.
