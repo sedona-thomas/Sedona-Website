@@ -1,0 +1,10 @@
+[user]
+        name = Sedona Thomas
+	email = sntsregister@gmail.com
+	user = sedona-thomas
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[push]
+        default = matching

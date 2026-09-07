@@ -1,0 +1,119 @@
+Delivered-To: snt2127@columbia.edu
+Received: by 2002:a50:c907:0:0:0:0:0 with SMTP id o7csp2355278edh;
+        Fri, 29 Mar 2019 12:53:40 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqy5XqJIAbagI5UfxWYe4BA3FW+aGtkFoCGZnZ21yCiFFHmouxTr2rLTjM/OLg5tmnoGucYY
+X-Received: by 2002:ac8:cf:: with SMTP id d15mr42795184qtg.243.1553889220545;
+        Fri, 29 Mar 2019 12:53:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1553889220; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UiZ/E4T2Hrn6uIFr8AhrlYwTRrQwDTgB25RUB8UvEt6yKxHyz1Id3TQCBc9q1zNHKL
+         HMDFYmxjESI+EdxKJvautRln8WqGlcvYEgBhgvrp4uRbpuN97HL/W1lktYWmhlnmdxCs
+         nLd1bMHB7nsN8LZXPnsyryCBOav3vbzJKDNTpD5vdxNxhZCPR9NHCV1Eqd0O52XUXisC
+         6eaWhIFd3N8OcD2xdC9ajIqgFiLcErW3tEDnoq64TErJlXqvB3vXFFGtZcRmmHuuTreL
+         Fd6Q06taUWMzaumgeMl2w7mXx7bO9AxbGx0dBZc9TgjpNBLsyLPT5Cj5HjGJ0/e9TjiF
+         zYHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:cc:to:from:date;
+        bh=dOnnon6KpqYcgtmLKq7akdB52u8bRbk/Xpwv1W9k9YA=;
+        b=uOMz22Ile9w/GtXZJ0ctId7i16YqqP/6/n8lG1x2q3+ioI7dzbGeupgr71jiz3sxG5
+         uBDNu9Dm7DNsbQOGO8A7i2Qecg3AES30v7Gss0pK8ccd/XWWJVtVInQpK3iEc/WQLYHe
+         g6N1ZbE6raPcmWTK8V/hfFdoWhvtx76cbmpyRsLeAGdHgiVjwONtPtqM6YSQQVP1H2L6
+         XHkSZJ2Z1eaDsWDyb639udZznVqanyGCztPbHeEJziALFwg96C7638Gkhu3DFaSz67YR
+         QlX9VdBBuhpuQVpAumaQMY1f1keJQfHJh0O6UiMHO3cjWiR/6sRExv1aIpfXmRHdIIeZ
+         F8uA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning sc2764@columbia.edu does not designate 199.231.134.73 as permitted sender) smtp.mailfrom=sc2764@columbia.edu
+Return-Path: <sc2764@columbia.edu>
+Received: from inprodmail03.cc.columbia.edu (inprodmail03.cc.columbia.edu. [128.59.72.54])
+        by mx.google.com with ESMTPS id h36si1735325qvd.7.2019.03.29.12.53.40
+        for <snt2127@columbia.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 29 Mar 2019 12:53:40 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning sc2764@columbia.edu does not designate 199.231.134.73 as permitted sender) client-ip=199.231.134.73;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning sc2764@columbia.edu does not designate 199.231.134.73 as permitted sender) smtp.mailfrom=sc2764@columbia.edu
+Received: from mail-hosting-lou.terradotta.com (mail-hosting-lou.terradotta.com [199.231.134.73])
+	by inprodmail03.cc.columbia.edu (8.14.4/8.14.4) with ESMTP id x2TJrSrJ036745
+	for <snt2127@columbia.edu>; Fri, 29 Mar 2019 15:53:37 -0400
+Received: from web04-hosted-mlt-01.terradotta.com ([199.231.134.67]) by mail-hosting-lou.terradotta.com with Microsoft SMTPSVC(10.0.14393.2608);
+	 Fri, 29 Mar 2019 15:53:32 -0400
+Date: Fri, 29 Mar 2019 15:53:32 -0400 (EDT)
+From: sc2764@columbia.edu
+To: snt2127@columbia.edu
+Cc: snt2127@columbia.edu
+Message-ID: <1836976872.30924.1553889212648@mail-hosting-lou.terradotta.com>
+Subject: Beesen Global Travel Fellowship Decision
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_30923_812345618.1553889212648"
+X-Mailer: ColdFusion 2018 Application Server
+X-OriginalArrivalTime: 29 Mar 2019 19:53:32.0644 (UTC) FILETIME=[16A4CA40:01D4E669]
+X-Spam-Score: 0.101 () CU_GIFT_10 HTML_MESSAGE CU_SPF_softfail
+X-Scanned-By: MIMEDefang 2.84 on 128.59.72.54
+
+------=_Part_30923_812345618.1553889212648
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Office of Global Programs
+
+Dear Student,
+
+Congratulations! I am pleased to inform you that you have been selected as one of this year&rsquo;s recipients of the Beesen Global Travel Fellowship. This award will be made to you in the amount of $5,000 and is only redeemable to aid in your participation in the Columbia in Paris program during the summer 2019, as outlined in your application.
+
+Established to support Columbia undergraduates in pursuit of their academic interests related to France, the Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia in Paris program at Reid Hall. The decision to award you this fellowship was made after a careful review of your application, which revealed an academic interest  to engage with French and Francophone culture, a desire to make the most of the abroad experience, and a willingness to articulate the value of the international experience to the wider Columbia community.
+
+If you choose to accept the award, please complete the following no later than April 4, 2019:
+
+(1) Email Lindsey Schram, your Paris Summer Program Adviser, at {mailto:ls2553@columbia.edu ls2553@columbia.edu} to confirm your participation in the program;
+
+(2) Complete your Confirmation of Participation, available through your {http://ogp.columbia.edu OGP account};
+
+(3) Email me (Scott Carpenter; {mailto:sc2764@columbia.edu sc2764@columbia.edu})  to formally accept the Beesen Travel award. Our office will follow up you on the next steps in the disbursement process.
+
+(4) If you have received or are awarded any additional fellowships or funds at any time to support this summer opportunity, you are required to inform our office immediately. 
+
+Please note, if you cannot accept the award, please contact me by April 4, 2019 with your decision to decline the award.
+
+Congratulations once again!
+
+Best wishes,
+
+Scott Carpenter
+
+Associate Dean, Global Education
+
+Office of Global Programs
+
+Columbia University
+------=_Part_30923_812345618.1553889212648
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table cellpadding="3" cellspacing="0" width="100%" border="0" summary= ""><tr><th align="left" style="border-bottom: 1px solid black;">Office of Global Programs</th></tr></table><p /> <div style="padding-left: 10px;">
+				Dear Student,<br />
+&nbsp;<br />
+Congratulations! I am pleased to inform you that you have been selected as one of this year&rsquo;s recipients of the Beesen Global Travel Fellowship. This award will be made to you in the amount of $5,000 and is only redeemable to aid in your participation in the Columbia in Paris program during the summer 2019, as outlined in your application.<br />
+&nbsp;<br />
+Established to support Columbia undergraduates in pursuit of their academic interests related to France, the Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia in Paris program at Reid Hall. The decision to award you this fellowship was made after a careful review of your application, which revealed an academic interest&nbsp; to engage with French and Francophone culture, a desire to make the most of the abroad experience, and a willingness to articulate the value of the international experience to the wider Columbia community.<br />
+&nbsp;<br />
+If you choose to accept the award, please complete the following no later than <strong>April 4, 2019</strong>:<br />
+<br />
+(1) Email Lindsey Schram, your Paris Summer Program Adviser, at <a href="mailto:ls2553@columbia.edu">ls2553@columbia.edu</a> to confirm your participation in the program;<br />
+(2) Complete your Confirmation of Participation, available through your <a href="http://ogp.columbia.edu">OGP account</a>;<br />
+(3) Email me (Scott Carpenter; <a href="mailto:sc2764@columbia.edu">sc2764@columbia.edu</a>) &nbsp;to formally accept the Beesen Travel award. Our office will follow up you on the next steps in the disbursement process.<br />
+(4) If you have received or are awarded any additional fellowships or funds at any time to support this summer opportunity, you are required to inform our office immediately.&nbsp;&nbsp;<br />
+<br />
+Please note, if you cannot accept the award, please contact me by April 4, 2019 with your decision to decline the award.<br />
+&nbsp;<br />
+Congratulations once again!<br />
+&nbsp;<br />
+Best wishes,<br />
+&nbsp;<br />
+Scott Carpenter<br />
+Associate Dean, Global Education<br />
+Office of Global Programs<br />
+Columbia University<br />
+&nbsp;
+			</div><br /> 
+------=_Part_30923_812345618.1553889212648--
