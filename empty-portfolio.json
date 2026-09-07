@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "title":       "Personal — Portfolio",
+    "description": "Resume and portfolio",
+    "language":    "en",
+    "icon":        "static/img/icon.ico",
+    "keywords":    "resume,portfolio"
+  },
+  "sections": {
+    "about":          {
+      "label":   "About",
+      "id":      "about",
+      "eyebrow": "Profile",
+      "heading": "About Me"
+    },
+    "education":      {
+      "label":   "Education",
+      "id":      "education",
+      "eyebrow": "Academic Background",
+      "heading": "Education"
+    },
+    "experience":     {
+      "label":   "Experience",
+      "id":      "experience",
+      "eyebrow": "Career",
+      "heading": "Professional Experience"
+    },
+    "skills":         {
+      "label":   "Skills",
+      "id":      "skills",
+      "eyebrow": "Expertise",
+      "heading": "Skills"
+    },
+    "projects":       {
+      "label":   "Projects",
+      "id":      "projects",
+      "eyebrow": "Portfolio",
+      "heading": "Selected Projects"
+    },
+    "certifications": {
+      "label":          "Certifications",
+      "id":             "certifications",
+      "eyebrow":        "Professional Development",
+      "heading":        "Certifications",
+      "excludeFromNav": true
+    },
+    "awards":         {
+      "label":   "Awards",
+      "id":      "awards",
+      "eyebrow": "Recognition",
+      "heading": "Awards & Recognition"
+    },
+    "conferences":    {
+      "label":          "Conferences",
+      "id":             "conferences",
+      "eyebrow":        "Events",
+      "heading":        "Conference Experience",
+      "excludeFromNav": true
+    },
+    "languages":      {
+      "label":          "Languages",
+      "id":             "languages",
+      "eyebrow":        "Communication",
+      "heading":        "Languages",
+      "excludeFromNav": true
+    },
+    "contact":        {
+      "label":          "Contact",
+      "id":             "contact",
+      "eyebrow":        "Get In Touch",
+      "heading":        "Contact Me",
+      "excludeFromNav": true
+    }
+  },
+  "content":  {
+    "person":         {
+      "name":           "",
+      "role":           "",
+      "email":          "",
+      "intro":          [],
+      "bio":            [],
+      "website":        "",
+      "profileImage":   "",
+      "resume":         "",
+      "cv":             null,
+      "contactMessage": ""
+    },
+    "education":      [
+      {
+        "degree":         "",
+        "institution":    "",
+        "institutionUrl": "",
+        "location":       "",
+        "startDate":      "",
+        "startLabel":     "",
+        "endDate":        "",
+        "endLabel":       "",
+        "current":        false,
+        "description":    "",
+        "thesis":         "",
+        "highlights":     [],
+        "courses":        [
+          {
+            "code":           "",
+            "title":          "",
+            "professor":      "",
+            "date":           "",
+            "enrollmentType": "",
+            "syllabus":       null,
+            "description":    ""
+          }
+        ]
+      }
+    ],
+    "experience":     [
+      {
+        "position":     "",
+        "company":      "",
+        "companyUrl":   "",
+        "location":     "",
+        "type":         "",
+        "startDate":    "",
+        "startLabel":   "",
+        "endDate":      null,
+        "endLabel":     null,
+        "current":      true,
+        "summary":      "",
+        "achievements": [],
+        "skills":       []
+      }
+    ],
+    "skills":         [
+      {
+        "category": "",
+        "items":    []
+      }
+    ],
+    "projects":       {
+      "primaryProjects":   [
+        {
+          "name":          "",
+          "url":           "",
+          "description":   "",
+          "image":         "",
+          "imageAlt":      "",
+          "date":          "",
+          "achievements":  [],
+          "tags":          [],
+          "links":         [],
+          "collaborators": []
+        }
+      ],
+      "secondaryProjects": []
+    },
+    "certifications": [],
+    "awards":         [
+      {
+        "name":             "",
+        "issuer":           "",
+        "date":             "",
+        "certificate":      null,
+        "acceptanceLetter": null,
+        "article":          "",
+        "description":      []
+      }
+    ],
+    "conferences":    [
+      {
+        "name":        "",
+        "role":        "",
+        "attendance":  [],
+        "description": []
+      }
+    ],
+    "languages":      [
+      {
+        "name":  "",
+        "level": ""
+      }
+    ],
+    "social":         [
+      {
+        "label": "",
+        "url":   "",
+        "icon":  ""
+      }
+    ]
+  }
+}

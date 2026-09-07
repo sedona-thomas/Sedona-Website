@@ -3,7 +3,7 @@
     "title":       "Sedona Thomas — Portfolio",
     "description": "Resume and portfolio of Sedona Thomas",
     "language":    "en",
-    "icon":        "img/icon.ico",
+    "icon":        "static/img/icon.ico",
     "keywords":    "Sedona,Thomas,SedonaThomas,resume,portfolio,swe,software,engineer,java,python,sedona-thomas"
   },
   "sections": {
