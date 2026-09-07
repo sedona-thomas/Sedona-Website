@@ -1,85 +1,495 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Copyright 2023 {{ content.person.name }} -->
+
+{# Render Section Heading/Eyebrow #}
+{% macro render_section(section) %}
+{% if section %}
+<div class="section-heading">
+    {% if section.eyebrow %}
+    <p class="eyebrow">{{ section.eyebrow }}</p>
+    {% endif %}
+
+    {% if section.heading %}
+    <h2 id="{{ section.id }}-heading">{{ section.heading }}</h2>
+    {% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{# Project Cards #}
+{% macro render_project_cards(projects) %}
+<div class="card-grid">
+    {% for project in projects %}
+    <article class="card project-card">
+
+        {% if project.image %}
+        <div class="project-image-wrapper">
+            <img class="project-image" src="{{ project.image }}"
+                 alt="{{ project.image_alt | default('Screenshot of ' ~ project.name) }}" loading="lazy">
+        </div>
+        {% endif %}
+
+        <div class="project-content">
+            <h3>
+                {% if project.url %}
+                <a href="{{ project.url }}">{{ project.name }}</a>
+                {% else %}
+                {{ project.name }}
+                {% endif %}
+            </h3>
+
+            <p>
+                <strong>
+                    <time datetime="{{ project.date }}">{{ project.date }}</time>
+                </strong>
+                — {{ project.description }}
+            </p>
+
+            {% if project.achievements %}
+            <ul class="achievement-list">
+                {% for achievement in project.achievements %}
+                <li>{{ achievement | safe }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if project.links %}
+            <ul class="link-list" aria-label="Project links">
+                {% for link in project.links %}
+                <li>
+                    <a href="{{ link.url }}" rel="me noopener noreferrer" target="_blank">{{ link.label }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if project.tags %}
+            <ul class="tag-list" aria-label="Technologies used for {{ project.name }}">
+                {% for tag in project.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+
+<!doctype html>
+<html lang="{{ metadata.language }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html">
-    <meta name="language" content="English">
-    <meta http-equiv="content-language" content="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../index.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="./img/Sedona_Thomas_icon.ico">
-    <link rel="canonical" href="http://www.columbia.edu/~snt2127/" />
-    <title> Templates </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name="keywords" content="{{ metadata.keywords }}">
+
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" href="{{ metadata.icon }}">
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <h1>Templates </h1>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="site-name" href="#top" aria-label="Go to the top of the portfolio">{{ content.person.name }}</a>
 
-    <ul id="dot_list">
+        <nav aria-label="Portfolio navigation">
+            <ul class="navigation-list">
+                {% for key, section in sections.items() %}
+                {% if key in content and not (section.excludeFromNav | default(false)) %}
+                <li><a href="#{{ section.id }}">{{ section.label }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/MakefileTemplate">
-                MakefileTemplate
+<main id="main-content">
+
+    {% if content.person %}
+    <section class="hero container" id="top" aria-labelledby="hero-heading">
+        <div class="hero-content">
+            <p class="eyebrow">{{ content.person.role }}</p>
+            <h1 id="hero-heading">{{ content.person.name }}</h1>
+            <div class="hero-intro">
+                {% for paragraph in content.person.intro %}
+                <p>{{ paragraph|safe }}</p>
+                {% endfor %}
+            </div>
+
+            <p class="contact-summary">
+                <span><a href="mailto:{{ content.person.email }}">{{ content.person.email }}</a></span>
+            </p>
+
+            <div class="hero-actions">
+                {% if content.person.resume %}
+                <a class="button button-primary" href="{{ content.person.resume }}" download>Download resume</a>
+                {% endif %}
+                {% if content.person.cv %}
+                <a class="button button-primary" href="{{ content.person.cv }}" download>Download Curriculum Vitae</a>
+                {% endif %}
+                <a class="button button-secondary" href="mailto:{{ content.person.email }}">Email me</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img class="hero-image" src="{{ content.person.profileImage }}"
+                 alt="Professional headshot of {{ content.person.name }}" width="240" height="240">
+        </div>
+    </section>
+
+    {% if content.person.bio %}
+    <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+            {{ render_section(sections.about | default(none)) }}
+            <div class="larger-text">
+                {% for paragraph in content.person.bio %}
+                <p>{{ paragraph|safe }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% endif %}
+
+    {% if content.education %}
+    <section class="section" id="education" aria-labelledby="education-heading">
+        <div class="container">
+            {{ render_section(sections.education | default(none)) }}
+            <div class="education-list">
+                {% for item in content.education %}
+                <article class="education-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>{{ item.degree }}</h3>
+
+                            <p class="institution">
+                                {% if item.institutionUrl %}
+                                <a href="{{ item.institutionUrl }}">{{ item.institution }}</a>
+                                {% else %}
+                                {{ item.institution }}
+                                {% endif %}
+
+                                {% if item.location %}
+                                <span> · {{ item.location }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+
+                        <p class="date">
+                            <time datetime="{{ item.startDate }}">{{ item.startLabel }}</time>
+                            –
+                            {% if item.current %}
+                            Present
+                            {% else %}
+                            <time datetime="{{ item.endDate }}">{{ item.endLabel }}</time>
+                            {% endif %}
+                        </p>
+                    </div>
+
+                    {% if item.thesis %}
+                    <p><strong>Thesis:</strong> {{ item.thesis|safe }}</p>
+                    {% endif %}
+
+                    {% if item.description %}
+                    <p>{{ item.description|safe }}</p>
+                    {% endif %}
+
+                    {% if item.highlights %}
+                    <ul class="achievement-list">
+                        {% for highlight in item.highlights %}
+                        <li>{{ highlight|safe }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    <!-- TODO: finish adding courses then re-add -->
+                    {% if false and item.courses %}
+                    <details>
+                        <summary>Courses</summary>
+                        <ul class="course-list">
+                            {% for course in item.courses %}
+                            <li>
+                                {{ course.code }}: {{ course.title }} ({{ course.date }})
+                                {% if course.description %}
+                                <span class="info-icon" tabindex="0" aria-label="More information">
+                                    i
+                                    <span class="tooltip">Professor {{ course.professor }}: {{ course.description }}</span>
+                                </span>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </details>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.experience %}
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+            {{ render_section(sections.experience | default(none)) }}
+            <div class="experience">
+                {% for job in content.experience %}
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3>{{ job.position }}</h3>
+
+                            <p class="employer">
+                                {% if job.companyUrl %}
+                                <a href="{{ job.companyUrl }}">{{ job.company }}</a>
+                                {% else %}
+                                {{ job.company }}
+                                {% endif %}
+
+                                {% if job.location %}
+                                <span> · {{ job.location }}</span>
+                                {% endif %}
+
+                                {% if job.type %}
+                                <span> · {{ job.type }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+
+                        <p class="date">
+                            <time datetime="{{ job.startDate }}">{{ job.startLabel }}</time>
+                            –
+                            {% if job.current %}
+                            Present
+                            {% else %}
+                            <time datetime="{{ job.endDate }}">{{ job.endLabel }}</time>
+                            {% endif %}
+                        </p>
+                    </div>
+
+                    {% if job.summary %}
+                    <p>{{ job.summary|safe }}</p>
+                    {% endif %}
+
+                    {% if job.achievements %}
+                    <ul class="achievement-list">
+                        {% for achievement in job.achievements %}
+                        <li>{{ achievement|safe }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if job.skills %}
+                    <ul class="tag-list" aria-label="Skills and technologies used at {{ job.company }}">
+                        {% for skill in job.skills %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.skills %}
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+            {{ render_section(sections.skills | default(none)) }}
+            <div class="skills-grid">
+                {% for group in content.skills %}
+                <article class="skill-group">
+                    <h3>{{ group.category }}</h3>
+
+                    <ul class="tag-list">
+                        {% for skill in group["items"] %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.projects %}
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+            {{ render_section(sections.projects | default(none)) }}
+            {{ render_project_cards(content.projects.primaryProjects) }}
+            {% if content.projects.secondaryProjects %}
+            <details>
+                <summary>Additional Projects</summary>
+                {{ render_project_cards(content.projects.secondaryProjects) }}
+            </details>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.certifications %}
+    <section class="section" id="certifications" aria-labelledby="certifications-heading">
+        <div class="container">
+            {{ render_section(sections.certifications | default(none)) }}
+            <div class="card-grid">
+                {% for certification in content.certifications %}
+                <article class="card">
+                    <h3>{{ certification.name }}</h3>
+                    <p>{{ certification.issuer }}</p>
+
+                    {% if certification.date %}
+                    <p class="date">
+                        <time datetime="{{ certification.date }}">{{ certification.date }}</time>
+                    </p>
+                    {% endif %}
+
+                    {% if certification.url %}
+                    <a href="{{ certification.url }}">View Credential</a>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.awards %}
+    <section class="section" id="awards" aria-labelledby="awards-heading">
+        <div class="container">
+            {{ render_section(sections.awards | default(none)) }}
+            <div class="education-list">
+                {% for award in content.awards %}
+                <article class="education-item">
+                    <h3>{{ award.name }}</h3>
+
+                    <p class="issuer">
+                        {{ award.issuer }}
+                        ·
+                        <time datetime="{{ award.date }}">{{ award.date }}</time>
+                    </p>
+
+                    <ul>
+                        {% for paragraph in award.description %}
+                        <li>{{ paragraph|safe }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <p>
+                        {% if award.certificate %}
+                        <a class="button button-tertiary" href="{{ award.certificate }}" download>Certificate</a>
+                        {% endif %}
+
+                        {% if award.acceptanceLetter %}
+                        <a class="button button-tertiary" href="{{ award.acceptanceLetter }}" download>Acceptance
+                            Letter</a>
+                        {% endif %}
+
+                        {% if award.article %}
+                        <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
+                        {% endif %}
+                    </p>
+
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.conferences %}
+    <section class="section" id="conferences" aria-labelledby="conferences-heading">
+        <div class="container">
+            {{ render_section(sections.conferences | default(none)) }}
+            <div class="education-list">
+                {% for conference in content.conferences %}
+                <article class="conference-item">
+                    <h3>{{ conference.name }} — {{ conference.role }}</h3>
+
+                    {% if conference.attendance %}
+                    <ul class="tag-list" aria-label="Dates of attendance at {{ conference.name }}">
+                        {% for date in conference.attendance %}
+                        <li>
+                            <time datetime="{{ date }}">{{ date }}</time>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    <ul>
+                        {% for item in conference.description %}
+                        <li>{{ item|safe }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.languages %}
+    <section class="section" id="languages" aria-labelledby="languages-heading">
+        <div class="container">
+            {{ render_section(sections.languages | default(none)) }}
+            <ul class="language-list">
+                {% for language in content.languages %}
+                <li>
+                    <strong>{{ language.name }}:</strong> <span>{{ language.level }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.person.contactMessage and content.person.email %}
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+        <div class="container narrow contact-section">
+            {{ render_section(sections.contact | default(none)) }}
+
+            <p class="larger-text">{{ content.person.contactMessage }}</p>
+
+            <a class="button button-primary" href="mailto:{{ content.person.email }}">
+                Email {{ content.person.name }}
             </a>
-        </li>
+        </div>
+    </section>
+    {% endif %}
+</main>
 
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.c">
-                template.c
-            </a>
-        </li>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>
+            &copy; {{ content.person.name }}
+            <span id="current-year"></span>
+        </p>
 
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.cpp">
-                template.cpp
-            </a>
-        </li>
+        {% if content.social %}
+        <ul class="link-list" aria-label="Professional social links">
+            {% for account in content.social %}
+            <li>
+                {% if account.icon %}
+                <img src="{{ account.icon }}" alt="Icon of {{ account.label }}" aria-hidden="true">
+                {% endif %}
+                <a href="{{ account.url }}" rel="me noopener noreferrer" target="_blank">{{ account.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</footer>
 
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.h">
-                template.h
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.html">
-                template.html
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.css">
-                template.css
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.java">
-                template.java
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.py">
-                template.py
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.s">
-                template.s
-            </a>
-        </li>
-
-        <li>
-            <a href="http://www.columbia.edu/~snt2127/templates/template.sh">
-                template.sh
-            </a>
-        </li>
-
-    </ul>
-
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 </body>
-
 </html>
