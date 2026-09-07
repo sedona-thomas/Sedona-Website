@@ -2,60 +2,70 @@ from __future__ import annotations
 
 import json
 import shutil
+from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from jsonschema import Draft202012Validator
-from pathlib import Path
 from referencing import Registry, Resource
 
-ROOT_DIR = Path(__file__).parent
+
+ROOT_DIR = Path(__file__).resolve().parent
+SCHEMAS_DIR = ROOT_DIR / "schemas"
+
 DATA_FILE = ROOT_DIR / "portfolio.json"
 TEMPLATES_DIR = ROOT_DIR / "templates"
 STATIC_DIR = ROOT_DIR / "static"
 OUTPUT_DIR = ROOT_DIR / "dist"
-SCHEMA_FILE = ROOT_DIR / "schemas" / "portfolio.schema.json"
 
-SCHEMA_DIR = Path(__file__).resolve().parent / "schemas"
-ROOT_SCHEMA_NAME = "portfolio.schema.json"
+ROOT_SCHEMA_FILE = SCHEMAS_DIR / "portfolio.schema.json"
+PERMISSIONS_SOURCE = ROOT_DIR / "CUNIX" / "permissions.txt"
 
 
-def _load_schema_registry(schema_dir: Path) -> tuple[dict, Registry]:
+def _load_schema_registry(
+        schema_dir: Path,
+) -> tuple[dict[str, dict], Registry]:
     schemas: dict[str, dict] = {}
-
-    # Load all schema files and assign each one its local file URI.
-    for schema_path in schema_dir.glob("*.schema.json"):
-        schema = json.loads(schema_path.read_text(encoding="utf-8"))
-
-        # Use the real local path as the schema's identifier.
-        schema["$id"] = schema_path.resolve().as_uri()
-        schemas[schema_path.name] = schema
-
     registry = Registry()
 
-    # Register every schema using the same URI stored in its $id.
     for schema_path in schema_dir.glob("*.schema.json"):
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
         schema_uri = schema_path.resolve().as_uri()
-        registry = registry.with_resource(schema_uri, Resource.from_contents(schemas[schema_path.name]))
+
+        # Give each schema a stable URI so relative $ref values resolve correctly.
+        schema["$id"] = schema_uri
+        schemas[schema_path.name] = schema
+
+        registry = registry.with_resource(
+            schema_uri,
+            Resource.from_contents(schema),
+        )
 
     return schemas, registry
 
 
 def validate_profile(profile: dict) -> None:
-    schemas, registry = _load_schema_registry(SCHEMA_DIR)
-    try:
-        root_schema = schemas[ROOT_SCHEMA_NAME]
-    except KeyError as exc:
-        raise FileNotFoundError(f"Missing root schema: {SCHEMA_DIR / ROOT_SCHEMA_NAME}") from exc
+    schemas, registry = _load_schema_registry(SCHEMAS_DIR)
+    root_schema_name = ROOT_SCHEMA_FILE.name
 
-    validator = Draft202012Validator(schema=root_schema, registry=registry)
+    try:
+        root_schema = schemas[root_schema_name]
+    except KeyError as exc:
+        raise FileNotFoundError(
+            f"Missing root schema: {ROOT_SCHEMA_FILE}"
+        ) from exc
+
+    validator = Draft202012Validator(
+        root_schema,
+        registry=registry,
+    )
     validator.validate(profile)
 
 
 def load_profile() -> dict:
-    """Load and return website content from the JSON file."""
-    with DATA_FILE.open("r", encoding="utf-8") as file:
-        profile = json.load(file)
-        validate_profile(profile)
-        return profile
+    """Load and validate website content from the JSON file."""
+    profile = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    validate_profile(profile)
+    return profile
 
 
 def build_site() -> None:
@@ -68,19 +78,21 @@ def build_site() -> None:
         undefined=StrictUndefined,
     )
 
-    template = environment.get_template("index.html")
-    rendered_html = template.render(**profile)
+    rendered_html = environment.get_template("index.html").render(**profile)
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     output_file = OUTPUT_DIR / "index.html"
     output_file.write_text(rendered_html, encoding="utf-8")
 
     output_static_dir = OUTPUT_DIR / "static"
-    if output_static_dir.exists():
-        shutil.rmtree(output_static_dir)
-
+    shutil.rmtree(output_static_dir, ignore_errors=True)
     shutil.copytree(STATIC_DIR, output_static_dir)
+
+    shutil.copy2(
+        PERMISSIONS_SOURCE,
+        output_static_dir / PERMISSIONS_SOURCE.name,
+        )
 
     print(f"Built site: {output_file}")
 
