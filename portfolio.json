@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "title":       "Sedona Thomas — Portfolio",
+    "description": "Resume and portfolio of Sedona Thomas",
+    "language":    "en",
+    "icon":        "img/icon.ico",
+    "keywords":    "Sedona,Thomas,SedonaThomas,resume,portfolio,swe,software,engineer,java,python,sedona-thomas"
+  },
+  "sections": {
+    "about":          {
+      "label":   "About",
+      "id":      "about",
+      "eyebrow": "Profile",
+      "heading": "About Me"
+    },
+    "education":      {
+      "label":   "Education",
+      "id":      "education",
+      "eyebrow": "Academic Background",
+      "heading": "Education"
+    },
+    "experience":     {
+      "label":   "Experience",
+      "id":      "experience",
+      "eyebrow": "Career",
+      "heading": "Professional Experience"
+    },
+    "skills":         {
+      "label":   "Skills",
+      "id":      "skills",
+      "eyebrow": "Expertise",
+      "heading": "Skills"
+    },
+    "projects":       {
+      "label":   "Projects",
+      "id":      "projects",
+      "eyebrow": "Portfolio",
+      "heading": "Selected Projects"
+    },
+    "certifications": {
+      "label":          "Certifications",
+      "id":             "certifications",
+      "eyebrow":        "Professional Development",
+      "heading":        "Certifications",
+      "excludeFromNav": true
+    },
+    "awards":         {
+      "label":   "Awards",
+      "id":      "awards",
+      "eyebrow": "Recognition",
+      "heading": "Awards & Recognition"
+    },
+    "conferences":    {
+      "label":          "Conferences",
+      "id":             "conferences",
+      "eyebrow":        "Events",
+      "heading":        "Conference Experience",
+      "excludeFromNav": true
+    },
+    "languages":      {
+      "label":          "Languages",
+      "id":             "languages",
+      "eyebrow":        "Communication",
+      "heading":        "Languages",
+      "excludeFromNav": true
+    },
+    "contact":        {
+      "label":          "Contact",
+      "id":             "contact",
+      "eyebrow":        "Get In Touch",
+      "heading":        "Contact Me",
+      "excludeFromNav": true
+    }
+  },
+  "content":  {
+    "person":         {
+      "name":           "Sedona Thomas",
+      "role":           "Full-Stack Developer",
+      "email":          "sedona@caa.columbia.edu",
+      "intro":          [
+        "Full-stack developer with 3+ years of experience building containerized microservices in Java and monitoring cloud-native applications with Prometheus and Grafana.",
+        "Active <strong class=\"underline\">Top-Secret</strong> Security Clearance."
+      ],
+      "bio":            [
+        "Full-stack developer specializing in <em>cloud-native</em> Java Spring Boot microservices in <em>high-complexity</em> environments. Columbia University graduate with a dual-B.A./B.S. in <span class=\"underline\">Computer Science</span> and <span class=\"underline\">Human Rights</span>. Strong experience with microservice observability in cloud-native environments.",
+        "Prior roles include leading automated integration testing and application monitoring efforts across a suite of containerized microservices, specifically through the design of intuitive, user-friendly Grafana dashboards for use by both service developers and non-technical maintainers."
+      ],
+      "website":        "https://www.sedonathomas.com",
+      "profileImage":   "static/img/profile.jpg",
+      "resume":         "static/resume/resume.pdf",
+      "cv":             null,
+      "contactMessage": "I am open to software engineering opportunities."
+    },
+    "education":      [
+      {
+        "degree":         "Bachelor of Arts in Human Rights",
+        "institution":    "Columbia University in the City of New York, Columbia College",
+        "institutionUrl": "https://www.columbia.edu/",
+        "location":       "New York, NY",
+        "startDate":      "2022-09",
+        "startLabel":     "Sep 2022",
+        "endDate":        "2023-05",
+        "endLabel":       "May 2023",
+        "current":        false,
+        "description":    "<strong>Coursework focus:</strong> the intersection of technology, human rights, and gender studies.",
+        "thesis":         "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
+        "highlights":     [
+          "Graduated <strong>cum laude</strong>.",
+          "<a href=\"https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners\">2023 Faculty Choice</a> Senior Thesis.",
+          "Teaching Assistant for Computers and Society under Professor Ron Baecker.",
+          "Conducted undergraduate research under the supervision of Professor Mark Santolucito."
+        ],
+        "courses":        [
+          {
+            "code":           "APMA E2000",
+            "title":          "Multivariable Calculus for Engineers and Applied Scientists",
+            "professor":      "Drew Youngren",
+            "date":           "Spring 2019",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "Differential and integral calculus of multiple variables. Topics include partial differentiation; optimization of functions of several variables; line, area, volume, and surface integrals; vector functions and vector calculus; theorems of Green, Gauss, and Stokes; applications to selected problems in engineering and applied science."
+          },
+          {
+            "code":           "ECON UN1105",
+            "title":          "Principles of Economics",
+            "professor":      "Brendan O'Flaherty",
+            "date":           "Spring 2019",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "How a market economy determines the relative prices of goods, factors of production, and the allocation of resources and the circumstances under which it does it efficiently. Why such an economy has fluctuations and how they may be controlled."
+          },
+          {
+            "code":           "FREN UN1102",
+            "title":          "Elementary French II",
+            "professor":      "Christopher Wood",
+            "date":           "Spring 2019",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "The aim of the beginning French sequence (French 1101 and French 1102) is to help you to develop an active command of the language. Emphasis is placed on acquiring the four language skills--listening, speaking, reading and writing--within a cultural context, in order to achieve basic communicative proficiency."
+          },
+          {
+            "code":           "PHYS UN1402",
+            "title":          "Intro to Electricity/Magnetism & Optics",
+            "professor":      "Georgia Karagiorgi",
+            "date":           "Spring 2019",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "Electric fields, direct currents, magnetic fields, alternating currents, electromagnetic waves, polarization, geometrical optics, interference, and diffraction."
+          },
+          {
+            "code":           "ENGL CC1010",
+            "title":          "University Writing - Human Rights",
+            "professor":      "Taleen Mardirossian",
+            "date":           "Spring 2019",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "University Writing helps undergraduates engage in the conversations that form our intellectual community. By reading and writing about scholarly and popular essays, students learn that writing is a process of continual refinement of ideas. Rather than approaching writing as an innate talent, this course teaches writing as a learned skill. We give special attention to textual analysis, research, and revision practices. University Writing offers the following themed sections, all of which welcome students with no prior experience studying the theme. Students interested in a particular theme should register for the section within the specified range of section numbers. (UW: Readings in Human Rights (sections in the 400s). Features essays that investigate the ethics of belonging to a community and issues of personhood, identity, representation, and action.)"
+          },
+          {
+            "code":           "ENGI E1102",
+            "title":          "The Art of Engineering",
+            "professor":      "David Vallancourt",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "This course is a bridge between the science-oriented, high school way of thinking and the engineering point of view. Fundamental concepts of math and science are reviewed and re-framed in an engineering context, with numerous examples of each concept drawn from all disciplines of engineering represented at Columbia. Non-technical issues of importance in professional engineering practice such as ethics, engineering project management, and societal impact are addressed."
+          },
+          {
+            "code":           "FREN UN1101",
+            "title":          "Elementary French I",
+            "professor":      "Eric Matheis",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "The aim of the beginning French sequence (French 1101 and French 1102) is to help you to develop an active command of the language. Emphasis is placed on acquiring the four language skills--listening, speaking, reading and writing--within a cultural context, in order to achieve basic communicative proficiency."
+          },
+          {
+            "code":           "MATH UN1102",
+            "title":          "Calculus II",
+            "professor":      "Aliakbar Daemi",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "Methods of integration, applications of the integral, Taylors theorem, infinite series. (SC)"
+          },
+          {
+            "code":           "PHYS UN1601",
+            "title":          "Physics I: Mechanics/Relativity",
+            "professor":      "Jeremy Dodd",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "Fundamental laws of mechanics, kinematics and dynamics, work and energy, rotational dynamics, oscillations, gravitation, fluids, introduction to special relativity and relativistic kinematics. The course is preparatory for advanced work in physics and related fields."
+          },
+          {
+            "code":           "CHEM UN1403",
+            "title":          "General Chemistry I",
+            "professor":      "Robert Beer",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    "Topics include stoichiometry, states of matter, nuclear properties, electronic structures of atoms, periodic properties, chemical bonding, molecular geometry, introduction to quantum mechanics and atomic theory, introduction to organic and biological chemistry, solid state and materials science, polymer science and macromolecular structures and coordination chemistry. Although CHEM UN1403 and CHEM UN1404 are separate courses, students are expected to take both terms sequentially. The order of presentation of topics may differ from the order presented here, and from year to year. Students must ensure they register for the recitation that corresponds to the lecture section."
+          },
+          {
+            "code":           "PHED UN1001",
+            "title":          "Physical Education Activities - Goju Ryu Karate",
+            "professor":      "Bonnie Baker",
+            "date":           "Fall 2018",
+            "enrollmentType": "In-Person",
+            "syllabus":       null,
+            "description":    null
+          }
+        ]
+      },
+      {
+        "degree":         "Bachelor of Science in Computer Science",
+        "institution":    "Columbia University in the City of New York, Fu Foundation School of Engineering and Applied Science",
+        "institutionUrl": "https://www.columbia.edu/",
+        "location":       "New York, NY",
+        "startDate":      "2018-09",
+        "startLabel":     "Sep 2018",
+        "endDate":        "2022-05",
+        "endLabel":       "May 2022",
+        "current":        false,
+        "thesis":         null,
+        "description":    "<strong>Coursework focus:</strong> applications of computer science, artificial intelligence, natural language processing, accessible UI design, and clean object-oriented design.",
+        "highlights":     [
+          "Accepted into Columbia University’s <span class=\"underline\">SEAS/CC 4-1 Program,</span> a rigorous dual-degree pathway leading to a B.A. from Columbia College and a B.S. from the Fu Foundation School of Engineering and Applied Science.",
+          "Volunteered as a Makerspace staff member and served as a Columbia Health Peer Ambassador.",
+          "Provided mentorship and academic support to students in the Society of Women Engineers (SWE) and Women in Computer Science (WiCS) organizations."
+        ],
+        "courses":        []
+      }
+    ],
+    "experience":     [
+      {
+        "position":     "Research Engineer II",
+        "company":      "RTX BBN Technologies",
+        "companyUrl":   "https://www.rtx.com/what-we-do/bbn-technologies",
+        "location":     "Cambridge, MA",
+        "type":         "Remote",
+        "startDate":    "2023-06",
+        "startLabel":   "June 2023",
+        "endDate":      null,
+        "endLabel":     null,
+        "current":      true,
+        "summary":      "Full-Stack Software Engineer who developed and monitored scalable backend services using <strong>Java</strong> and <strong>Spring Boot,</strong> leveraging <strong>Prometheus</strong> and <strong>Grafana</strong> for performance monitoring and observability.",
+        "achievements": [
+          "Maintain a <strong>Top-Secret</strong> security clearance and ensure federal security protocol compliance",
+          "Led the maintenance and expansion of automated integration testing and observability for seven <strong>Kafka-based microservices</strong>.",
+          "Built <strong>Grafana</strong> dashboards for real-time monitoring of system metrics via <strong>Prometheus</strong> and automated test reporting via <strong>InfluxDB</strong>.",
+          "Founded and led weekly cross-team testing meetings to improve collaboration and knowledge sharing within an <strong>Agile/Scrum</strong> development team.",
+          "Enhanced a Dockerized Java Spring Boot microservice responsible for processing high-volume <strong>XML</strong> messages through <strong>Kafka</strong>.",
+          "Maintained and expanded a comprehensive suite of automated <strong>Python</strong> integration tests using <strong>Pytest,</strong> improving test coverage and software reliability.",
+          "Integrated <strong>Drools</strong> rule workflows, <strong>REST APIs,</strong> and <strong>GeoServer</strong> data to support real-time alerts and automated responses.",
+          "Supported monthly write-ups as an <span class=\"underline\">Ethical Legal and Social Implications (ELSI) Liaison</span> for the use of automated decision makers in a foundational research project."
+        ],
+        "skills":       [
+          "Java",
+          "Python",
+          "Grafana",
+          "Prometheus",
+          "Kafka",
+          "Drools (Rule Engine)",
+          "Swagger/OpenAPI Specification",
+          "Redis",
+          "MongoDB",
+          "InfluxDB"
+        ]
+      },
+      {
+        "position":     "Software Development Engineering Intern",
+        "company":      "Amazon Prime Video",
+        "companyUrl":   "https://www.amazon.com",
+        "location":     "New York, NY",
+        "type":         "Hybrid",
+        "startDate":    "2022-05",
+        "startLabel":   "May 2022",
+        "endDate":      "2022-08",
+        "endLabel":     "Aug 2022",
+        "current":      false,
+        "summary":      "Software Engineering Intern at Amazon Prime Video who developed a proof-of-concept promotional content page using Kotlin and Java.",
+        "achievements": [
+          "Developed and enhanced a proof-of-concept promotional content carousel for Amazon Prime Video using Java and Kotlin, enabling the dynamic presentation of featured titles.",
+          "Implemented backend components while adhering to established engineering and code-quality standards.",
+          "Collaborated with software engineers and product managers throughout the feature development process.",
+          "Tested and debugged features, resolving issues to improve reliability and performance.",
+          "Participated in code reviews, technical discussions, and Agile development processes throughout the feature lifecycle."
+        ],
+        "skills":       [
+          "Java",
+          "Kotlin",
+          "User Interface Design",
+          "Clean Code Design",
+          "Code Reviews",
+          "Collaboration"
+        ]
+      },
+      {
+        "position":     "Primary Course Instructor",
+        "company":      "Inspirit AI",
+        "companyUrl":   "https://www.inspiritai.com/",
+        "location":     "Palo Alto, CA",
+        "type":         "Remote",
+        "startDate":    "2021-06",
+        "startLabel":   "June 2021",
+        "endDate":      "2023-05",
+        "endLabel":     "May 2023",
+        "current":      false,
+        "summary":      "Primary course instructor for online 10-week courses teaching AI/ML/NLP to young students.",
+        "achievements": [
+          "Led weekly lessons to cohorts of approximately 20 students about artificial intelligence, natural language processing, and machine learning.",
+          "Taught courses over Zoom ranging from beginner to advanced consisting of elementary through high-school students.",
+          "Led development of course materials integrating technology ethics discussions."
+        ],
+        "skills":       [
+          "Communication",
+          "Artificial Intelligence",
+          "Natural Language Processing",
+          "Machine Learning",
+          "Mentorship",
+          "Teaching"
+        ]
+      },
+      {
+        "position":     "Volunteer Staff Member",
+        "company":      "Columbia University Makerspace",
+        "companyUrl":   "https://make.columbia.edu/",
+        "location":     "New York, NY",
+        "type":         "In-Person",
+        "startDate":    "2022-02",
+        "startLabel":   "Apr 2022",
+        "endDate":      "2023-05",
+        "endLabel":     "May 2023",
+        "current":      false,
+        "summary":      "Volunteer makerspace staff member leading equipment trainings and holding open hours to assist users with fabrication tools and projects.",
+        "achievements": [
+          "Supported daily makerspace operations by helping users safely access and operate fabrication tools, electronics equipment, and workshop resources.",
+          "Led hands-on workshops on leathercraft, stained glass, jewelry smithing, 3D printing, laser cutting, and electronics.",
+          "Trained and advised students, researchers, and community members on equipment use, prototyping techniques, and makerspace policies.",
+          "Assisted with troubleshooting, workspace organization, equipment maintenance, and enforcement of health and safety procedures.",
+          "Collaborated with makers from diverse technical backgrounds to develop projects, share knowledge, and foster an inclusive creative environment.",
+          "Promoted responsible tool use and independent problem-solving while serving as a knowledgeable point of contact during open hours."
+        ],
+        "skills":       [
+          "3D Printing",
+          "Laser Cutting",
+          "Soldering",
+          "Stained Glass",
+          "Leathercraft",
+          "Jewelry Smithing",
+          "CNC Waterjet Cutting",
+          "Woodshop Tools",
+          "Vinyl Cutting"
+        ]
+      }
+    ],
+    "skills":         [
+      {
+        "category": "Programming Languages",
+        "items":    [
+          "Java",
+          "Python",
+          "Javascript",
+          "C/C++",
+          "Bash",
+          "Shell Scripting"
+        ]
+      },
+      {
+        "category": "Backend & Data",
+        "items":    [
+          "REST APIs",
+          "MongoDB",
+          "Redis",
+          "Drools (Rule Engine)",
+          "HTML",
+          "Markdown",
+          "YAML",
+          "XML",
+          "XSD",
+          "JSON",
+          "JSON Schema"
+        ]
+      },
+      {
+        "category": "Observability & Monitoring",
+        "items":    [
+          "Grafana",
+          "Prometheus",
+          "Loki",
+          "InfluxDB",
+          "PromQL",
+          "FluxQL"
+        ]
+      },
+      {
+        "category": "Cloud & Operations",
+        "items":    [
+          "Docker",
+          "Docker Compose",
+          "Kubernetes",
+          "SonarQube",
+          "Artifactory",
+          "GitLab CI/CD",
+          "ArgoCD"
+        ]
+      },
+      {
+        "category": "Leadership & Soft Skills",
+        "items":    [
+          "System Design",
+          "Mentoring",
+          "Collaboration",
+          "Agile Delivery",
+          "Education",
+          "Technical Writing",
+          "Technology Ethics",
+          "Public Speaking"
+        ]
+      }
+    ],
+    "projects":       {
+      "primaryProjects":   [
+        {
+          "name":          "OpenWRT Monitoring Stack",
+          "url":           "https://github.com/sedona-thomas/openwrt-monitoring-stack",
+          "description":   "An at-home monitoring stack with Grafana, Prometheus, and Loki for a router running OpenWRT.",
+          "image":         "static/img/grafana_screenshot.png",
+          "imageAlt":      "Screenshot of a Grafana dashboard displaying the state of running Docker containers.",
+          "date":          "2025",
+          "achievements":  [],
+          "tags":          [
+            "Grafana",
+            "Prometheus",
+            "Loki",
+            "Nginx",
+            "OpenWRT/OpenWRT Plugins",
+            "Docker",
+            "Observability",
+            "Open Source"
+          ],
+          "links":         [],
+          "collaborators": []
+        },
+        {
+          "name":          "Stained Glass - Rainbow Sunset",
+          "url":           "https://github.com/sedona-thomas/openwrt-monitoring-stack",
+          "description":   "An electronic stained glass art display. Written in C++ and controlled by an ESP32.",
+          "image":         "static/img/stained_glass_sunset.png",
+          "imageAlt":      "Stained glass sunset with rainbow rays in a sunny window. Small LEDs can be seen through the glass.",
+          "date":          "2022",
+          "achievements":  [],
+          "tags":          [
+            "Stained Glass",
+            "Soldering",
+            "ESP32",
+            "C++",
+            "UART/Serial Communication",
+            "pyserial",
+            "PlatformIO"
+          ],
+          "links":         [
+            {
+              "label": "Medium",
+              "url":   "https://sedonathomas.medium.com/rainbow-sunset-edff6b4f1702",
+              "icon":  "static/img/medium.png"
+            },
+            {
+              "label": "GitHub",
+              "url":   "https://github.com/sedona-thomas/Rainbow-Sunset",
+              "icon":  "static/img/github.png"
+            },
+            {
+              "label": "Youtube",
+              "url":   "https://youtu.be/Bv8L7zAvgYc",
+              "icon":  null
+            }
+          ],
+          "collaborators": []
+        }
+      ],
+      "secondaryProjects": []
+    },
+    "certifications": [],
+    "awards":         [
+      {
+        "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice Winner",
+        "issuer":           "Columbia University Institute for the Study of Human Rights (ISHR)",
+        "date":             "2023",
+        "certificate":      null,
+        "acceptanceLetter": null,
+        "article":          "https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners",
+        "description":      [
+          "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
+          "Annual Columbia University Institute for the Study of Human Rights Thesis Competition, in which students deliver five-minute presentations on their thesis research and are evaluated by a faculty panel."
+        ]
+      },
+      {
+        "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
+        "issuer":           "Columbia University",
+        "date":             "2022",
+        "certificate":      null,
+        "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
+        "article":          null,
+        "description":      [
+          "Selected for Columbia University’s 4-1 SEAS/CC Program, a rigorous dual-degree pathway combining a B.A. from Columbia College with a B.S. in Engineering from Columbia Engineering."
+        ]
+      },
+      {
+        "name":             "The Beesen Global Experience Research Fellowship",
+        "issuer":           "Columbia University",
+        "date":             "2019",
+        "certificate":      null,
+        "acceptanceLetter": "static/scholarships/Beesen_Global_Travel_Fellowship_Acceptance.pdf",
+        "article":          null,
+        "description":      [
+          "The Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia study abroad program at Reid Hall."
+        ]
+      },
+      {
+        "name":             "Nevada Governor's Volunteer Recognition Award",
+        "issuer":           "Nevada Volunteers & Brian Sandoval, Governor of the State of Nevada",
+        "date":             "2017",
+        "certificate":      "static/certifications/Sedona_Thomas_Nevada_Governor_Volunteer_Service_Award.jpg",
+        "acceptanceLetter": null,
+        "article":          null,
+        "description":      [
+          "Recognized for outstanding volunteer service, including significant community contributions, leadership in launching or enhancing programs, championing innovation, and addressing organizational needs."
+        ]
+      }
+    ],
+    "conferences":    [
+      {
+        "name":        "Out for Undergrad (O4U) Conference",
+        "role":        "Selected Participant",
+        "attendance":  [
+          "Engineering · 2023 · St. Paul, MN",
+          "Engineering · 2022 · Virtual",
+          "Tech · 2022 · Virtual"
+        ],
+        "description": [
+          "Selected through O4U’s competitive application process to attend a national conference for high-achieving LGBTQ+ undergraduates.",
+          "Participated in workshops, networking events, and employer discussions focused on software engineering, product management, and technology careers.",
+          "Connected with technology professionals and fellow students, gaining insight into recruiting, mentorship, and career pathways in the tech industry."
+        ]
+      }
+    ],
+    "languages":      [
+      {
+        "name":  "English",
+        "level": "Native"
+      },
+      {
+        "name":  "French",
+        "level": "Limited working proficiency"
+      }
+    ],
+    "social":         [
+      {
+        "label": "LinkedIn",
+        "url":   "https://www.linkedin.com/in/sedonathomas",
+        "icon":  "static/img/linkedin.png"
+      },
+      {
+        "label": "GitHub",
+        "url":   "https://github.com/sedona-thomas",
+        "icon":  "static/img/github.png"
+      },
+      {
+        "label": "Portfolio",
+        "url":   "https://www.sedonathomas.com",
+        "icon":  "static/img/icon.jpg"
+      }
+    ]
+  }
+}
