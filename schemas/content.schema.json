@@ -1,0 +1,113 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "content.schema.json",
+  "title":                "Content",
+  "description":          "Stores the content for a professional portfolio for a personal website.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             [
+    "person",
+    "experience",
+    "education",
+    "skills",
+    "projects",
+    "certifications",
+    "awards",
+    "languages",
+    "social"
+  ],
+  "properties":           {
+    "person":         {
+      "title":       "Personal Information",
+      "description": "The individual's personal and professional profile information.",
+      "$ref":        "./person.schema.json"
+    },
+    "education":      {
+      "title":       "Education",
+      "description": "A list of academic qualifications, institutions, and educational achievements.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./education.schema.json"
+      }
+    },
+    "experience":     {
+      "title":       "Experience",
+      "description": "A list of professional roles, employment history, or relevant work experience.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./experience.schema.json"
+      }
+    },
+    "skills":         {
+      "title":       "Skills",
+      "description": "A list of professional, technical, and personal skills.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./skillset.schema.json"
+      }
+    },
+    "projects":       {
+      "title":       "Projects",
+      "description": "A collection of projects.",
+      "type":        "object",
+      "properties":  {
+        "primaryProjects":   {
+          "title":       "Primary Projects",
+          "description": "A list of the individual's most important projects to be displayed by default.",
+          "type":        "array",
+          "items":       {
+            "$ref": "./project.schema.json"
+          }
+        },
+        "secondaryProjects": {
+          "title":       "Secondary Projects",
+          "description": "A list of additional projects to be collapsed by default.",
+          "type":        "array",
+          "items":       {
+            "$ref": "./project.schema.json"
+          }
+        }
+      }
+    },
+    "certifications": {
+      "title":       "Certifications",
+      "description": "A list of professional, academic, technical, or industry certifications.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./certification.schema.json"
+      }
+    },
+    "awards":         {
+      "title":       "Awards",
+      "description": "A list of awards, honors, professional recognitions, or academic scholarships.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./award.schema.json"
+      }
+    },
+    "conferences":    {
+      "title":       "Conferences",
+      "description": "A list of conferences, events, symposiums, conventions, or professional gatherings attended.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./conference.schema.json"
+      }
+    },
+    "languages":      {
+      "title":       "Languages",
+      "description": "A list of spoken, written, or otherwise known languages and related proficiency information.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./language.schema.json"
+      }
+    },
+    "social":         {
+      "title":       "Social Links",
+      "description": "A list of social media profiles, professional networks, websites, and other relevant links.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./links.schema.json"
+      }
+    }
+  }
+}

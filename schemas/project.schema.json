@@ -1,0 +1,97 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./project.schema.json",
+  "title":                "Project",
+  "description":          "Represents a personal, academic, professional, or collaborative project.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "description", "achievements", "tags"],
+  "properties":           {
+    "name":          {
+      "title":       "Project Name",
+      "type":        "string",
+      "description": "The name or title of the project.",
+      "minLength":   1
+    },
+    "url":           {
+      "title":       "Project URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "The URI of the project's website, repository, demo, or primary online resource. Null indicates that no project URL is available."
+    },
+    "description":   {
+      "title":       "Project Description",
+      "type":        "string",
+      "description": "A summary of the project's purpose, functionality, scope, or significance.",
+      "minLength":   1
+    },
+    "image":         {
+      "title":       "Project Image",
+      "type":        ["string", "null"],
+      "description": "The path or URI of an image representing the project. Null indicates that no project image is available."
+    },
+    "imageAlt":      {
+      "title":       "Project Image Alternative Text",
+      "type":        ["string", "null"],
+      "description": "Alternative text describing the project image for accessibility. Null indicates that no alternative text is available."
+    },
+    "date":          {
+      "title":       "Project Date",
+      "type":        "string",
+      "description": "The year, month, or date associated with the project.",
+      "minLength":   1
+    },
+    "achievements":  {
+      "title":       "Achievements",
+      "type":        "array",
+      "description": "A list of notable achievements, outcomes, contributions, or results associated with the project.",
+      "items":       {
+        "type":        "string",
+        "description": "A notable achievement, outcome, contribution, or result.",
+        "minLength":   1
+      }
+    },
+    "tags":          {
+      "title":       "Tags",
+      "type":        "array",
+      "description": "A list of technologies, concepts, categories, or keywords associated with the project.",
+      "items":       {
+        "type":        "string",
+        "description": "A technology, concept, category, or keyword associated with the project.",
+        "minLength":   1
+      }
+    },
+    "links":         {
+      "title":       "Related Links",
+      "type":        "array",
+      "description": "A list of labeled links related to the project.",
+      "items":       {
+        "$ref": "./links.schema.json"
+      }
+    },
+    "collaborators": {
+      "title":       "Collaborators",
+      "type":        "array",
+      "description": "A list of people or organizations that contributed to the project.",
+      "items":       {
+        "type":                 "object",
+        "additionalProperties": false,
+        "required":             ["name", "url"],
+        "properties":           {
+          "name": {
+            "title":       "Collaborator Name",
+            "type":        "string",
+            "description": "The name of the collaborating person or organization.",
+            "minLength":   1
+          },
+          "url":  {
+            "title":       "Collaborator URL",
+            "type":        "string",
+            "format":      "uri",
+            "description": "The URI of the collaborator's website, profile, or relevant online resource."
+          }
+        }
+      }
+    }
+  }
+}

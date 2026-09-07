@@ -1,0 +1,28 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./links.schema.json",
+  "title":                "Link",
+  "description":          "Represents a labeled link to a social media profile, professional network, website, or other online resource.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["label", "url"],
+  "properties":           {
+    "label": {
+      "title":       "Link Label",
+      "type":        "string",
+      "description": "The display name or label identifying the linked resource.",
+      "minLength":   1
+    },
+    "url":   {
+      "title":       "Link URL",
+      "type":        "string",
+      "format":      "uri",
+      "description": "The URI of the linked social profile, professional network, website, or online resource."
+    },
+    "icon":  {
+      "title":       "Link Icon",
+      "type":        ["string", "null"],
+      "description": "The name, identifier, or path of an icon representing the link."
+    }
+  }
+}

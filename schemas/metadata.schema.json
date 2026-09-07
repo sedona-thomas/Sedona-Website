@@ -1,0 +1,41 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./metadata.schema.json",
+  "title":                "Site Metadata",
+  "description":          "Represents metadata used in a website.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["language", "title", "description", "icon"],
+  "properties":           {
+    "language":    {
+      "title":       "Language",
+      "type":        "string",
+      "description": "The language tag used by the website.",
+      "minLength":   1,
+      "examples":    ["en", "en-US"]
+    },
+    "title":       {
+      "title":       "Site Title",
+      "type":        "string",
+      "description": "The title of the website.",
+      "minLength":   1
+    },
+    "description": {
+      "title":       "Site Description",
+      "type":        "string",
+      "description": "A concise description of the website.",
+      "minLength":   1
+    },
+    "icon":        {
+      "title":       "Site Icon",
+      "type":        "string",
+      "description": "The URI of the website icon.",
+      "minLength":   1
+    },
+    "keywords":    {
+      "title":       "Keywords",
+      "type":        "string",
+      "description": "A comma separated list of string containing keywords associated with the website."
+    }
+  }
+}

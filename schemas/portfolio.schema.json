@@ -1,0 +1,26 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "portfolio.schema.json",
+  "title":                "Portfolio",
+  "description":          "Represents the complete content of a professional portfolio.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["metadata", "sections", "content"],
+  "properties":           {
+    "metadata": {
+      "title":       "Site Metadata",
+      "description": "Metadata used to describe and identify the portfolio website.",
+      "$ref":        "./metadata.schema.json"
+    },
+    "sections": {
+      "title":       "Portfolio Sections",
+      "description": "Configuration defining the sections displayed in the portfolio.",
+      "$ref":        "./section.schema.json"
+    },
+    "content":  {
+      "title":       "Portfolio Content",
+      "description": "The personal, professional, academic, and project information presented in the portfolio.",
+      "$ref":        "./content.schema.json"
+    }
+  }
+}

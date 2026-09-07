@@ -1,0 +1,45 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./conference.schema.json",
+  "title":                "Conference",
+  "description":          "Represents participation in a conference, event, symposium, convention, or professional gathering.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "role", "attendance"],
+  "properties":           {
+    "name":        {
+      "title":       "Conference Name",
+      "type":        "string",
+      "description": "The official name or title of the conference or event.",
+      "minLength":   1
+    },
+    "role":        {
+      "title":       "Participation Role",
+      "type":        "string",
+      "description": "The role performed or capacity held at the conference or event.",
+      "minLength":   1
+    },
+    "attendance":  {
+      "title":       "Attendance",
+      "type":        "array",
+      "description": "The dates or periods during which the conference or event was attended.",
+      "minItems":    1,
+      "items":       {
+        "type":        "string",
+        "description": "A date or attendance period associated with the conference or event.",
+        "minLength":   1
+      }
+    },
+    "description": {
+      "title":       "Description",
+      "type":        "array",
+      "description": "A list of statements describing the conference participation.",
+      "minItems":    1,
+      "items":       {
+        "type":        "string",
+        "description": "A statement describing the conference participation.",
+        "minLength":   1
+      }
+    }
+  }
+}

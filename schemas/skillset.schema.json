@@ -1,0 +1,29 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./skillset.schema.json",
+  "title":                "Skill Set",
+  "description":          "Represents a categorized group of skills, technologies, tools, or areas of expertise.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["category", "items"],
+  "properties":           {
+    "category": {
+      "title":       "Skill Category",
+      "type":        "string",
+      "description": "The name of the category used to group related skills.",
+      "minLength":   1
+    },
+    "items":    {
+      "title":       "Skills",
+      "type":        "array",
+      "description": "A list of skills belonging to the category.",
+      "minItems":    1,
+      "items":       {
+        "title":       "Skill",
+        "type":        "string",
+        "description": "The name of a skill, technology, tool, or area of expertise.",
+        "minLength":   1
+      }
+    }
+  }
+}

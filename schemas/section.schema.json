@@ -1,0 +1,102 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./section.schema.json",
+  "title":                "Portfolio Sections",
+  "description":          "Content sections displayed on the portfolio page.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "properties":           {
+    "about":          {
+      "title":       "About Section",
+      "description": "Introduces the portfolio owner and provides a brief professional summary.",
+      "$ref":        "#/$defs/section"
+    },
+    "education":      {
+      "title":       "Education Section",
+      "description": "Describes academic background.",
+      "$ref":        "#/$defs/section"
+    },
+    "experience":     {
+      "title":       "Experience Section",
+      "description": "Describes professional work experience, employment history, and career highlights.",
+      "$ref":        "#/$defs/section"
+    },
+    "skills":         {
+      "title":       "Skills Section",
+      "description": "Lists professional skills.",
+      "$ref":        "#/$defs/section"
+    },
+    "projects":       {
+      "title":       "Projects Section",
+      "description": "Showcases selected projects, applications, and other portfolio work.",
+      "$ref":        "#/$defs/section"
+    },
+    "certifications": {
+      "title":       "Certifications Section",
+      "description": "Lists professional certifications.",
+      "$ref":        "#/$defs/section"
+    },
+    "awards":         {
+      "title":       "Awards Section",
+      "description": "Lists professional awards and recognitions.",
+      "$ref":        "#/$defs/section"
+    },
+    "conferences":    {
+      "title":       "Conference Section",
+      "description": "Lists professional conference attendance.",
+      "$ref":        "#/$defs/section"
+    },
+    "languages":      {
+      "title":       "Languages Section",
+      "description": "Lists languages and proficiency.",
+      "$ref":        "#/$defs/section"
+    },
+    "contact":        {
+      "title":       "Contact Section",
+      "description": "Provides contact information.",
+      "$ref":        "#/$defs/section"
+    }
+  },
+  "$defs":                {
+    "section": {
+      "title":                "Portfolio Section",
+      "description":          "Display metadata for an individual portfolio section.",
+      "type":                 "object",
+      "required":             ["label", "id", "eyebrow", "heading"],
+      "additionalProperties": false,
+      "properties":           {
+        "label":          {
+          "title":       "Navigation Label",
+          "description": "Short, user-facing label displayed in the navigation menu.",
+          "type":        "string",
+          "minLength":   1,
+          "examples":    ["About"]
+        },
+        "id":             {
+          "title":       "Section Identifier",
+          "description": "Identifier for this section on the page.",
+          "type":        "string",
+          "pattern":     "^[a-z]+$"
+        },
+        "eyebrow":        {
+          "title":       "Eyebrow Text",
+          "description": "Short supporting text displayed above the main section heading.",
+          "type":        "string",
+          "minLength":   1
+        },
+        "heading":        {
+          "title":       "Section Heading",
+          "description": "Primary heading displayed at the beginning of the section.",
+          "type":        "string",
+          "minLength":   1
+        },
+        "excludeFromNav": {
+          "title":       "Exclude from Navigation",
+          "description": "Whether this section should be excluded from the navigation menu.",
+          "type":        "boolean",
+          "default":     false
+        }
+      }
+    }
+  }
+}

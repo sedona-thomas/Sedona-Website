@@ -1,0 +1,141 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./education.schema.json",
+  "title":                "Education",
+  "description":          "Represents an academic qualification, educational program, or course of study.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["degree", "institution", "startDate", "startLabel", "current", "highlights"],
+  "properties":           {
+    "degree":         {
+      "title":       "Degree",
+      "type":        "string",
+      "description": "The name or type of degree, qualification, or program completed or pursued.",
+      "minLength":   1
+    },
+    "institution":    {
+      "title":       "Institution",
+      "type":        "string",
+      "description": "The school, university, college, or other educational institution attended.",
+      "minLength":   1
+    },
+    "institutionUrl": {
+      "title":       "Institution URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "A URI linking to the website of the educational institution. Null indicates that no URL is available."
+    },
+    "location":       {
+      "title":       "Location",
+      "type":        ["string", "null"],
+      "description": "The city, region, or country where the educational institution or program is located."
+    },
+    "startDate":      {
+      "title":       "Start Date",
+      "type":        "string",
+      "description": "The year or month in which the education began, using YYYY or YYYY-MM format.",
+      "pattern":     "^\\d{4}(-\\d{2})?$"
+    },
+    "startLabel":     {
+      "title":       "Start Date Label",
+      "type":        "string",
+      "description": "The human-readable label used to display the education start date.",
+      "minLength":   1
+    },
+    "endDate":        {
+      "title":       "End Date",
+      "type":        ["string", "null"],
+      "description": "The year or month in which the education ended, using YYYY or YYYY-MM format. Null indicates that the education is ongoing.",
+      "pattern":     "^\\d{4}(-\\d{2})?$"
+    },
+    "endLabel":       {
+      "title":       "End Date Label",
+      "type":        ["string", "null"],
+      "description": "The human-readable label used to display the education end date. Null indicates that the education is ongoing."
+    },
+    "current":        {
+      "title":       "Currently Enrolled",
+      "type":        "boolean",
+      "description": "Indicates whether the individual is currently enrolled in the education program."
+    },
+    "thesis":         {
+      "title":       "Thesis",
+      "type":        ["string", "null"],
+      "description": "The title or description of the thesis, dissertation, or major academic research project. Null indicates that the program did not involve a thesis."
+    },
+    "description":    {
+      "title":       "Description",
+      "type":        ["string", "null"],
+      "description": "Additional information about the education, program, academic focus, or achievements."
+    },
+    "highlights":     {
+      "title":       "Highlights",
+      "type":        "array",
+      "description": "A list of notable achievements, activities, distinctions, or outcomes associated with the education.",
+      "items":       {
+        "type":        "string",
+        "description": "A notable achievement, activity, distinction, or outcome.",
+        "minLength":   1
+      }
+    },
+    "courses":        {
+      "title":       "Courses",
+      "type":        "array",
+      "description": "A list of relevant academic courses associated with the education.",
+      "items":       {
+        "$ref": "#/$defs/course"
+      }
+    }
+  },
+  "$defs":                {
+    "course": {
+      "title":                "Course",
+      "description":          "Represents an academic course and its associated information.",
+      "type":                 "object",
+      "additionalProperties": false,
+      "required":             ["code", "title", "professor", "date", "enrollmentType", "syllabus", "description"],
+      "properties":           {
+        "code":           {
+          "title":       "Course Code",
+          "type":        "string",
+          "description": "The official course code or identifier, such as APMA E2000 or FREN UN1101.",
+          "minLength":   1
+        },
+        "title":          {
+          "title":       "Course Title",
+          "type":        "string",
+          "description": "The official title or name of the course.",
+          "minLength":   1
+        },
+        "professor":      {
+          "title":       "Professor",
+          "type":        "string",
+          "description": "The name of the professor or instructor who taught the course.",
+          "minLength":   1
+        },
+        "date":           {
+          "title":       "Course Date",
+          "type":        "string",
+          "description": "The year or date associated with the course, using YYYY or the ISO 8601 calendar date format YYYY-MM-DD.",
+          "format":      "date"
+        },
+        "enrollmentType": {
+          "title":       "Enrollment Type",
+          "type":        "string",
+          "description": "The enrollment/participation type for the course.",
+          "enum":        ["In-Person", "Hybrid", "Remote"]
+        },
+        "syllabus":       {
+          "title":       "Syllabus",
+          "type":        ["string", "null"],
+          "description": "A URL pointing to the course syllabus."
+        },
+        "description":    {
+          "title":       "Course Description",
+          "type":        ["string", "null"],
+          "description": "A summary of the course content."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./language.schema.json",
+  "title":                "Language",
+  "description":          "Represents a language known or used by an individual and their level of proficiency.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "level"],
+  "properties":           {
+    "name":  {
+      "title":       "Language Name",
+      "type":        "string",
+      "description": "The name of the spoken, written, or otherwise known language.",
+      "minLength":   1
+    },
+    "level": {
+      "title":       "Proficiency Level",
+      "type":        "string",
+      "description": "The individual's level of proficiency in the language.",
+      "minLength":   1
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./award.schema.json",
+  "title":                "Award",
+  "description":          "Represents an award, honor, professional/academic recognition, or academic scholarship.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "issuer", "date"],
+  "properties":           {
+    "name":             {
+      "title":       "Award Name",
+      "type":        "string",
+      "description": "The official name or title of the award.",
+      "minLength":   1
+    },
+    "issuer":           {
+      "title":       "Issuing Organization",
+      "type":        "string",
+      "description": "The organization, institution, committee, and/or person that issued the award.",
+      "minLength":   1
+    },
+    "date":             {
+      "title":       "Award Date",
+      "type":        "string",
+      "description": "The year or date on which the award was received."
+    },
+    "certificate":      {
+      "title":       "Certificate",
+      "type":        ["string", "null"],
+      "format":      "uri-reference",
+      "description": "A URI or relative reference to the award certificate. Null indicates that no certificate is available."
+    },
+    "acceptanceLetter": {
+      "title":       "Acceptance Letter",
+      "type":        ["string", "null"],
+      "format":      "uri-reference",
+      "description": "A URI or relative reference to the award acceptance letter. Null indicates that no acceptance letter is available."
+    },
+    "article":          {
+      "title":       "Related Article",
+      "type":        ["string", "null"],
+      "format":      "uri-reference",
+      "description": "A URI or relative reference to an article, announcement, or publication related to the award. Null indicates that no article is available."
+    },
+    "description":      {
+      "title":       "Description",
+      "type":        "array",
+      "description": "A list of statements describing the award.",
+      "items":       {
+        "type":        "string",
+        "description": "A non-empty description statement.",
+        "minLength":   1
+      }
+    }
+  }
+}

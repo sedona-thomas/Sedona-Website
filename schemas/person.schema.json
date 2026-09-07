@@ -1,0 +1,88 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./person.schema.json",
+  "title":                "Person",
+  "description":          "Represents an individual's personal, professional, and contact information.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "role", "intro", "email", "profileImage", "resume", "website", "contactMessage"],
+  "properties":           {
+    "name":           {
+      "title":       "Name",
+      "type":        "string",
+      "description": "The individual's full name.",
+      "minLength":   1
+    },
+    "role":           {
+      "title":       "Professional Role",
+      "type":        "string",
+      "description": "The individual's current professional title, role, and/or area of specialization.",
+      "minLength":   1
+    },
+    "intro":          {
+      "title":       "Introduction",
+      "type":        "array",
+      "description": "A list of high-level descriptions about the individual.",
+      "minItems":    1,
+      "items":       {
+        "type":        "string",
+        "description": "An introduction statement.",
+        "minLength":   1
+      }
+    },
+    "bio":            {
+      "title":       "Biography",
+      "type":        "array",
+      "description": "A list of statements describing the individual's background, experience, interests, or personal profile.",
+      "minItems":    1,
+      "items":       {
+        "type":        "string",
+        "description": "A non-empty biographical statement.",
+        "minLength":   1
+      }
+    },
+    "email":          {
+      "title":       "Email Address",
+      "type":        "string",
+      "format":      "email",
+      "description": "The individual's primary email address."
+    },
+    "profileImage":   {
+      "title":       "Profile Image",
+      "type":        ["string", "null"],
+      "description": "The path or URI of the individual's profile image."
+    },
+    "resume":         {
+      "title":       "Resume",
+      "type":        ["string", "null"],
+      "description": "The path or URI of the individual's resume."
+    },
+    "cv":             {
+      "title":       "Curriculum Vitae",
+      "type":        ["string", "null"],
+      "description": "The path or URI of the individual's curriculum vitae."
+    },
+    "website":        {
+      "title":       "Website",
+      "type":        ["string", "null"],
+      "description": "The URI of the individual's personal or professional website."
+    },
+    "phone":          {
+      "title":       "Phone Number",
+      "type":        ["string", "null"],
+      "description": "The individual's phone number."
+    },
+    "contactMessage": {
+      "title":       "Contact Message",
+      "type":        "string",
+      "description": "The message displayed with the contact information.",
+      "minLength":   1
+    },
+    "location":       {
+      "title":       "Location",
+      "type":        "string",
+      "description": "The individual's city, region, country, or general location.",
+      "minLength":   1
+    }
+  }
+}

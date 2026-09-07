@@ -1,0 +1,34 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./certification.schema.json",
+  "title":                "Certification",
+  "description":          "Represents a professional, academic, technical, or industry certification awarded to an individual.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "issuer", "date"],
+  "properties":           {
+    "name":   {
+      "title":       "Certification Name",
+      "type":        "string",
+      "description": "The official name or title of the certification.",
+      "minLength":   1
+    },
+    "issuer": {
+      "title":       "Issuing Organization",
+      "type":        "string",
+      "description": "The organization, institution, committee, or person that issued the certification.",
+      "minLength":   1
+    },
+    "date":   {
+      "title":       "Certification Date",
+      "type":        "string",
+      "description": "The year or date on which the certification was awarded."
+    },
+    "url":    {
+      "title":       "Certification URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "A URI linking to the certification, verification page, or related documentation. Null indicates that no URL is available."
+    }
+  }
+}

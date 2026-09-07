@@ -1,0 +1,93 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./experience.schema.json",
+  "title":                "Work Experience",
+  "description":          "Represents a professional work experience or employment position.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["position", "company", "startDate", "startLabel", "current", "achievements", "skills"],
+  "properties":           {
+    "position":     {
+      "title":       "Position",
+      "type":        "string",
+      "description": "The job title, position, or role held by the individual.",
+      "minLength":   1
+    },
+    "company":      {
+      "title":       "Company",
+      "type":        "string",
+      "description": "The name of the company, organization, institution, or employer.",
+      "minLength":   1
+    },
+    "companyUrl":   {
+      "title":       "Company URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "A URI linking to the website of the company or employer. Null indicates that no URL is available."
+    },
+    "location":     {
+      "title":       "Location",
+      "type":        ["string", "null"],
+      "description": "The city, region, country, or other location associated with the work experience."
+    },
+    "type":         {
+      "title":       "Work Arrangement",
+      "type":        ["string", "null"],
+      "description": "The work arrangement for the position.",
+      "enum":        ["In-Person", "Hybrid", "Remote", null]
+    },
+    "startDate":    {
+      "title":       "Start Date",
+      "type":        "string",
+      "description": "The year or month in which the work experience began, using YYYY or YYYY-MM format.",
+      "pattern":     "^\\d{4}(-\\d{2})?$"
+    },
+    "startLabel":   {
+      "title":       "Start Date Label",
+      "type":        "string",
+      "description": "The human-readable label used to display the work experience start date.",
+      "minLength":   1
+    },
+    "endDate":      {
+      "title":       "End Date",
+      "type":        ["string", "null"],
+      "description": "The year or month in which the work experience ended, using YYYY or YYYY-MM format. Null indicates that the position is ongoing.",
+      "pattern":     "^\\d{4}(-\\d{2})?$"
+    },
+    "endLabel":     {
+      "title":       "End Date Label",
+      "type":        ["string", "null"],
+      "description": "The human-readable label used to display the work experience end date. Null indicates that the position is ongoing."
+    },
+    "current":      {
+      "title":       "Current Position",
+      "type":        "boolean",
+      "description": "Indicates whether the individual currently holds this position."
+    },
+    "summary":      {
+      "title":       "Summary",
+      "type":        ["string", "null"],
+      "description": "A brief overview of the responsibilities, contributions, or overall scope of the work experience."
+    },
+    "achievements": {
+      "title":       "Achievements",
+      "type":        "array",
+      "description": "A list of notable achievements, results, contributions, or accomplishments from the work experience.",
+      "items":       {
+        "type":        "string",
+        "description": "A notable achievement, result, contribution, or accomplishment.",
+        "minLength":   1
+      }
+    },
+    "skills":       {
+      "title":       "Skills",
+      "type":        "array",
+      "description": "A list of skills, technologies, tools, or areas of expertise used in the work experience.",
+      "items":       {
+        "type":        "string",
+        "description": "A skill, technology, tool, or area of expertise.",
+        "minLength":   1
+      }
+    }
+  }
+}
