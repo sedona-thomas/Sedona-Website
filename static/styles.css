@@ -261,7 +261,7 @@ details > summary {
   text-underline-offset: 2px;
 }
 
-.date {
+.date-range {
   color: var(--color-muted);
   font-size: 0.9rem;
 }

@@ -62,7 +62,9 @@
             <ul class="link-list" aria-label="Project links">
                 {% for link in project.links %}
                 <li>
-                    <a class="button button-primary" href="{{ link.url }}" rel="me noopener noreferrer" target="_blank">{{ link.label }}</a>
+                    <a class="button button-primary" href="{{ link.url }}" rel="me noopener noreferrer" target="_blank">
+                        {{ link.label }}
+                    </a>
                 </li>
                 {% endfor %}
             </ul>
@@ -188,7 +190,7 @@
                             </p>
                         </div>
 
-                        <p class="date date-separator">
+                        <p class="date-range date-separator">
                             <time datetime="{{ item.startDate }}">
                                 {% if item.startLabel %}
                                 {{ item.startLabel }}
@@ -282,11 +284,10 @@
                             </p>
                         </div>
 
-                        <p class="date">
+                        <p class="date-range date-separator">
                             <time datetime="{{ job.startDate }}" aria-label="Started {{ job.startLabel }}">
                                 {{ job.startLabel }}
                             </time>
-                            <span aria-hidden="true"> – </span>
                             {% if job.current or not job.endDate %}
                             <span aria-label="Present">Present</span>
                             {% else %}
@@ -489,6 +490,56 @@
     </section>
     {% endif %}
 
+    {% if content.organizations %}
+    <section class="section" id="organizations" aria-labelledby="organizations-heading">
+        <div class="container">
+            {{ render_section(sections.organizations | default(none)) }}
+            <div class="education-list">
+                {% for organization in content.organizations %}
+                <article class="organization-item">
+                    <h3 class="en-dash-separator">
+                        <span>{{ organization.role }}</span>
+                        <span>{{ organization.name }}</span>
+                    </h3>
+
+                    {% if organization.membership %}
+                    <p class="date-range date-separator">
+                        <time datetime="{{ organization.membership.startDate }}"
+                              aria-label="Started {{ organization.membership.startDate }}">
+                            {% if organization.membership.startLabel %}
+                            {{ organization.membership.startLabel }}
+                            {% else %}
+                            {{ organization.membership.startDate }}
+                            {% endif %}
+                        </time>
+                        {% if not organization.membership.endDate %}
+                        <span aria-label="Present">Present</span>
+                        {% else %}
+                        <time datetime="{{ organization.membership.endDate }}"
+                              aria-label="Ended {{ organization.membership.endDate }}">
+                            {% if organization.membership.endLabel %}
+                            {{ organization.membership.endLabel }}
+                            {% else %}
+                            {{ organization.membership.endDate }}
+                            {% endif %}
+                        </time>
+                        {% endif %}
+                    </p>
+                    {% endif %}
+
+                    <ul>
+                        {% for item in organization.description %}
+                        <li>{{ item|safe }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
     {% if content.conferences %}
     <section class="section" id="conferences" aria-labelledby="conferences-heading">
         <div class="container">
@@ -529,6 +580,75 @@
                         {% endfor %}
                     </ul>
 
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.volunteering %}
+    <section class="section" id="volunteering" aria-labelledby="volunteering-heading">
+        <div class="container">
+            {{ render_section(sections.volunteering | default(none)) }}
+            <div class="education-list">
+                {% for experience in content.volunteering %}
+                <article class="volunteer-experience-item">
+                    <div class="volunteer-experience-header">
+                        <h3 class="organization-info en-dash-separator">
+                            <span>{{ experience.role }}</span>
+                            <span>{{ experience.organization }}</span>
+                        </h3>
+
+                        {% if experience.participation %}
+                        <p class="dot-separator"
+                           aria-label="Dates of participation volunteering at {{ experience.organization }}">
+                            {% for timePeriod in experience.participation %}
+                            <span class="date-range date-separator">
+                                <time datetime="{{ timePeriod.startDate }}"
+                                      aria-label="Started {{ timePeriod.startDate }}">
+                                    {% if timePeriod.startLabel %}
+                                    {{ timePeriod.startLabel }}
+                                    {% else %}
+                                    {{ timePeriod.startDate }}
+                                    {% endif %}
+                                </time>
+                                {% if not timePeriod.endDate %}
+                                <span aria-label="Present">Present</span>
+                                {% else %}
+                                <time datetime="{{ timePeriod.endDate }}" aria-label="Ended {{ timePeriod.endDate }}">
+                                    {% if timePeriod.endLabel %}
+                                    {{ timePeriod.endLabel }}
+                                    {% else %}
+                                    {{ timePeriod.endDate }}
+                                    {% endif %}
+                                </time>
+                                {% endif %}
+                            </span>
+                            {% endfor %}
+                        </p>
+                        {% endif %}
+                    </div>
+
+                    {% if experience.summary %}
+                    <p>{{ experience.summary|safe }}</p>
+                    {% endif %}
+
+                    {% if experience.description %}
+                    <ul class="volunteer-experience-list">
+                        {% for item in experience.description %}
+                        <li>{{ item|safe }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if experience.skills %}
+                    <ul class="tag-list" aria-label="Skills used volunteering at {{ experience.organization }}">
+                        {% for skill in experience.skills %}
+                        <li class="skill">{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
                 </article>
                 {% endfor %}
             </div>
@@ -589,7 +709,7 @@
 </footer>
 
 <script>
-    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
