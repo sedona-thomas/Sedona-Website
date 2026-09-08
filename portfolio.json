@@ -63,6 +63,19 @@
       "heading":        "Conference Experience",
       "excludeFromNav": true
     },
+    "volunteering":   {
+      "label":          "Volunteering",
+      "id":             "volunteering",
+      "eyebrow":        "Volunteer Experience",
+      "heading":        "Volunteering",
+      "excludeFromNav": true
+    },
+    "organizations":  {
+      "label":   "Organizations",
+      "id":      "organizations",
+      "eyebrow": "Organizations & Affiliations",
+      "heading": "Organizations"
+    },
     "languages":      {
       "label":          "Languages",
       "id":             "languages",
@@ -113,6 +126,7 @@
         "thesis":         "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
         "highlights":     [
           "Graduated <strong>cum laude</strong>.",
+          "<strong>Dean's List:</strong> Fall 2022, Spring 2023",
           "<a href=\"https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners\">2023 Faculty Choice</a> Senior Thesis.",
           "Teaching Assistant for Computers and Society under Professor Ron Baecker.",
           "Conducted undergraduate research under the supervision of Professor Mark Santolucito."
@@ -232,6 +246,7 @@
         "thesis":         null,
         "description":    "<strong>Coursework focus:</strong> applications of computer science, artificial intelligence, natural language processing, accessible UI design, and clean object-oriented design.",
         "highlights":     [
+          "<strong>Dean's List:</strong> Spring 2021",
           "Accepted into Columbia University’s <span class=\"underline\">SEAS/CC 4-1 Program,</span> a rigorous dual-degree pathway leading to a B.A. from Columbia College and a B.S. from the Fu Foundation School of Engineering and Applied Science.",
           "Volunteered as a Makerspace staff member and served as a Columbia Health Peer Ambassador.",
           "Provided mentorship and academic support to students in the Society of Women Engineers (SWE) and Women in Computer Science (WiCS) organizations."
@@ -353,7 +368,6 @@
           "3D Printing",
           "Laser Cutting",
           "Soldering",
-          "Stained Glass",
           "Leathercraft",
           "Jewelry Smithing",
           "CNC Waterjet Cutting",
@@ -605,6 +619,18 @@
         ]
       },
       {
+        "name":             "Columbia University Dean's List",
+        "issuer":           "Columbia University",
+        "date":             "2023",
+        "dateLabel":        "Spring 2021, Fall 2022, Spring 2023",
+        "certificate":      null,
+        "acceptanceLetter": null,
+        "article":          null,
+        "description":      [
+          "Academic honor awarded for outstanding semester performance, requiring a GPA of at least 3.5 with 15+ graded credits in Columbia Engineering or 3.6 with 12+ letter-graded credits in Columbia College."
+        ]
+      },
+      {
         "name":             "The Beesen Global Experience Research Fellowship",
         "issuer":           "Columbia University",
         "date":             "2019",
@@ -720,6 +746,145 @@
           "Participated in workshops, networking events, and employer discussions focused on software engineering, product management, and technology careers.",
           "Connected with technology professionals and fellow students, gaining insight into recruiting, mentorship, and career pathways in the tech industry."
         ]
+      }
+    ],
+    "volunteering":   [
+      {
+        "organization":    "Columbia University Makerspace",
+        "organizationUrl": "https://make.columbia.edu/",
+        "role":            "Volunteer Staff Member",
+        "participation":   [
+          {
+            "startDate":  "2022-02",
+            "startLabel": "Apr 2022",
+            "endDate":    "2023-05",
+            "endLabel":   "May 2023"
+          }
+        ],
+        "summary":         "Volunteer makerspace staff member leading equipment trainings and holding open hours to assist users with fabrication tools and projects.",
+        "description":     [
+          "Supported daily makerspace operations by helping users safely access and operate fabrication tools, electronics equipment, and workshop resources.",
+          "Led hands-on workshops on leathercraft, stained glass, jewelry smithing, 3D printing, laser cutting, and electronics.",
+          "Trained and advised students, researchers, and community members on equipment use, prototyping techniques, and makerspace policies.",
+          "Assisted with troubleshooting, workspace organization, equipment maintenance, and enforcement of health and safety procedures.",
+          "Collaborated with makers from diverse technical backgrounds to develop projects, share knowledge, and foster an inclusive creative environment.",
+          "Promoted responsible tool use and independent problem-solving while serving as a knowledgeable point of contact during open hours."
+        ],
+        "skills":          [
+          "3D Printing",
+          "Laser Cutting",
+          "Soldering",
+          "Leathercraft",
+          "Jewelry Smithing",
+          "CNC Waterjet Cutting",
+          "Woodshop Tools",
+          "Vinyl Cutting"
+        ]
+      },
+      {
+        "organization":    "Columbia Health",
+        "organizationUrl": "https://www.health.columbia.edu/news/cu-well-peer-ambassador-network-launched-facilitate-connection-between-students-and-health",
+        "role":            "Peer Ambassador & New Student Orientation Program Discussion Facilitator",
+        "participation":   [
+          {
+            "startDate":  "2019",
+            "startLabel": null,
+            "endDate":    "2023",
+            "endLabel":   null
+          }
+        ],
+        "summary":         "Columbia Health Peer Ambassador and NSOP Discussion Facilitator supporting incoming and current students by leading health discussions and helping students navigate campus life.",
+        "description":     [
+          "Facilitated New Student Orientation Program (NSOP) discussions for hundreds of incoming students each year, covering campus resources, academics, mental health, and student life.",
+          "Educated Columbia students about available campus resources and services.",
+          "Served as a liaison between the student body and Columbia Health by communicating students' needs, concerns, and feedback.",
+          "Guided incoming and current students in navigating campus life, fostering meaningful connections and promoting an inclusive community.",
+          "Mentored peers by answering questions, sharing personal experiences, and encouraging student involvement.",
+          "Collaborated with orientation staff and student leaders to create inclusive and informative programming."
+        ],
+        "skills":          [
+          "Public Speaking",
+          "Leadership",
+          "Communication",
+          "Collaboration",
+          "Mentorship",
+          "Group Facilitation"
+        ]
+      },
+      {
+        "organization":    "Computers and Society",
+        "organizationUrl": "https://www.linkedin.com/company/computers-society-org/",
+        "role":            "Student Volunteer",
+        "participation":   [
+          {
+            "startDate":  "2022",
+            "startLabel": null,
+            "endDate":    "2023",
+            "endLabel":   null
+          }
+        ],
+        "summary":         "Student volunteer curating resources to aid multidisciplinary learning about computers and society and computer ethics.",
+        "description":     [
+          "Researching and writing the first <cite>Computers and Society</cite> Wikipedia page.",
+          "Collaborating with University of Toronto Emeritus Professor Ron Baecker, author of <cite>Computers and Society: Modern Perspectives (Oxford University Press, 2019)</cite> and <cite>Digital Dreams Have Become Nightmares: What We Must Do (2021)</cite>.",
+          "Researching and drafting content on topics at the intersection of computing, technology, and society.",
+          "Editing and organizing materials to support the development of the Wikipedia page."
+        ],
+        "skills":          [
+          "Research",
+          "Academic Writing",
+          "Collaboration",
+          "Critical Analysis",
+          "Technology Ethics",
+          "Copy Editing",
+          "Source Evaluation"
+        ]
+      }
+    ],
+    "organizations":  [
+      {
+        "name":        "Gamma Phi Beta (GPhi)",
+        "role":        "Lifetime Member",
+        "membership":  {
+          "startDate":  "2021",
+          "startLabel": null,
+          "endDate":    null,
+          "endLabel":   null
+        },
+        "description": []
+      },
+      {
+        "name":        "Girl Scouts of the USA",
+        "role":        "Lifetime Member",
+        "membership":  {
+          "startDate":  "2018",
+          "startLabel": null,
+          "endDate":    null,
+          "endLabel":   null
+        },
+        "description": []
+      },
+      {
+        "name":        "Society of Women Engineers (SWE)",
+        "role":        "General Member",
+        "membership":  {
+          "startDate":  "2018",
+          "startLabel": null,
+          "endDate":    "2023",
+          "endLabel":   null
+        },
+        "description": []
+      },
+      {
+        "name":        "Women in Computer Science (WiCS)",
+        "role":        "General Member",
+        "membership":  {
+          "startDate":  "2018",
+          "startLabel": null,
+          "endDate":    "2023",
+          "endLabel":   null
+        },
+        "description": []
       }
     ],
     "languages":      [
