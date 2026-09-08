@@ -1,0 +1,66 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./publication.schema.json",
+  "title":                "Publication",
+  "description":          "Represents an publication.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["publisher", "title", "role", "publicationDate", "url", "abstract", "tags"],
+  "properties":           {
+    "publisher":     {
+      "title":       "Publication Organization",
+      "type":        "string",
+      "description": "The publishing organization.",
+      "minLength":   1
+    },
+    "publisherUrl":             {
+      "title":       "Publisher URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "The URI of the publication (ex. a publication's DOI URL)."
+    },
+    "title":           {
+      "title":       "Publication Title",
+      "type":        "string",
+      "description": "The publication title.",
+      "minLength":   1
+    },
+    "role":            {
+      "title":       "Contribution Role",
+      "type":        "string",
+      "description": "A role name describing the contributions to the publication.",
+      "minLength":   1
+    },
+    "publicationDate": {
+      "title":       "Publication Date",
+      "type":        "string",
+      "description": "The year or date on which the award was received."
+    },
+    "url":             {
+      "title":       "Publication URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "The URI of the publication (ex. a publication's DOI URL)."
+    },
+    "abstract":        {
+      "title":       "Abstract",
+      "type":        "array",
+      "description": "A list of abstract paragraphs.",
+      "items":       {
+        "type":        "string",
+        "description": "An abstract paragraph.",
+        "minLength":   1
+      }
+    },
+    "tags":            {
+      "title":       "Tags",
+      "type":        "array",
+      "description": "A list of tags related to the publication.",
+      "items":       {
+        "type":        "string",
+        "description": "A tag.",
+        "minLength":   1
+      }
+    }
+  }
+}

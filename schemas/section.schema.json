@@ -41,6 +41,11 @@
       "description": "Lists professional awards and recognitions.",
       "$ref":        "#/$defs/section"
     },
+    "publications":         {
+      "title":       "Publications Section",
+      "description": "Lists publications.",
+      "$ref":        "#/$defs/section"
+    },
     "conferences":    {
       "title":       "Conference Section",
       "description": "Lists professional conference attendance.",

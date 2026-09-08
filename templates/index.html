@@ -75,7 +75,6 @@
 </div>
 {% endmacro %}
 
-
 <!doctype html>
 <html lang="{{ metadata.language }}">
 <head>
@@ -365,9 +364,9 @@
     <section class="section" id="awards" aria-labelledby="awards-heading">
         <div class="container">
             {{ render_section(sections.awards | default(none)) }}
-            <div class="education-list">
+            <div class="award-list">
                 {% for award in content.awards %}
-                <article class="education-item">
+                <article class="award-item">
                     <h3>{{ award.name }}</h3>
 
                     <p class="issuer">
@@ -397,6 +396,51 @@
                         {% endif %}
                     </p>
 
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content.publications %}
+    <section class="section" id="publications" aria-labelledby="publications-heading">
+        <div class="container">
+            {{ render_section(sections.publications | default(none)) }}
+            <div class="publication-list">
+                {% for publication in content.publications %}
+                <article class="publication-item">
+
+                    <h3>
+                        {% if publication.url %}
+                        <a href="{{ publication.url }}">{{ publication.title }}</a>
+                        {% else %}
+                        {{ publication.title }}
+                        {% endif %}
+                    </h3>
+
+                    <p class="issuer">
+                        <em>{{ publication.role }}</em>
+                        ·
+                        <a href="{{ publication.publisherUrl }}">{{ publication.publisher }}</a>
+                        ·
+                        <time datetime="{{ publication.publicationDate }}">{{ publication.publicationDate }}</time>
+                    </p>
+
+                    {% if publication.abstract %}
+                    <details>
+                        <summary>Abstract</summary>
+                        {% for paragraph in publication.abstract %}
+                        <p>{{ paragraph|safe }}</p>
+                        {% endfor %}
+                    </details>
+                    {% endif %}
+
+                    <ul class="tag-list">
+                        {% for tag in publication.tags %}
+                        <li>{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
                 </article>
                 {% endfor %}
             </div>

@@ -13,6 +13,7 @@
     "projects",
     "certifications",
     "awards",
+    "publications",
     "languages",
     "social"
   ],
@@ -83,6 +84,14 @@
       "type":        "array",
       "items":       {
         "$ref": "./award.schema.json"
+      }
+    },
+    "publications":   {
+      "title":       "Publications",
+      "description": "A list of publications.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./publication.schema.json"
       }
     },
     "conferences":    {
