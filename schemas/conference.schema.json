@@ -20,14 +20,41 @@
       "minLength":   1
     },
     "attendance":  {
-      "title":       "Attendance",
-      "type":        "array",
-      "description": "The dates or periods during which the conference or event was attended.",
-      "minItems":    1,
-      "items":       {
-        "type":        "string",
-        "description": "A date or attendance period associated with the conference or event.",
-        "minLength":   1
+      "title":                "Conference Attendance",
+      "description":          "Information about the conference or event was attended.",
+      "type":                 "array",
+      "additionalProperties": false,
+      "required":             ["date", "location"],
+      "items":                {
+        "title":                "Attendance Period",
+        "type":                 "object",
+        "additionalProperties": false,
+        "required":             ["date", "location"],
+        "properties":           {
+          "type":      {
+            "title":       "Conference Type",
+            "type":        ["string", "null"],
+            "description": "An additional label related to the conference.",
+            "examples":    ["Engineering", "Tech"]
+          },
+          "date":      {
+            "title":       "Date",
+            "description": "The date or year of attendance.",
+            "type":        "string",
+            "format":      "date"
+          },
+          "dateLabel": {
+            "title":       "Date Label",
+            "type":        ["string", "null"],
+            "description": "The human-readable start date displayed to users."
+          },
+          "location":  {
+            "title":       "Conference Location",
+            "type":        "string",
+            "description": "The conference location.",
+            "examples":    ["New York, NY", "Virtual"]
+          }
+        }
       }
     },
     "description": {
@@ -36,6 +63,7 @@
       "description": "A list of statements describing the conference participation.",
       "minItems":    1,
       "items":       {
+        "title":       "Description Statement",
         "type":        "string",
         "description": "A statement describing the conference participation.",
         "minLength":   1

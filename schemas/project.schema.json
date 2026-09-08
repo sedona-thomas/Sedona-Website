@@ -41,6 +41,11 @@
       "description": "The year, month, or date associated with the project.",
       "minLength":   1
     },
+    "dateLabel":     {
+      "title":       "Project Date Label",
+      "type":        ["string", "null"],
+      "description": "The display format of the year, month, or date associated with the project."
+    },
     "achievements":  {
       "title":       "Achievements",
       "type":        "array",

@@ -37,11 +37,17 @@
                 {% endif %}
             </h3>
 
-            <p>
+            <p class="en-dash-separator">
                 <strong>
-                    <time datetime="{{ project.date }}">{{ project.date }}</time>
+                    <time datetime="{{ project.date }}">
+                        {% if project.dateLabel %}
+                        {{ project.dateLabel }}
+                        {% else %}
+                        {{ project.date }}
+                        {% endif %}
+                    </time>
                 </strong>
-                — {{ project.description }}
+                <span>{{ project.description|safe }}</span>
             </p>
 
             {% if project.achievements %}
@@ -56,7 +62,7 @@
             <ul class="link-list" aria-label="Project links">
                 {% for link in project.links %}
                 <li>
-                    <a href="{{ link.url }}" rel="me noopener noreferrer" target="_blank">{{ link.label }}</a>
+                    <a class="button button-primary" href="{{ link.url }}" rel="me noopener noreferrer" target="_blank">{{ link.label }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -167,26 +173,39 @@
                         <div>
                             <h3>{{ item.degree }}</h3>
 
-                            <p class="institution">
+                            <p class="institution-info dot-separator">
+                                <span class="institution">
                                 {% if item.institutionUrl %}
                                 <a href="{{ item.institutionUrl }}">{{ item.institution }}</a>
                                 {% else %}
                                 {{ item.institution }}
                                 {% endif %}
+                                </span>
 
                                 {% if item.location %}
-                                <span> · {{ item.location }}</span>
+                                <span class="location">{{ item.location }}</span>
                                 {% endif %}
                             </p>
                         </div>
 
-                        <p class="date">
-                            <time datetime="{{ item.startDate }}">{{ item.startLabel }}</time>
-                            –
+                        <p class="date date-separator">
+                            <time datetime="{{ item.startDate }}">
+                                {% if item.startLabel %}
+                                {{ item.startLabel }}
+                                {% else %}
+                                {{ item.startDate }}
+                                {% endif %}
+                            </time>
                             {% if item.current %}
-                            Present
+                            <span>Present</span>
                             {% else %}
-                            <time datetime="{{ item.endDate }}">{{ item.endLabel }}</time>
+                            <time datetime="{{ item.endDate }}">
+                                {% if item.endLabel %}
+                                {{ item.endLabel }}
+                                {% else %}
+                                {{ item.endDate }}
+                                {% endif %}
+                            </time>
                             {% endif %}
                         </p>
                     </div>
@@ -244,30 +263,36 @@
                         <div>
                             <h3>{{ job.position }}</h3>
 
-                            <p class="employer">
+                            <p class="employer-info dot-separator">
+                                <span class="employer">
                                 {% if job.companyUrl %}
                                 <a href="{{ job.companyUrl }}">{{ job.company }}</a>
                                 {% else %}
                                 {{ job.company }}
                                 {% endif %}
+                                </span>
 
                                 {% if job.location %}
-                                <span> · {{ job.location }}</span>
+                                <span>{{ job.location }}</span>
                                 {% endif %}
 
                                 {% if job.type %}
-                                <span> · {{ job.type }}</span>
+                                <span>{{ job.type }}</span>
                                 {% endif %}
                             </p>
                         </div>
 
                         <p class="date">
-                            <time datetime="{{ job.startDate }}">{{ job.startLabel }}</time>
-                            –
-                            {% if job.current %}
-                            Present
+                            <time datetime="{{ job.startDate }}" aria-label="Started {{ job.startLabel }}">
+                                {{ job.startLabel }}
+                            </time>
+                            <span aria-hidden="true"> – </span>
+                            {% if job.current or not job.endDate %}
+                            <span aria-label="Present">Present</span>
                             {% else %}
-                            <time datetime="{{ job.endDate }}">{{ job.endLabel }}</time>
+                            <time datetime="{{ job.endDate }}" aria-label="Ended {{ job.endLabel }}">
+                                {{ job.endLabel }}
+                            </time>
                             {% endif %}
                         </p>
                     </div>
@@ -287,7 +312,7 @@
                     {% if job.skills %}
                     <ul class="tag-list" aria-label="Skills and technologies used at {{ job.company }}">
                         {% for skill in job.skills %}
-                        <li>{{ skill }}</li>
+                        <li class="skill">{{ skill }}</li>
                         {% endfor %}
                     </ul>
                     {% endif %}
@@ -307,7 +332,7 @@
                 <article class="skill-group">
                     <h3>{{ group.category }}</h3>
 
-                    <ul class="tag-list">
+                    <ul class="tag-list larger-tag-list">
                         {% for skill in group["items"] %}
                         <li>{{ skill }}</li>
                         {% endfor %}
@@ -346,7 +371,13 @@
 
                     {% if certification.date %}
                     <p class="date">
-                        <time datetime="{{ certification.date }}">{{ certification.date }}</time>
+                        <time datetime="{{ certification.date }}">
+                            {% if certification.dateLabel %}
+                            {{ certification.dateLabel }}
+                            {% else %}
+                            {{ certification.date }}
+                            {% endif %}
+                        </time>
                     </p>
                     {% endif %}
 
@@ -369,33 +400,39 @@
                 <article class="award-item">
                     <h3>{{ award.name }}</h3>
 
-                    <p class="issuer">
-                        {{ award.issuer }}
-                        ·
-                        <time datetime="{{ award.date }}">{{ award.date }}</time>
-                    </p>
+                    <div class="award-info">
+                        <div class="issuer dot-separator">
+                            <span>{{ award.issuer }}</span>
+                            <time datetime="{{ award.date }}">
+                                {% if award.dateLabel %}
+                                {{ award.dateLabel }}
+                                {% else %}
+                                {{ award.date }}
+                                {% endif %}
+                            </time>
+                        </div>
+
+                        <div class="award-links">
+                            {% if award.certificate %}
+                            <a class="button button-tertiary" href="{{ award.certificate }}" download>Certificate</a>
+                            {% endif %}
+
+                            {% if award.acceptanceLetter %}
+                            <a class="button button-tertiary" href="{{ award.acceptanceLetter }}" download>Acceptance
+                                Letter</a>
+                            {% endif %}
+
+                            {% if award.article %}
+                            <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
+                            {% endif %}
+                        </div>
+                    </div>
 
                     <ul>
                         {% for paragraph in award.description %}
                         <li>{{ paragraph|safe }}</li>
                         {% endfor %}
                     </ul>
-
-                    <p>
-                        {% if award.certificate %}
-                        <a class="button button-tertiary" href="{{ award.certificate }}" download>Certificate</a>
-                        {% endif %}
-
-                        {% if award.acceptanceLetter %}
-                        <a class="button button-tertiary" href="{{ award.acceptanceLetter }}" download>Acceptance
-                            Letter</a>
-                        {% endif %}
-
-                        {% if award.article %}
-                        <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
-                        {% endif %}
-                    </p>
-
                 </article>
                 {% endfor %}
             </div>
@@ -419,12 +456,16 @@
                         {% endif %}
                     </h3>
 
-                    <p class="issuer">
+                    <p class="issuer dot-separator">
                         <em>{{ publication.role }}</em>
-                        ·
-                        <a href="{{ publication.publisherUrl }}">{{ publication.publisher }}</a>
-                        ·
-                        <time datetime="{{ publication.publicationDate }}">{{ publication.publicationDate }}</time>
+                        <span><a href="{{ publication.publisherUrl }}">{{ publication.publisher }}</a></span>
+                        <time datetime="{{ publication.publicationDate }}">
+                            {% if publication.publicationDateLabel %}
+                            {{ publication.publicationDateLabel }}
+                            {% else %}
+                            {{ publication.publicationDate }}
+                            {% endif %}
+                        </time>
                     </p>
 
                     {% if publication.abstract %}
@@ -455,13 +496,28 @@
             <div class="education-list">
                 {% for conference in content.conferences %}
                 <article class="conference-item">
-                    <h3>{{ conference.name }} — {{ conference.role }}</h3>
+                    <h3 class="en-dash-separator">
+                        <span>{{ conference.name }}</span>
+                        <span>{{ conference.role }}</span>
+                    </h3>
 
                     {% if conference.attendance %}
                     <ul class="tag-list" aria-label="Dates of attendance at {{ conference.name }}">
-                        {% for date in conference.attendance %}
-                        <li>
-                            <time datetime="{{ date }}">{{ date }}</time>
+                        {% for event in conference.attendance %}
+                        <li class="dot-separator">
+                            {% if event.type %}
+                            <span>{{ event.type }}</span>
+                            {% endif %}
+                            <time datetime="{{ event.date }}">
+                                {% if event.dateLabel %}
+                                {{ event.dateLabel }}
+                                {% else %}
+                                {{ event.date }}
+                                {% endif %}
+                            </time>
+                            {% if event.location %}
+                            <span>{{ event.location }}</span>
+                            {% endif %}
                         </li>
                         {% endfor %}
                     </ul>

@@ -7,24 +7,30 @@
   "additionalProperties": false,
   "required":             ["name", "issuer", "date"],
   "properties":           {
-    "name":   {
+    "name":      {
       "title":       "Certification Name",
       "type":        "string",
       "description": "The official name or title of the certification.",
       "minLength":   1
     },
-    "issuer": {
+    "issuer":    {
       "title":       "Issuing Organization",
       "type":        "string",
       "description": "The organization, institution, committee, or person that issued the certification.",
       "minLength":   1
     },
-    "date":   {
+    "date":      {
       "title":       "Certification Date",
       "type":        "string",
-      "description": "The year or date on which the certification was awarded."
+      "description": "The year or date on which the certification was awarded.",
+      "format":      "date"
     },
-    "url":    {
+    "dateLabel": {
+      "title":       "Certification Date Label",
+      "type":        ["string", "null"],
+      "description": "The display format of the year or date on which the certification was awarded."
+    },
+    "url":       {
       "title":       "Certification URL",
       "type":        ["string", "null"],
       "format":      "uri",

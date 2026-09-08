@@ -22,7 +22,13 @@
     "date":             {
       "title":       "Award Date",
       "type":        "string",
-      "description": "The year or date on which the award was received."
+      "description": "The year or date on which the award was received.",
+      "format":      "date"
+    },
+    "dateLabel": {
+      "title":       "Award Date Label",
+      "type":        ["string", "null"],
+      "description": "The display format of the year or date on which the certification was awarded."
     },
     "certificate":      {
       "title":       "Certificate",
