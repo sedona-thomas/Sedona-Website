@@ -424,7 +424,7 @@
       "primaryProjects":   [
         {
           "name":          "OpenWRT Monitoring Stack",
-          "url":           "https://github.com/sedona-thomas/openwrt-monitoring-stack",
+          "url":           "https://github.com/sedona-thomas/Protected-OpenWRT-Metrics",
           "description":   "An at-home monitoring stack with Grafana, Prometheus, and Loki for a router running OpenWRT.",
           "image":         "static/img/grafana_screenshot.png",
           "imageAlt":      "Screenshot of a Grafana dashboard displaying the state of running Docker containers.",
@@ -440,7 +440,13 @@
             "Observability",
             "Open Source"
           ],
-          "links":         [],
+          "links":         [
+            {
+              "label": "Related - Basic Monitoring Stack",
+              "url":   "https://github.com/sedona-thomas/Basic-Monitoring-Stack",
+              "icon":  "static/img/github.png"
+            }
+          ],
           "collaborators": []
         },
         {
