@@ -1,9 +1,7 @@
 :root {
   color-scheme: light;
 
-  /* Color palette */
-  --white: #ffffff;
-
+  /* Blue palette */
   --blue-50: #eef4f9;
   --blue-100: #dce8f2;
   --blue-200: #c2d7e8;
@@ -11,47 +9,71 @@
   --blue-400: #789bb9;
   --blue-500: #6f93b2;
   --blue-600: #496f8e;
+  --blue-650: #3d5f7a;
   --blue-700: #315a7a;
   --blue-800: #1d3d56;
   --blue-900: #1b405b;
   --blue-950: #122b3e;
 
-  /* Blue palette */
-  --blue-main: var(--blue-300);
+  /* Other Blue Palettes */
+  --navy-500: #162b3b;
+  --navy-800: #163f5d;
+  --navy-900: #0d2d44;
+  --slate-500: #3f6078;
+  --slate-700: #365368;
+  --slate-750: #304b60;
+  --slate-800: #2b4356;
+
+  /* Neutral palette */
+  --neutral-0: #ffffff;
+  --neutral-50: #f5f9fc;
+  --neutral-100: #e8f0f7;
+  --neutral-150: #e0ebf4;
+  --white: var(--neutral-0);
+
+  /* Orange palette */
+  --orange-700: #8a4b08;
+
+  /* Yellow palette */
+  --yellow-400: #fbbf24;
+
+  /* Blue aliases */
   --blue-lighter: var(--blue-50);
   --blue-light: var(--blue-100);
   --blue-soft: var(--blue-200);
-
+  --blue-main: var(--blue-300);
   --blue-medium: var(--blue-400);
   --blue-slate: var(--blue-500);
   --blue-medium-slate: var(--blue-600);
   --blue-dark-slate: var(--blue-900);
-
   --blue-dark: var(--blue-700);
   --blue-darker: var(--blue-800);
   --blue-deepest: var(--blue-950);
 
   /* Text colors */
   --text-white: var(--white);
-  --text-offwhite: #f5f9fc;
-  --text-navy: #162b3b;
-  --text-slate: #304b60;
-  --text-muted: #3f6078;
-  --text-pale: #e0ebf4;
+  --text-offwhite: var(--neutral-50);
+  --text-medium-pale: var(--neutral-100);
+  --text-pale: var(--neutral-150);
+  --text-navy: var(--navy-500);
+  --text-muted: var(--slate-500);
+  --text-medium-muted: var(--slate-700);
+  --text-slate: var(--slate-750);
+  --text-medium-slate: var(--slate-800);
 
   /* Link colors */
-  --link-blue: #163f5d;
-  --link-blue-light: #c2d7e8;
-  --link-blue-hover: #0d2d44;
+  --link-blue: var(--navy-800);
+  --link-blue-light: var(--blue-soft);
+  --link-blue-hover: var(--navy-900);
   --link-blue-hover-light: var(--white);
 
-  /* Borders and shadows */
-  --border-blue: #496f8e;
+  /* Borders and effects */
+  --border-blue: var(--blue-medium-slate);
   --shadow-blue: rgb(29 61 86 / 14%);
 
-  /* Utilities */
-  --focus-orange: #8a4b08;
-  --yellow-focus: #fbbf24;
+  /* Utility colors */
+  --focus-orange: var(--orange-700);
+  --focus-yellow: var(--yellow-400);
 
   /* Semantic colors */
   --color-background: var(--blue-main);
@@ -60,6 +82,7 @@
 
   --color-text: var(--text-navy);
   --color-muted: var(--text-slate);
+  --color-medium-muted: var(--text-medium-slate);
   --color-border: var(--border-blue);
 
   --color-primary: var(--blue-dark);
@@ -97,6 +120,7 @@
 
     --color-text: var(--text-offwhite);
     --color-muted: var(--text-pale);
+    --color-medium-muted: var(--text-medium-pale);
     --color-border: var(--blue-medium-slate);
 
     --color-primary: var(--blue-main);
@@ -107,7 +131,7 @@
 
     --color-button-primary-text: var(--blue-deepest);
 
-    --color-focus: var(--yellow-focus);
+    --color-focus: var(--focus-yellow);
     --color-shadow: rgb(0 0 0 / 28%);
   }
 }
@@ -189,10 +213,6 @@ p {
   margin-top: 0;
 }
 
-details {
-  margin-bottom: 1rem;
-}
-
 cite {
   font-style: italic;
 }
@@ -211,20 +231,29 @@ main > section:nth-of-type(even) {
   margin-bottom: 2rem;
 }
 
+/* ---------------------------- Details Dropdown --------------------------- */
+
+details {
+  margin-bottom: 1rem;
+}
+
+details > summary {
+  font-size: 1.3rem;
+}
+
 /* -------------------------------- Styling -------------------------------- */
 
 .larger-text {
   font-size: 120%;
 }
 
+.medium-strong {
+  font-weight: 600;
+}
+
 .underline {
   text-decoration: underline;
   text-underline-offset: 1px;
-}
-
-.hero-intro .underline {
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
 }
 
 .larger-text .underline {
@@ -235,6 +264,22 @@ main > section:nth-of-type(even) {
 .date {
   color: var(--color-muted);
   font-size: 0.9rem;
+}
+
+.dot-separator > * + *::before {
+  content: " · ";
+}
+
+.en-dash-separator > * + *::before {
+  content: " — ";
+}
+
+.date-separator > * + *::before {
+  content: " — ";
+}
+
+.skill {
+  font-weight: 600;
 }
 
 /* -------------------------------- Buttons -------------------------------- */
@@ -252,8 +297,8 @@ main > section:nth-of-type(even) {
 }
 
 .button-primary {
+  color: var(--color-button-primary-text);
   background-color: var(--color-primary);
-  color: #ffffff;
 }
 
 .button-secondary {
@@ -272,11 +317,11 @@ main > section:nth-of-type(even) {
 
 .button-primary:hover {
   background-color: var(--color-primary-hover);
-  color: #ffffff;
+  color: var(--white);
 }
 
 .button-secondary:hover, .button-tertiary:hover {
-  background-color: var(--color-surface);
+  background-color: var(--color-primary);
   color: var(--color-link-hover);
 }
 
@@ -292,7 +337,7 @@ main > section:nth-of-type(even) {
   padding: 0;
 }
 
-.tag-list li {
+.tag-list > li {
   border: 1px solid var(--color-border);
   border-radius: 999px;
 
@@ -302,6 +347,14 @@ main > section:nth-of-type(even) {
   font-size: 0.875rem;
   padding: 0.25rem 0.7rem;
 }
+
+.tag-list.larger-tag-list > li {
+  border: 1.25px solid;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 450;
+}
+
 
 /* ------------------------------- Link Lists ------------------------------ */
 
@@ -533,8 +586,13 @@ main > section:nth-of-type(even) {
 .hero-intro {
   max-width: 42rem;
 
-  color: var(--color-muted);
+  color: var(--color-medium-muted);
   font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.hero-intro .underline {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .hero-actions {
@@ -564,6 +622,7 @@ main > section:nth-of-type(even) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
+  padding: 1.25rem;
 }
 
 .card {
@@ -688,11 +747,7 @@ main > section:nth-of-type(even) {
   align-items: center;
   gap: 0.45rem;
 
-  border: 1px solid var(--color-primary);
   border-radius: 999px;
-
-  background-color: var(--color-primary);
-  color: #ffffff;
 
   padding: 0.45rem 0.85rem;
 
@@ -708,15 +763,39 @@ main > section:nth-of-type(even) {
 }
 
 .project-content .link-list a:hover {
-  border-color: var(--color-primary-hover);
-  background-color: var(--color-primary-hover);
-  color: #ffffff;
   transform: translateY(-0.1rem);
 }
 
 .project-content .link-list a:focus-visible {
-  outline: 0.2rem solid var(--color-focus);
   outline-offset: 0.15rem;
+}
+
+/* --------------------------------- Award --------------------------------- */
+
+.award-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.issuer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.award-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.award-links .button {
+  border-color: transparent;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
 }
 
 /* -------------------------------- Contact -------------------------------- */

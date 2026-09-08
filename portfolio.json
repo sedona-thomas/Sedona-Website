@@ -35,7 +35,7 @@
       "label":   "Projects",
       "id":      "projects",
       "eyebrow": "Portfolio",
-      "heading": "Selected Projects"
+      "heading": "Highlighted Projects"
     },
     "certifications": {
       "label":          "Certifications",
@@ -84,12 +84,13 @@
       "role":           "Full-Stack Developer",
       "email":          "sedona@caa.columbia.edu",
       "intro":          [
-        "Full-stack developer with 3+ years of experience building containerized microservices in Java and monitoring cloud-native applications with Prometheus and Grafana.",
+        "Full-stack developer with <span class=\"medium-strong\">7+ years</span> of programming experience and <span class=\"medium-strong\">3+ years</span> of industry experience building containerized <span class=\"skill\">Java</span> and <span class=\"skill\">Python</span> microservices and monitoring cloud-native applications using <span class=\"skill\">Prometheus</span> and <span class=\"skill\">Grafana</span>.",
         "Active <strong class=\"underline\">Top-Secret</strong> Security Clearance."
       ],
       "bio":            [
-        "Full-stack developer specializing in <em>cloud-native</em> Java Spring Boot microservices in <em>high-complexity</em> environments. Columbia University graduate with a dual-B.A./B.S. in <span class=\"underline\">Computer Science</span> and <span class=\"underline\">Human Rights</span>. Strong experience with microservice observability in cloud-native environments.",
-        "Prior roles include leading automated integration testing and application monitoring efforts across a suite of containerized microservices, specifically through the design of intuitive, user-friendly Grafana dashboards for use by both service developers and non-technical maintainers."
+        "Full-stack developer specializing in <em>cloud-native</em> <span class=\"skill\">Java</span> <span class=\"skill\">Spring Boot</span> microservices in <em>high-complexity</em> environments. Columbia University graduate with a dual-B.A./B.S. in <span class=\"underline\">Computer Science</span> and <span class=\"underline\">Human Rights</span>. Strong experience with microservice observability in cloud-native environments.",
+        "Brings <span class=\"underline\">7+ years</span> of formal programming experience in <span class=\"skill\">Python</span>, <span class=\"skill\">Java</span>, <span class=\"skill\">C++</span>, <span class=\"skill\">JavaScript</span>, <span class=\"skill\">Bash</span>, and other technologies, including <span class=\"underline\">3+ years</span> of full-time industry experience and an internship at Amazon.",
+        "Experience leading automated integration testing and application monitoring efforts across a suite of containerized microservices, including designing intuitive, user-friendly <span class=\"skill\">Grafana</span> dashboards that enabled both service developers and non-technical maintainers to monitor live system health."
       ],
       "website":        "https://www.sedonathomas.com",
       "profileImage":   "static/img/profile.jpg",
@@ -250,15 +251,15 @@
         "endDate":      null,
         "endLabel":     null,
         "current":      true,
-        "summary":      "Full-Stack Software Engineer who developed and monitored scalable backend services using <strong>Java</strong> and <strong>Spring Boot,</strong> leveraging <strong>Prometheus</strong> and <strong>Grafana</strong> for performance monitoring and observability.",
+        "summary":      "Full-Stack Software Engineer who developed and monitored scalable backend services using <span class=\"skill\">Java</span> and <span class=\"skill\">Spring Boot</span>, leveraging <span class=\"skill\">Prometheus</span> and <span class=\"skill\">Grafana</span> for performance monitoring and observability.",
         "achievements": [
-          "Maintain a <strong>Top-Secret</strong> security clearance and ensure federal security protocol compliance",
-          "Led the maintenance and expansion of automated integration testing and observability for seven <strong>Kafka-based microservices</strong>.",
-          "Built <strong>Grafana</strong> dashboards for real-time monitoring of system metrics via <strong>Prometheus</strong> and automated test reporting via <strong>InfluxDB</strong>.",
-          "Founded and led weekly cross-team testing meetings to improve collaboration and knowledge sharing within an <strong>Agile/Scrum</strong> development team.",
-          "Enhanced a Dockerized Java Spring Boot microservice responsible for processing high-volume <strong>XML</strong> messages through <strong>Kafka</strong>.",
-          "Maintained and expanded a comprehensive suite of automated <strong>Python</strong> integration tests using <strong>Pytest,</strong> improving test coverage and software reliability.",
-          "Integrated <strong>Drools</strong> rule workflows, <strong>REST APIs,</strong> and <strong>GeoServer</strong> data to support real-time alerts and automated responses.",
+          "Maintain a <strong>Top Secret</strong> security clearance and ensure federal security protocol compliance",
+          "Led the maintenance and expansion of automated integration testing and observability for seven <span class=\"skill\">Kafka-based microservices</span>.",
+          "Built <span class=\"skill\">Grafana</span> dashboards for real-time monitoring of system metrics via <span class=\"skill\">Prometheus</span> and automated test reporting via <span class=\"skill\">InfluxDB</span>.",
+          "Founded and led weekly cross-team testing meetings to improve collaboration and knowledge sharing within an <span class=\"skill\">Agile/Scrum</span> development team.",
+          "Enhanced a Dockerized Java Spring Boot microservice responsible for processing high-volume <span class=\"skill\">XML</span> messages through <span class=\"skill\">Kafka</span>.",
+          "Maintained and expanded a comprehensive suite of automated <span class=\"skill\">Python</span> integration tests using <span class=\"skill\">Pytest</span>, improving test coverage and software reliability.",
+          "Integrated <span class=\"skill\">Drools</span> rule workflows, <span class=\"skill\">REST APIs</span>, and <span class=\"skill\">GeoServer</span> data to support real-time alerts and automated responses.",
           "Supported monthly write-ups as an <span class=\"underline\">Ethical Legal and Social Implications (ELSI) Liaison</span> for the use of automated decision makers in a foundational research project."
         ],
         "skills":       [
@@ -359,6 +360,25 @@
           "Woodshop Tools",
           "Vinyl Cutting"
         ]
+      },
+      {
+        "position":     "Teaching Assistant",
+        "company":      "Columbia University",
+        "companyUrl":   "https://www.columbia.edu/",
+        "location":     "New York, NY",
+        "type":         "In-Person",
+        "startDate":    "2022-08",
+        "startLabel":   "Aug 2022",
+        "endDate":      "2022-12",
+        "endLabel":     "Dec 2022",
+        "current":      false,
+        "summary":      "Assisted faculty and held office hours for COMS 3410: Computers and Society, topics of social and technology ethics.",
+        "achievements": [],
+        "skills":       [
+          "Technology Ethics",
+          "Teaching",
+          "Communication"
+        ]
       }
     ],
     "skills":         [
@@ -431,10 +451,11 @@
         {
           "name":          "OpenWRT Monitoring Stack",
           "url":           "https://github.com/sedona-thomas/Protected-OpenWRT-Metrics",
-          "description":   "An at-home monitoring stack with Grafana, Prometheus, and Loki for a router running OpenWRT.",
+          "description":   "An at-home monitoring stack with <span class=\"skill\">Grafana</span>, <span class=\"skill\">Prometheus</span>, and <span class=\"skill\">Loki</span> for a router running <span class=\"skill\">OpenWRT</span>.",
           "image":         "static/img/grafana_screenshot.png",
           "imageAlt":      "Screenshot of a Grafana dashboard displaying the state of running Docker containers.",
           "date":          "2025",
+          "dateLabel":     null,
           "achievements":  [],
           "tags":          [
             "Grafana",
@@ -448,7 +469,12 @@
           ],
           "links":         [
             {
-              "label": "Related - Basic Monitoring Stack",
+              "label": "Github",
+              "url":   "https://github.com/sedona-thomas/Protected-OpenWRT-Metrics",
+              "icon":  "static/img/github.png"
+            },
+            {
+              "label": "Related - Monitoring Stack",
               "url":   "https://github.com/sedona-thomas/Basic-Monitoring-Stack",
               "icon":  "static/img/github.png"
             }
@@ -458,10 +484,11 @@
         {
           "name":          "Stained Glass - Rainbow Sunset",
           "url":           "https://github.com/sedona-thomas/openwrt-monitoring-stack",
-          "description":   "An electronic stained glass art display. Written in C++ and controlled by an ESP32.",
+          "description":   "An electronic stained glass art display. Written in <span class=\"skill\">C++</span> and controlled by an <span class=\"skill\">ESP32</span>.",
           "image":         "static/img/stained_glass_sunset.png",
           "imageAlt":      "Stained glass sunset with rainbow rays in a sunny window. Small LEDs can be seen through the glass.",
           "date":          "2022",
+          "dateLabel":     null,
           "achievements":  [],
           "tags":          [
             "Stained Glass",
@@ -490,9 +517,65 @@
             }
           ],
           "collaborators": []
+        },
+        {
+          "name":          "Personal Portfolio Website",
+          "url":           "https://github.com/sedona-thomas/Sedona-Website",
+          "description":   "A portfolio website generator used for this website. Written in <span class=\"skill\">Python</span> using <span class=\"skill\">Jinja templates</span> and a portfolio data <span class=\"skill\">JSON Schema</span>.",
+          "image":         "static/img/personal_website_screenshot.png",
+          "imageAlt":      "Screenshot of this portfolio website which was generated by this project.",
+          "date":          "2026",
+          "dateLabel":     null,
+          "achievements":  [],
+          "tags":          [
+            "Python",
+            "Jinja Templates",
+            "JSON/JSON Schema"
+          ],
+          "links":         [
+            {
+              "label": "Github",
+              "url":   "https://github.com/sedona-thomas/Sedona-Website",
+              "icon":  "static/img/github.png"
+            },
+            {
+              "label": "Demo Website",
+              "url":   "https://www.sedonathomas.com",
+              "icon":  "static/img/icon.jpg"
+            }
+          ],
+          "collaborators": []
         }
       ],
-      "secondaryProjects": []
+      "secondaryProjects": [
+        {
+          "name":          "Basic Monitoring Stack",
+          "url":           "https://github.com/sedona-thomas/Basic-Monitoring-Stack",
+          "description":   "A basic monitoring stack built with <span class=\"skill\">Grafana</span>, <span class=\"skill\">Prometheus</span>, <span class=\"skill\">Loki</span>, <span class=\"skill\">Nginx</span>, and <span class=\"skill\">cAdvisor</span> for collecting, storing, and visualizing <span class=\"skill\">Docker</span> container metrics.",
+          "image":         "static/img/grafana_screenshot.png",
+          "imageAlt":      "Screenshot of a Grafana dashboard displaying the state of running Docker containers.",
+          "date":          "2025",
+          "dateLabel":     null,
+          "achievements":  [],
+          "tags":          [
+            "Grafana",
+            "Prometheus",
+            "Loki",
+            "Nginx",
+            "Docker",
+            "Observability",
+            "Open Source"
+          ],
+          "links":         [
+            {
+              "label": "Github",
+              "url":   "https://github.com/sedona-thomas/Basic-Monitoring-Stack",
+              "icon":  "static/img/github.png"
+            }
+          ],
+          "collaborators": []
+        }
+      ]
     },
     "certifications": [],
     "awards":         [
@@ -500,6 +583,7 @@
         "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice Winner",
         "issuer":           "Columbia University Institute for the Study of Human Rights (ISHR)",
         "date":             "2023",
+        "dateLabel":        null,
         "certificate":      null,
         "acceptanceLetter": null,
         "article":          "https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners",
@@ -512,6 +596,7 @@
         "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
         "issuer":           "Columbia University",
         "date":             "2022",
+        "dateLabel":        null,
         "certificate":      null,
         "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
         "article":          null,
@@ -523,6 +608,7 @@
         "name":             "The Beesen Global Experience Research Fellowship",
         "issuer":           "Columbia University",
         "date":             "2019",
+        "dateLabel":        null,
         "certificate":      null,
         "acceptanceLetter": "static/scholarships/Beesen_Global_Travel_Fellowship_Acceptance.pdf",
         "article":          null,
@@ -534,6 +620,7 @@
         "name":             "Nevada Governor's Volunteer Recognition Award",
         "issuer":           "Nevada Volunteers & Brian Sandoval, Governor of the State of Nevada",
         "date":             "2017",
+        "dateLabel":        null,
         "certificate":      "static/certifications/Sedona_Thomas_Nevada_Governor_Volunteer_Service_Award.jpg",
         "acceptanceLetter": null,
         "article":          null,
@@ -544,34 +631,36 @@
     ],
     "publications":   [
       {
-        "publisher":       "AAAI Spring Symposium",
-        "publisherUrl":    "https://ojs.aaai.org/index.php/AAAI-SS",
-        "title":           "Human-AI Collaborations for Controlled Tasking Use Cases",
-        "role":            "Co-Author",
-        "publicationDate": "2025-05-28",
-        "url":             "https://doi.org/10.1609/aaaiss.v5i1.35552",
-        "abstract":        [
+        "publisher":            "AAAI Spring Symposium",
+        "publisherUrl":         "https://ojs.aaai.org/index.php/AAAI-SS",
+        "title":                "Human-AI Collaborations for Controlled Tasking Use Cases",
+        "role":                 "Co-Author",
+        "publicationDate":      "2025-05-28",
+        "publicationDateLabel": "2025",
+        "url":                  "https://doi.org/10.1609/aaaiss.v5i1.35552",
+        "abstract":             [
           "Many Human-AI collaborations are based on task environments in which tasks on controllable assets need to be taken (e.g., to change a route of a truck or to send an informational message to the truck driver) in response to results of monitoring tasks (e.g., changes in customer needs, changes in weather). Human-AI teams need to collaborate effectively and efficiently to generate, assess, and adjust Courses of Actions (COAs) in those environments. RTX BBN Technologies (BBN) has developed multiple AI agents, covering different specific use cases, and is currently deploying Human-AI teams into operational environments. In our work, the most relevant use cases involve an AI agent advising a human on executing complex tasks and human and AI agents handling subtasks usually done by one person. The workshop presentation will focus on overall context, our successes with Human-AI teams in recent years, and specific insights from our work with Human-AI teams performing joint activities in controlled tasking environments."
         ],
-        "tags":            [
+        "tags":                 [
           "Human Computer Interaction (HCI)",
           "Controlled Tasking",
           "Human-AI Teaming"
         ]
       },
       {
-        "publisher":       "Columbia University Academic Commons",
-        "publisherUrl":    "https://academiccommons.columbia.edu",
-        "title":           "The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm",
-        "role":            "Author",
-        "publicationDate": "2023-10-04",
-        "url":             "https://doi.org/10.7916/ab13-jf83",
-        "abstract":        [
+        "publisher":            "Columbia University Academic Commons",
+        "publisherUrl":         "https://academiccommons.columbia.edu",
+        "title":                "The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm",
+        "role":                 "Author",
+        "publicationDate":      "2023-10-04",
+        "publicationDateLabel": "2023",
+        "url":                  "https://doi.org/10.7916/ab13-jf83",
+        "abstract":             [
           "Recent advancements in machine learning algorithms have gained public attention for a variety of reasons and expanded into almost every domain—including the criminal justice system. These criminogenic algorithms are trained on real-world data to make highly specific predictions about criminal behaviors and personality traits.",
           "The reflection of real-world discrimination within algorithms has posed novel risks to the human rights obligation of non-discrimination under the law, and debates around appropriate choices of quantifiable fairness metrics have remained largely unresolved—and remain entirely unaddressed under international law. This research proposes a preliminary set of requirements for assessing the fairness of criminal justice algorithms that aggregates General Recommendations from the United Nations.",
           "Through a case study of Northpointe, Inc.’s COMPAS recidivism prediction algorithm focusing on its use in the state of New York, these requirements are contextualized in relation to various features of the algorithmic assessment process and computational norms regarding validation studies. This thesis sheds light on features of criminogenic assessment algorithms that may lead to bias against protected groups. Additionally, it highlights major limitations in research, including the proprietary nature of these algorithms, which pose significant obstacles to fully understanding their potential biases."
         ],
-        "tags":            [
+        "tags":                 [
           "Human Rights",
           "Technology Ethics",
           "Artificial Intelligence",
@@ -582,18 +671,19 @@
         ]
       },
       {
-        "publisher":       "All Tech Is Human (Non-Profit)",
-        "publisherUrl":    "https://alltechishuman.org",
-        "title":           "AI & Human Rights 2022 Report",
-        "role":            "Volunteer Contributor",
-        "publicationDate": "2022-06-27",
-        "url":             "https://static1.squarespace.com/static/60355084905d134a93c099a8/t/62c4898dc0ce4423c43e53a7/1657047446740/AI+and+Human+Rights_Building+a+Tech+Future+Aligned+With+the+Public+Interest +(4).pdf",
-        "abstract":        [
+        "publisher":            "All Tech Is Human (Non-Profit)",
+        "publisherUrl":         "https://alltechishuman.org",
+        "title":                "AI & Human Rights 2022 Report",
+        "role":                 "Volunteer Contributor",
+        "publicationDate":      "2022-06-27",
+        "publicationDateLabel": "2022",
+        "url":                  "https://static1.squarespace.com/static/60355084905d134a93c099a8/t/62c4898dc0ce4423c43e53a7/1657047446740/AI+and+Human+Rights_Building+a+Tech+Future+Aligned+With+the+Public+Interest +(4).pdf",
+        "abstract":             [
           "Artificial Intelligence (AI) and other digital technologies are tools. As such, they can be used to create unprecedented opportunities and advancement, and can also be wielded in ways that oppress and harm. Applied unconsciously, they will continue to recreate\nexisting social norms, biases and power structures. Developed thoughtfully, they can help transform society for the better.",
           "While the breadth of applications for AI are enormous, the ways in which these technologies intersect with human rights are no different from previous technologies. In other words, AI can be leveraged to advance human knowledge and capacity in a range of fields - including, but not limited to, medicine, engineering, energy, finance, law, communication and security. In the process, they can also enable dangerous violations of human rights in areas of digital identity, privacy, healthcare and civil rights, to name a few.",
           "This report outlines key issues and opportunities related to the intersection of AI and Human Rights, across seven key areas - Automated Decision Making Systems and Civil Rights; Data Privacy; Synthetic Media and Information Integrity; Content Moderation; Healthcare; Surveillance Technology, Predictive Technology and Criminal Justice; and Cybersecurity and Autonomous Weapons. These topics are not intended to be comprehensive. Rather, they explore some of the key issues surfaced by our team of 93 co-authors. Each section provides an overview of the topic, and lists key barriers and challenges, next steps and proposed solutions."
         ],
-        "tags":            [
+        "tags":                 [
           "Human Rights",
           "Technology Ethics",
           "Artificial Intelligence",
@@ -606,9 +696,24 @@
         "name":        "Out for Undergrad (O4U) Conference",
         "role":        "Selected Participant",
         "attendance":  [
-          "Engineering · 2023 · St. Paul, MN",
-          "Engineering · 2022 · Virtual",
-          "Tech · 2022 · Virtual"
+          {
+            "type":      "Engineering",
+            "date":      "2023",
+            "dateLabel": null,
+            "location":  "St. Paul, MN"
+          },
+          {
+            "type":      "Engineering",
+            "date":      "2022",
+            "dateLabel": null,
+            "location":  "Virtual"
+          },
+          {
+            "type":      "Tech",
+            "date":      "2022",
+            "dateLabel": null,
+            "location":  "Virtual"
+          }
         ],
         "description": [
           "Selected through O4U’s competitive application process to attend a national conference for high-achieving LGBTQ+ undergraduates.",
