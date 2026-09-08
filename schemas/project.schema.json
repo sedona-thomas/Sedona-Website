@@ -91,7 +91,7 @@
           },
           "url":  {
             "title":       "Collaborator URL",
-            "type":        "string",
+            "type":        ["string", "null"],
             "format":      "uri",
             "description": "The URI of the collaborator's website, profile, or relevant online resource."
           }

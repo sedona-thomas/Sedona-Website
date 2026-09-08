@@ -126,7 +126,7 @@
         "thesis":         "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
         "highlights":     [
           "Graduated <strong>cum laude</strong>.",
-          "<strong>Dean's List:</strong> Fall 2022, Spring 2023",
+          "<span class=\"medium-strong\">Dean's List:</span> Fall 2022, Spring 2023",
           "<a href=\"https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners\">2023 Faculty Choice</a> Senior Thesis.",
           "Teaching Assistant for Computers and Society under Professor Ron Baecker.",
           "Conducted undergraduate research under the supervision of Professor Mark Santolucito."
@@ -246,7 +246,7 @@
         "thesis":         null,
         "description":    "<strong>Coursework focus:</strong> applications of computer science, artificial intelligence, natural language processing, accessible UI design, and clean object-oriented design.",
         "highlights":     [
-          "<strong>Dean's List:</strong> Spring 2021",
+          "<span class=\"medium-strong\">Dean's List:</span> Spring 2021",
           "Accepted into Columbia University’s <span class=\"underline\">SEAS/CC 4-1 Program,</span> a rigorous dual-degree pathway leading to a B.A. from Columbia College and a B.S. from the Fu Foundation School of Engineering and Applied Science.",
           "Volunteered as a Makerspace staff member and served as a Columbia Health Peer Ambassador.",
           "Provided mentorship and academic support to students in the Society of Women Engineers (SWE) and Women in Computer Science (WiCS) organizations."
@@ -588,34 +588,103 @@
             }
           ],
           "collaborators": []
+        },
+        {
+          "name":          "Kinetic Sculpture",
+          "url":           "https://github.com/sedona-thomas/Kinetic-Sculpture",
+          "description":   "A kinetic sculpture art installation on an <span class=\"skill\">ESP32</span> TTGO T-Display programmed in <span class=\"skill\">C++</span>.",
+          "image":         "static/img/kinetic_sculpture.jpg",
+          "imageAlt":      "Picture of a small rectangular box on wheels, decorated with felt leaves and a spinning 3D-printed rose in the center.",
+          "date":          "2022",
+          "dateLabel":     null,
+          "achievements":  [],
+          "tags":          [
+            "C++",
+            "ESP32",
+            "Python",
+            "HTML",
+            "Doxygen",
+            "Laser Cutter",
+            "3D Printer",
+            "2D/3D CAD Modeling"
+          ],
+          "links":         [
+            {
+              "label": "Medium",
+              "url":   "https://sedonathomas.medium.com/kinetic-sculpture-20c4813ef82f",
+              "icon":  "static/img/medium.png"
+            },
+            {
+              "label": "GitHub",
+              "url":   "https://github.com/sedona-thomas/Kinetic-Sculpture",
+              "icon":  "static/img/github.png"
+            },
+            {
+              "label": "Youtube",
+              "url":   "https://youtu.be/uOoaBGFkzKg",
+              "icon":  null
+            }
+          ],
+          "collaborators": [
+            {
+              "name": "Anaïs Lawson",
+              "url":  null
+            }
+          ]
+        },
+        {
+          "name":          "Digital Music Box",
+          "url":           "https://github.com/sedona-thomas/Digital-Music-Box",
+          "description":   "A control box allowing a user to play a digital synthesizer from their computer keyboard. Uses an <span class=\"skill>ESP32</skill> TTGO T-Display with a joystick, button, and potentiometer. Programmed in <span class=\"skill\">C++</span>, <span class=\"skill\">JavaScript</span>, and <span class=\"skill\">HTML</span>.",
+          "image":         "static/img/digital_music_box.jpg",
+          "imageAlt":      "Picture of a small rectangular box with a turn dial, button, joystick, and small screen.",
+          "date":          "2022",
+          "dateLabel":     null,
+          "achievements":  [],
+          "tags":          [
+            "C++",
+            "ESP32",
+            "Python",
+            "HTML",
+            "Doxygen",
+            "Laser Cutter",
+            "2D CAD Modeling"
+          ],
+          "links":         [
+            {
+              "label": "Medium",
+              "url":   "https://sedonathomas.medium.com/digital-music-box-3c5826457c24",
+              "icon":  "static/img/medium.png"
+            },
+            {
+              "label": "GitHub",
+              "url":   "https://github.com/sedona-thomas/Digital-Music-Box",
+              "icon":  "static/img/github.png"
+            },
+            {
+              "label": "Youtube",
+              "url":   "https://youtu.be/2rkQq6D6_u0",
+              "icon":  null
+            }
+          ],
+          "collaborators": []
         }
       ]
     },
     "certifications": [],
     "awards":         [
       {
-        "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice Winner",
+        "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice",
         "issuer":           "Columbia University Institute for the Study of Human Rights (ISHR)",
         "date":             "2023",
         "dateLabel":        null,
         "certificate":      null,
         "acceptanceLetter": null,
         "article":          "https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners",
+        "sourceUrl":        null,
         "description":      [
           "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
           "Annual Columbia University Institute for the Study of Human Rights Thesis Competition, in which students deliver five-minute presentations on their thesis research and are evaluated by a faculty panel."
-        ]
-      },
-      {
-        "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
-        "issuer":           "Columbia University",
-        "date":             "2022",
-        "dateLabel":        null,
-        "certificate":      null,
-        "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
-        "article":          null,
-        "description":      [
-          "Selected for Columbia University’s 4-1 SEAS/CC Program, a rigorous dual-degree pathway combining a B.A. from Columbia College with a B.S. in Engineering from Columbia Engineering."
         ]
       },
       {
@@ -626,8 +695,22 @@
         "certificate":      null,
         "acceptanceLetter": null,
         "article":          null,
+        "sourceUrl":        null,
         "description":      [
           "Academic honor awarded for outstanding semester performance, requiring a GPA of at least 3.5 with 15+ graded credits in Columbia Engineering or 3.6 with 12+ letter-graded credits in Columbia College."
+        ]
+      },
+      {
+        "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
+        "issuer":           "Columbia University",
+        "date":             "2022",
+        "dateLabel":        null,
+        "certificate":      null,
+        "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
+        "article":          null,
+        "sourceUrl":        "https://www.cc-seas.columbia.edu/sites/dsa/files/handbooks/4-1_1.pdf",
+        "description":      [
+          "Selected for Columbia University’s 4-1 SEAS/CC Program, a rigorous dual-degree pathway combining a B.A. from Columbia College with a B.S. in Engineering from Columbia Engineering."
         ]
       },
       {
@@ -638,6 +721,7 @@
         "certificate":      null,
         "acceptanceLetter": "static/scholarships/Beesen_Global_Travel_Fellowship_Acceptance.pdf",
         "article":          null,
+        "sourceUrl":        null,
         "description":      [
           "The Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia study abroad program at Reid Hall."
         ]
@@ -650,6 +734,7 @@
         "certificate":      "static/certifications/Sedona_Thomas_Nevada_Governor_Volunteer_Service_Award.jpg",
         "acceptanceLetter": null,
         "article":          null,
+        "sourceUrl":        null,
         "description":      [
           "Recognized for outstanding volunteer service, including significant community contributions, leadership in launching or enhancing programs, championing innovation, and addressing organizational needs."
         ]
@@ -784,7 +869,7 @@
       {
         "organization":    "Columbia Health",
         "organizationUrl": "https://www.health.columbia.edu/news/cu-well-peer-ambassador-network-launched-facilitate-connection-between-students-and-health",
-        "role":            "Peer Ambassador & New Student Orientation Program Discussion Facilitator",
+        "role":            "New Student Orientation Program (NSOP) Discussion Facilitator",
         "participation":   [
           {
             "startDate":  "2019",
@@ -793,7 +878,7 @@
             "endLabel":   null
           }
         ],
-        "summary":         "Columbia Health Peer Ambassador and NSOP Discussion Facilitator supporting incoming and current students by leading health discussions and helping students navigate campus life.",
+        "summary":         "NSOP Discussion Facilitator supporting hundreds of incoming students by leading health and campus life discussions.",
         "description":     [
           "Facilitated New Student Orientation Program (NSOP) discussions for hundreds of incoming students each year, covering campus resources, academics, mental health, and student life.",
           "Educated Columbia students about available campus resources and services.",
@@ -809,6 +894,31 @@
           "Collaboration",
           "Mentorship",
           "Group Facilitation"
+        ]
+      },
+      {
+        "organization":    "Columbia Health",
+        "organizationUrl": "https://www.health.columbia.edu/news/cu-well-peer-ambassador-network-launched-facilitate-connection-between-students-and-health",
+        "role":            "Peer Ambassador",
+        "participation":   [
+          {
+            "startDate":  "2019-08",
+            "startLabel": "Aug 2019",
+            "endDate":    "2020-01",
+            "endLabel":   "Jan 2020"
+          }
+        ],
+        "summary":         "Peer Ambassador serving as a liaison between the student body and Columbia Health.",
+        "description":     [
+          "Educated Columbia students about available campus resources and services.",
+          "Served as a liaison between the student body and Columbia Health by communicating students' needs, concerns, and feedback.",
+          "Guided students in navigating campus life, fostering meaningful connections and promoting an inclusive community.",
+          "Mentored peers by answering questions, sharing personal experiences, and encouraging student involvement."
+        ],
+        "skills":          [
+          "Leadership",
+          "Communication",
+          "Collaboration"
         ]
       },
       {
@@ -842,6 +952,17 @@
       }
     ],
     "organizations":  [
+      {
+        "name":        "Out for Undergrad (O4U)",
+        "role":        "Conference Alumnus",
+        "membership":  {
+          "startDate":  "2022",
+          "startLabel": null,
+          "endDate":    null,
+          "endLabel":   null
+        },
+        "description": []
+      },
       {
         "name":        "Gamma Phi Beta (GPhi)",
         "role":        "Lifetime Member",
@@ -879,7 +1000,7 @@
         "name":        "Women in Computer Science (WiCS)",
         "role":        "General Member",
         "membership":  {
-          "startDate":  "2018",
+          "startDate":  "2019",
           "startLabel": null,
           "endDate":    "2023",
           "endLabel":   null

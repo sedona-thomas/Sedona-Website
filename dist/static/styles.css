@@ -234,10 +234,19 @@ main > section:nth-of-type(even) {
 /* ---------------------------- Details Dropdown --------------------------- */
 
 details {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-details > summary {
+details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+details.description > summary {
+  font-size: 1rem;
+}
+
+details.extra-content > summary {
   font-size: 1.3rem;
 }
 
@@ -263,7 +272,7 @@ details > summary {
 
 .date-range {
   color: var(--color-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .dot-separator > * + *::before {
@@ -709,7 +718,7 @@ details > summary {
 }
 
 .project-content .tag-list {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .project-card:has(.project-image-wrapper) .project-content {
@@ -777,6 +786,7 @@ details > summary {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
+  font-size: 115%;
 }
 
 .issuer {
@@ -792,7 +802,7 @@ details > summary {
   gap: 0.5rem;
 }
 
-.award-links .button {
+.award-links > .button {
   border-color: transparent;
   padding: 0.35rem 0.8rem;
   font-size: 0.85rem;

@@ -77,6 +77,21 @@
                 {% endfor %}
             </ul>
             {% endif %}
+
+            {% if project.collaborators %}
+            <p aria-label="Collaborators">
+                In collaboration with:
+                {% for collaborator in project.collaborators %}
+                <span class="collaborator">
+                {% if collaborator.url %}
+                <a href="{{ collaborator.url }}">{{ collaborator.name }}</a>
+                {% else %}
+                {{ collaborator.name }}
+                {% endif %}
+                </span>
+                {% endfor %}
+            </p>
+            {% endif %}
         </div>
     </article>
     {% endfor %}
@@ -230,7 +245,7 @@
 
                     <!-- TODO: finish adding courses then re-add -->
                     {% if false and item.courses %}
-                    <details>
+                    <details class="extra-content">
                         <summary>Courses</summary>
                         <ul class="course-list">
                             {% for course in item.courses %}
@@ -351,7 +366,7 @@
             {{ render_section(sections.projects | default(none)) }}
             {{ render_project_cards(content.projects.primaryProjects) }}
             {% if content.projects.secondaryProjects %}
-            <details>
+            <details class="extra-content">
                 <summary>Additional Projects</summary>
                 {{ render_project_cards(content.projects.secondaryProjects) }}
             </details>
@@ -412,6 +427,10 @@
                                 {% endif %}
                             </time>
                         </div>
+                    </div>
+
+                    <details class="description">
+                        <summary>Description</summary>
 
                         <div class="award-links">
                             {% if award.certificate %}
@@ -426,14 +445,18 @@
                             {% if award.article %}
                             <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
                             {% endif %}
-                        </div>
-                    </div>
 
-                    <ul>
-                        {% for paragraph in award.description %}
-                        <li>{{ paragraph|safe }}</li>
-                        {% endfor %}
-                    </ul>
+                            {% if award.sourceUrl %}
+                            <a class="button button-tertiary" href="{{ award.sourceUrl }}" download>Source</a>
+                            {% endif %}
+                        </div>
+
+                        <ul>
+                            {% for paragraph in award.description %}
+                            <li>{{ paragraph|safe }}</li>
+                            {% endfor %}
+                        </ul>
+                    </details>
                 </article>
                 {% endfor %}
             </div>
@@ -470,7 +493,7 @@
                     </p>
 
                     {% if publication.abstract %}
-                    <details>
+                    <details class="description">
                         <summary>Abstract</summary>
                         {% for paragraph in publication.abstract %}
                         <p>{{ paragraph|safe }}</p>
@@ -634,13 +657,16 @@
                     <p>{{ experience.summary|safe }}</p>
                     {% endif %}
 
-                    {% if experience.description %}
-                    <ul class="volunteer-experience-list">
-                        {% for item in experience.description %}
-                        <li>{{ item|safe }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
+                    <details class="description">
+                        <summary>Description</summary>
+                        {% if experience.description %}
+                        <ul class="volunteer-experience-list">
+                            {% for item in experience.description %}
+                            <li>{{ item|safe }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </details>
 
                     {% if experience.skills %}
                     <ul class="tag-list" aria-label="Skills used volunteering at {{ experience.organization }}">

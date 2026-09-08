@@ -48,6 +48,12 @@
       "format":      "uri-reference",
       "description": "A URI or relative reference to an article, announcement, or publication related to the award. Null indicates that no article is available."
     },
+    "sourceUrl":          {
+      "title":       "Source URL",
+      "type":        ["string", "null"],
+      "format":      "uri-reference",
+      "description": "A URI or relative reference to an article, announcement, or publication related to the award. Null indicates that no article is available."
+    },
     "description":      {
       "title":       "Description",
       "type":        "array",
