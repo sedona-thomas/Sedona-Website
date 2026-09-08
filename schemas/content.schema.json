@@ -7,13 +7,16 @@
   "additionalProperties": false,
   "required":             [
     "person",
-    "experience",
     "education",
+    "experience",
     "skills",
     "projects",
     "certifications",
     "awards",
     "publications",
+    "conferences",
+    "volunteering",
+    "organizations",
     "languages",
     "social"
   ],
@@ -100,6 +103,22 @@
       "type":        "array",
       "items":       {
         "$ref": "./conference.schema.json"
+      }
+    },
+    "volunteering":    {
+      "title":       "Volunteer Experience",
+      "description": "A list of volunteer experiences.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./volunteer.schema.json"
+      }
+    },
+    "organizations":    {
+      "title":       "Organizations",
+      "description": "A list of organization membership.",
+      "type":        "array",
+      "items":       {
+        "$ref": "./organization.schema.json"
       }
     },
     "languages":      {

@@ -51,6 +51,16 @@
       "description": "Lists professional conference attendance.",
       "$ref":        "#/$defs/section"
     },
+    "volunteering":    {
+      "title":       "Volunteering Section",
+      "description": "Lists volunteer experience.",
+      "$ref":        "#/$defs/section"
+    },
+    "organizations":    {
+      "title":       "Organization Section",
+      "description": "Lists organization membership.",
+      "$ref":        "#/$defs/section"
+    },
     "languages":      {
       "title":       "Languages Section",
       "description": "Lists languages and proficiency.",

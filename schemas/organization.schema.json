@@ -1,0 +1,64 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./organization.schema.json",
+  "title":                "Organization",
+  "description":          "Represents membership to an organization.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["name", "role", "membership", "description"],
+  "properties":           {
+    "name":        {
+      "title":       "Organization Name",
+      "type":        "string",
+      "description": "The official name or title of the organization.",
+      "minLength":   1
+    },
+    "role":        {
+      "title":       "Organization Role",
+      "type":        "string",
+      "description": "The role within the organization.",
+      "minLength":   1
+    },
+    "membership":  {
+      "title":       "Membership",
+      "type":        "object",
+      "description": "Time period of membership.",
+      "items":       {
+        "startDate":  {
+          "title":       "Start Date",
+          "type":        "string",
+          "description": "The year or month in which the membership began, using YYYY or YYYY-MM format.",
+          "pattern":     "^\\d{4}(-\\d{2})?$"
+        },
+        "startLabel": {
+          "title":       "Start Date Label",
+          "type":        "string",
+          "description": "The human-readable label used to display the membership start date.",
+          "minLength":   1
+        },
+        "endDate":    {
+          "title":       "End Date",
+          "type":        ["string", "null"],
+          "description": "The year or month in which the memberhship ended, using YYYY or YYYY-MM format. Null indicates that the membership is ongoing.",
+          "pattern":     "^\\d{4}(-\\d{2})?$"
+        },
+        "endLabel":   {
+          "title":       "End Date Label",
+          "type":        ["string", "null"],
+          "description": "The human-readable label used to display the membership end date. Null indicates that the membership is ongoing."
+        }
+      }
+    },
+    "description": {
+      "title":       "Description",
+      "type":        "array",
+      "description": "A list of statements describing the organization participation.",
+      "items":       {
+        "title":       "Description Statement",
+        "type":        "string",
+        "description": "A statement describing the organization participation.",
+        "minLength":   1
+      }
+    }
+  }
+}

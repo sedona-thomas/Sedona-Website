@@ -1,0 +1,88 @@
+{
+  "$schema":              "https://json-schema.org/draft/2020-12/schema",
+  "$id":                  "./volunteer.schema.json",
+  "title":                "Volunteer Experience",
+  "description":          "Represents volunteer experience.",
+  "type":                 "object",
+  "additionalProperties": false,
+  "required":             ["organization", "role", "participation"],
+  "properties":           {
+    "organization":        {
+      "title":       "Organization Name",
+      "type":        "string",
+      "description": "The official name or title of the organization.",
+      "minLength":   1
+    },
+    "organizationUrl":   {
+      "title":       "Organization URL",
+      "type":        ["string", "null"],
+      "format":      "uri",
+      "description": "A URI linking to the website of the organization. Null indicates that no URL is available."
+    },
+    "role":        {
+      "title":       "Organization Role",
+      "type":        "string",
+      "description": "The role within the organization.",
+      "minLength":   1
+    },
+    "participation": {
+      "title":       "Participation",
+      "type":        "array",
+      "description": "A list of periods of participation.",
+      "minItems":    1,
+      "items":       {
+        "startDate":    {
+          "title":       "Start Date",
+          "type":        "string",
+          "description": "The year or month in which the work experience began, using YYYY or YYYY-MM format.",
+          "pattern":     "^\\d{4}(-\\d{2})?$"
+        },
+        "startLabel":   {
+          "title":       "Start Date Label",
+          "type":        "string",
+          "description": "The human-readable label used to display the work experience start date.",
+          "minLength":   1
+        },
+        "endDate":      {
+          "title":       "End Date",
+          "type":        ["string", "null"],
+          "description": "The year or month in which the work experience ended, using YYYY or YYYY-MM format. Null indicates that the position is ongoing.",
+          "pattern":     "^\\d{4}(-\\d{2})?$"
+        },
+        "endLabel":     {
+          "title":       "End Date Label",
+          "type":        ["string", "null"],
+          "description": "The human-readable label used to display the work experience end date. Null indicates that the position is ongoing."
+        }
+      }
+    },
+    "summary":        {
+      "title":       "Summary",
+      "type":        "string",
+      "description": "A summary of the volunteer experience.",
+      "minLength":   1
+    },
+    "description": {
+      "title":       "Description",
+      "type":        "array",
+      "description": "A list of statements describing the organization participation.",
+      "minItems":    1,
+      "items":       {
+        "title":       "Description Statement",
+        "type":        "string",
+        "description": "A statement describing the organization participation.",
+        "minLength":   1
+      }
+    },
+    "skills":       {
+      "title":       "Skills",
+      "type":        "array",
+      "description": "A list of skills, technologies, tools, or areas of expertise used in the work experience.",
+      "items":       {
+        "type":        "string",
+        "description": "A skill, technology, tool, or area of expertise.",
+        "minLength":   1
+      }
+    }
+  }
+}
