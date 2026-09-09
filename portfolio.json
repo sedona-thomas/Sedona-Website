@@ -67,14 +67,14 @@
       "label":          "Volunteering",
       "id":             "volunteering",
       "eyebrow":        "Volunteer Experience",
-      "heading":        "Volunteering",
-      "excludeFromNav": true
+      "heading":        "Volunteering"
     },
     "organizations":  {
       "label":   "Organizations",
       "id":      "organizations",
       "eyebrow": "Organizations & Affiliations",
-      "heading": "Organizations"
+      "heading": "Organizations",
+      "excludeFromNav": true
     },
     "languages":      {
       "label":          "Languages",
@@ -98,11 +98,11 @@
       "email":          "sedona@caa.columbia.edu",
       "intro":          [
         "Full-stack developer with <span class=\"medium-strong\">7+ years</span> of programming experience and <span class=\"medium-strong\">3+ years</span> of industry experience building containerized <span class=\"skill\">Java</span> and <span class=\"skill\">Python</span> microservices and monitoring cloud-native applications using <span class=\"skill\">Prometheus</span> and <span class=\"skill\">Grafana</span>.",
-        "Active <strong class=\"underline\">Top-Secret</strong> Security Clearance."
+        "Active <strong class=\"underline\">Top Secret</strong> Security Clearance."
       ],
       "bio":            [
         "Full-stack developer specializing in <em>cloud-native</em> <span class=\"skill\">Java</span> <span class=\"skill\">Spring Boot</span> microservices in <em>high-complexity</em> environments. Columbia University graduate with a dual-B.A./B.S. in <span class=\"underline\">Computer Science</span> and <span class=\"underline\">Human Rights</span>. Strong experience with microservice observability in cloud-native environments.",
-        "Brings <span class=\"underline\">7+ years</span> of formal programming experience in <span class=\"skill\">Python</span>, <span class=\"skill\">Java</span>, <span class=\"skill\">C++</span>, <span class=\"skill\">JavaScript</span>, <span class=\"skill\">Bash</span>, and other technologies, including <span class=\"underline\">3+ years</span> of full-time industry experience and an internship at Amazon.",
+        "Brings <span class=\"underline\">7+ years</span> of programming experience in <span class=\"skill\">Python</span>, <span class=\"skill\">Java</span>, <span class=\"skill\">C++</span>, <span class=\"skill\">JavaScript</span>, <span class=\"skill\">Bash</span>, and other technologies, including <span class=\"underline\">3+ years</span> of full-time industry experience and an internship at Amazon.",
         "Experience leading automated integration testing and application monitoring efforts across a suite of containerized microservices, including designing intuitive, user-friendly <span class=\"skill\">Grafana</span> dashboards that enabled both service developers and non-technical maintainers to monitor live system health."
       ],
       "website":        "https://www.sedonathomas.com",
@@ -126,7 +126,7 @@
         "thesis":         "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
         "highlights":     [
           "Graduated <strong>cum laude</strong>.",
-          "<span class=\"medium-strong\">Dean's List:</span> Fall 2022, Spring 2023",
+          "Dean's List: Fall 2022, Spring 2023",
           "<a href=\"https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners\">2023 Faculty Choice</a> Senior Thesis.",
           "Teaching Assistant for Computers and Society under Professor Ron Baecker.",
           "Conducted undergraduate research under the supervision of Professor Mark Santolucito."
@@ -246,7 +246,7 @@
         "thesis":         null,
         "description":    "<strong>Coursework focus:</strong> applications of computer science, artificial intelligence, natural language processing, accessible UI design, and clean object-oriented design.",
         "highlights":     [
-          "<span class=\"medium-strong\">Dean's List:</span> Spring 2021",
+          "Dean's List: Spring 2021",
           "Accepted into Columbia University’s <span class=\"underline\">SEAS/CC 4-1 Program,</span> a rigorous dual-degree pathway leading to a B.A. from Columbia College and a B.S. from the Fu Foundation School of Engineering and Applied Science.",
           "Volunteered as a Makerspace staff member and served as a Columbia Health Peer Ambassador.",
           "Provided mentorship and academic support to students in the Society of Women Engineers (SWE) and Women in Computer Science (WiCS) organizations."
@@ -268,12 +268,12 @@
         "current":      true,
         "summary":      "Full-Stack Software Engineer who developed and monitored scalable backend services using <span class=\"skill\">Java</span> and <span class=\"skill\">Spring Boot</span>, leveraging <span class=\"skill\">Prometheus</span> and <span class=\"skill\">Grafana</span> for performance monitoring and observability.",
         "achievements": [
-          "Maintain a <strong>Top Secret</strong> security clearance and ensure federal security protocol compliance",
+          "Maintain a <strong>Top Secret</strong> security clearance and ensure federal security protocol compliance.",
           "Led the maintenance and expansion of automated integration testing and observability for seven <span class=\"skill\">Kafka-based microservices</span>.",
           "Built <span class=\"skill\">Grafana</span> dashboards for real-time monitoring of system metrics via <span class=\"skill\">Prometheus</span> and automated test reporting via <span class=\"skill\">InfluxDB</span>.",
           "Founded and led weekly cross-team testing meetings to improve collaboration and knowledge sharing within an <span class=\"skill\">Agile/Scrum</span> development team.",
-          "Enhanced a Dockerized Java Spring Boot microservice responsible for processing high-volume <span class=\"skill\">XML</span> messages through <span class=\"skill\">Kafka</span>.",
-          "Maintained and expanded a comprehensive suite of automated <span class=\"skill\">Python</span> integration tests using <span class=\"skill\">Pytest</span>, improving test coverage and software reliability.",
+          "Enhanced a <span class=\"skill\">Dockerized</span> <span class=\"skill\">Java</span> <span class=\"skill\">Spring Boot</span> microservice responsible for processing high-volume <span class=\"skill\">XML</span> messages through <span class=\"skill\">Kafka</span>.",
+          "Maintained and expanded a comprehensive suite of automated <span class=\"skill\">Python</span> integration tests using <span class=\"skill\">Pytest</span>, improving test coverage and reliability.",
           "Integrated <span class=\"skill\">Drools</span> rule workflows, <span class=\"skill\">REST APIs</span>, and <span class=\"skill\">GeoServer</span> data to support real-time alerts and automated responses.",
           "Supported monthly write-ups as an <span class=\"underline\">Ethical Legal and Social Implications (ELSI) Liaison</span> for the use of automated decision makers in a foundational research project."
         ],
