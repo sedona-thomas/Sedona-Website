@@ -83,10 +83,29 @@
     },
     "awards":         {
       "title":       "Awards",
-      "description": "A list of awards, honors, professional recognitions, or academic scholarships.",
-      "type":        "array",
-      "items":       {
-        "$ref": "./award.schema.json"
+      "description": "A collection of awards, honors, professional recognitions, or academic scholarships.",
+      "properties":  {
+        "primaryAwards":   {
+          "description": "A list of the most important awards to be displayed by default.",
+          "type":        "array",
+          "items":       {
+            "$ref": "./award.schema.json"
+          }
+        },
+        "secondaryAwards": {
+          "description": "A list of additional awards to be collapsed by default.",
+          "type":        "array",
+          "items":       {
+            "$ref": "./award.schema.json"
+          }
+        },
+        "collapsedScholarships": {
+          "description": "A list of additional scholarships to be collapsed by default.",
+          "type":        "array",
+          "items":       {
+            "$ref": "./award.schema.json"
+          }
+        }
       }
     },
     "publications":   {
@@ -105,7 +124,7 @@
         "$ref": "./conference.schema.json"
       }
     },
-    "volunteering":    {
+    "volunteering":   {
       "title":       "Volunteer Experience",
       "description": "A list of volunteer experiences.",
       "type":        "array",
@@ -113,7 +132,7 @@
         "$ref": "./volunteer.schema.json"
       }
     },
-    "organizations":    {
+    "organizations":  {
       "title":       "Organizations",
       "description": "A list of organization membership.",
       "type":        "array",

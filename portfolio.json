@@ -64,16 +64,16 @@
       "excludeFromNav": true
     },
     "volunteering":   {
-      "label":          "Volunteering",
-      "id":             "volunteering",
-      "eyebrow":        "Volunteer Experience",
-      "heading":        "Volunteering"
+      "label":   "Volunteering",
+      "id":      "volunteering",
+      "eyebrow": "Volunteer Experience",
+      "heading": "Volunteering"
     },
     "organizations":  {
-      "label":   "Organizations",
-      "id":      "organizations",
-      "eyebrow": "Organizations & Affiliations",
-      "heading": "Organizations",
+      "label":          "Organizations",
+      "id":             "organizations",
+      "eyebrow":        "Organizations & Affiliations",
+      "heading":        "Organizations",
       "excludeFromNav": true
     },
     "languages":      {
@@ -107,7 +107,7 @@
       ],
       "website":        "https://www.sedonathomas.com",
       "profileImage":   "static/img/profile.jpg",
-      "resume":         "static/resume/resume.pdf",
+      "resume":         "static/resume/Thomas_Sedona_Resume.pdf",
       "cv":             null,
       "contactMessage": "I am open to software engineering opportunities."
     },
@@ -672,74 +672,236 @@
       ]
     },
     "certifications": [],
-    "awards":         [
-      {
-        "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice",
-        "issuer":           "Columbia University Institute for the Study of Human Rights (ISHR)",
-        "date":             "2023",
-        "dateLabel":        null,
-        "certificate":      null,
-        "acceptanceLetter": null,
-        "article":          "https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners",
-        "sourceUrl":        null,
-        "description":      [
-          "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
-          "Annual Columbia University Institute for the Study of Human Rights Thesis Competition, in which students deliver five-minute presentations on their thesis research and are evaluated by a faculty panel."
-        ]
-      },
-      {
-        "name":             "Columbia University Dean's List",
-        "issuer":           "Columbia University",
-        "date":             "2023",
-        "dateLabel":        "Spring 2021, Fall 2022, Spring 2023",
-        "certificate":      null,
-        "acceptanceLetter": null,
-        "article":          null,
-        "sourceUrl":        null,
-        "description":      [
-          "Academic honor awarded for outstanding semester performance, requiring a GPA of at least 3.5 with 15+ graded credits in Columbia Engineering or 3.6 with 12+ letter-graded credits in Columbia College."
-        ]
-      },
-      {
-        "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
-        "issuer":           "Columbia University",
-        "date":             "2022",
-        "dateLabel":        null,
-        "certificate":      null,
-        "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
-        "article":          null,
-        "sourceUrl":        "https://www.cc-seas.columbia.edu/sites/dsa/files/handbooks/4-1_1.pdf",
-        "description":      [
-          "Selected for Columbia University’s 4-1 SEAS/CC Program, a rigorous dual-degree pathway combining a B.A. from Columbia College with a B.S. in Engineering from Columbia Engineering."
-        ]
-      },
-      {
-        "name":             "The Beesen Global Experience Research Fellowship",
-        "issuer":           "Columbia University",
-        "date":             "2019",
-        "dateLabel":        null,
-        "certificate":      null,
-        "acceptanceLetter": "static/scholarships/Beesen_Global_Travel_Fellowship_Acceptance.pdf",
-        "article":          null,
-        "sourceUrl":        null,
-        "description":      [
-          "The Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia study abroad program at Reid Hall."
-        ]
-      },
-      {
-        "name":             "Nevada Governor's Volunteer Recognition Award",
-        "issuer":           "Nevada Volunteers & Brian Sandoval, Governor of the State of Nevada",
-        "date":             "2017",
-        "dateLabel":        null,
-        "certificate":      "static/certifications/Sedona_Thomas_Nevada_Governor_Volunteer_Service_Award.jpg",
-        "acceptanceLetter": null,
-        "article":          null,
-        "sourceUrl":        null,
-        "description":      [
-          "Recognized for outstanding volunteer service, including significant community contributions, leadership in launching or enhancing programs, championing innovation, and addressing organizational needs."
-        ]
-      }
-    ],
+    "awards":         {
+      "primaryAwards":         [
+        {
+          "name":             "ISHR Thesis Competition: Undergraduate Faculty Choice",
+          "issuer":           "Columbia University Institute for the Study of Human Rights (ISHR)",
+          "date":             "2023",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          "https://humanrights.columbia.edu/news/2023-human-rights-thesis-competition-winners",
+          "sourceUrl":        null,
+          "description":      [
+            "<cite>The Fairness Fallacy: Northpointe and the COMPAS Recidivism Prediction Algorithm</cite> (DOI: <a href=\"https://doi.org/10.7916/ab13-jf83\">10.7916/ab13-jf83</a>, Advisor: Dr. Tracy Holland)",
+            "Annual Columbia University Institute for the Study of Human Rights Thesis Competition, in which students deliver five-minute presentations on their thesis research and are evaluated by a faculty panel."
+          ]
+        },
+        {
+          "name":             "Columbia University Dean's List",
+          "issuer":           "Columbia University",
+          "date":             "2023",
+          "dateLabel":        "Spring 2021, Fall 2022, Spring 2023",
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        null,
+          "description":      [
+            "Academic honor awarded for outstanding semester performance, requiring a GPA of at least 3.5 with 15+ graded credits in Columbia Engineering or 3.6 with 12+ letter-graded credits in Columbia College."
+          ]
+        },
+        {
+          "name":             "Columbia University SEAS-CC 4-1 Program Selectee",
+          "issuer":           "Columbia University",
+          "date":             "2022",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": "static/programs/SEAS-CC_4-1_Program_Acceptance_Letter.pdf",
+          "article":          null,
+          "sourceUrl":        "https://www.cc-seas.columbia.edu/sites/dsa/files/handbooks/4-1_1.pdf",
+          "description":      [
+            "Selected for Columbia University’s 4-1 SEAS/CC Program, a rigorous dual-degree pathway combining a B.A. from Columbia College with a B.S. in Engineering from Columbia Engineering."
+          ]
+        },
+        {
+          "name":             "The Beesen Global Experience Research Fellowship",
+          "issuer":           "Columbia University",
+          "date":             "2019",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": "static/scholarships/Beesen_Global_Travel_Fellowship_Acceptance.pdf",
+          "article":          "https://www.college.columbia.edu/news/columbia-college-offers-new-global-fellowships",
+          "sourceUrl":        null,
+          "description":      [
+            "The Beesen Global Travel Fellowship provides financial assistance to individuals seeking to engage those interests by participating in Columbia study abroad program at Reid Hall."
+          ]
+        },
+        {
+          "name":             "Nevada Governor's Volunteer Recognition Award",
+          "issuer":           "Nevada Volunteers & Brian Sandoval, Governor of the State of Nevada",
+          "date":             "2017",
+          "dateLabel":        null,
+          "certificate":      "static/certifications/Sedona_Thomas_Nevada_Governor_Volunteer_Service_Award.jpg",
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        null,
+          "description":      [
+            "Recognized for outstanding volunteer service, including significant community contributions, leadership in launching or enhancing programs, championing innovation, and addressing organizational needs."
+          ]
+        }
+      ],
+      "secondaryAwards":       [
+        {
+          "name":             "Prudential Spirit of Community Awards: Distinguished Finalist",
+          "issuer":           "Prudential Financial",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.prudential.com/links/about/emergingvisionaries",
+          "description":      [
+            "A nationwide program nominating students for outstanding acts of volunteerism in their community."
+          ]
+        },
+        {
+          "name":             "QuestBridge Presidential Scholars Program Nominee",
+          "issuer":           "QuestBridge",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.questbridge.org",
+          "description":      [
+            "Selected as 1 of 35 QuestBridge scholars nominated by QuestBridge for the U.S. Presidential Scholars Program."
+          ]
+        }
+      ],
+      "collapsedScholarships": [
+        {
+          "name":             "Governor Guinn Millennium Scholarship",
+          "issuer":           "Nevada State Treasurer’s Office",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      "static/scholarships/Governor_Guinn_Millenium_Scholarship.pdf",
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.nevadatreasurer.gov/ggms/ggms_home/",
+          "description":      [
+            "A $10,000 merit-based scholarship supporting Nevada students pursuing postsecondary education at an eligible Nevada institution."
+          ]
+        },
+        {
+          "name":             "Ronald McDonald House Charities Scholarship",
+          "issuer":           "Ronald McDonald House Charities Greater Las Vegas",
+          "date":             "2018–2020",
+          "dateLabel":        "Awarded in 2018; Renewed through 2020",
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          "https://mvprogress.com/2018/05/23/mvhs-seniors-recognized-at-awards-night-ceremony/",
+          "sourceUrl":        "https://rmhlv.org/what-we-do/scholarship-program/",
+          "description":      [
+            "Received $3,500 in scholarship support for undergraduate study, including additional awards for outstanding community service and continued academic achievement. Special recognition as 1 out of 100 scholarship recipients for outstanding community service."
+          ]
+        },
+        {
+          "name":             "Toyota Making Life Easier Scholarship",
+          "issuer":           "Toyota",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          "static/scholarships/Toyota_Making_Life_Easier.png",
+          "sourceUrl":        "https://toyotaeffect.com/stories-of-impact/making-life-easier/",
+          "description":      [
+            "Selected as one of 28 Girl Scouts nationwide to receive a $10,000 scholarship in recognition of academic achievement and community involvement."
+          ]
+        },
+        {
+          "name":             "Michael T. Martin Memorial Scholarship",
+          "issuer":           "Nevada Contractors Association",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.nvcontractors.org/michaeltmartinscholarship.html",
+          "description":      [
+            "A $6,000 scholarship supporting high-achieving students pursuing a four-year degree in construction or a related field."
+          ]
+        },
+        {
+          "name":             "Nevada State Firefighters Association Scholarship",
+          "issuer":           "Nevada State Firefighters Association",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.nsfa.org/scholarships/",
+          "description":      [
+            "A $1,000 scholarship supporting students pursuing higher education and recognizing academic achievement."
+          ]
+        },
+        {
+          "name":             "\"Vegas Strong\" First Responders’ Dependent Scholarship",
+          "issuer":           "Macy's",
+          "date":             "2018–2022",
+          "dateLabel":        "Awarded in 2018; Renewed through 2022",
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        null,
+          "description":      [
+            "A $10,000 scholarship awarded over four years to dependents of first responders in the wake of the 2017 Las Vegas tragedy."
+          ]
+        },
+        {
+          "name":             "American Atheists President’s Scholarship",
+          "issuer":           "American Atheists",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.atheists.org/activism/scholarships/",
+          "description":      [
+            "A $500 scholarship recognizing academically accomplished atheist student activists pursuing higher education."
+          ]
+        },
+        {
+          "name":             "Royal Business Bank Scholarship",
+          "issuer":           "Royal Business Bank",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.apcf.org/royal-business-bank-scholarship-open",
+          "description":      [
+            "A $1,000 scholarship supporting high-achieving students pursuing postsecondary education."
+          ]
+        },
+        {
+          "name":             "NV Energy Powerful Partnership Scholarship",
+          "issuer":           "NV Energy",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          null,
+          "sourceUrl":        "https://www.nvenergy.com/about-nvenergy/community/scholarships",
+          "description":      [
+            "A $1,000 scholarship recognizing academic achievement and meaningful community-service involvement."
+          ]
+        },
+        {
+          "name":             "Overton Power District No. 5 Scholarship",
+          "issuer":           "Overton Power District",
+          "date":             "2018",
+          "dateLabel":        null,
+          "certificate":      null,
+          "acceptanceLetter": null,
+          "article":          "https://mvprogress.com/2018/05/23/mvhs-seniors-recognized-at-awards-night-ceremony/",
+          "sourceUrl":        "https://www.opd5.com/community/scholarships/",
+          "description":      [
+            "A $1,000 scholarship supporting local students pursuing STEM degrees who demonstrate a commitment to community service."
+          ]
+        }
+      ]
+    },
     "publications":   [
       {
         "publisher":            "AAAI Spring Symposium",
@@ -809,19 +971,19 @@
         "attendance":  [
           {
             "type":      "Engineering",
-            "date":      "2023",
+            "date":      "2022",
             "dateLabel": null,
             "location":  "St. Paul, MN"
           },
           {
             "type":      "Engineering",
-            "date":      "2022",
+            "date":      "2021",
             "dateLabel": null,
             "location":  "Virtual"
           },
           {
             "type":      "Tech",
-            "date":      "2022",
+            "date":      "2021",
             "dateLabel": null,
             "location":  "Virtual"
           }
@@ -881,7 +1043,7 @@
         "summary":         "NSOP Discussion Facilitator supporting hundreds of incoming students by leading health and campus life discussions.",
         "description":     [
           "Facilitated New Student Orientation Program (NSOP) discussions for hundreds of incoming students each year, covering campus resources, academics, mental health, and student life.",
-          "Educated Columbia students about available campus resources and services.",
+          "Educated Columbia students about available campus resources and services through the Responsible Community @ Columbia and Live Well | Learn Well and R.O.A.R. @ Columbia initiatives.",
           "Served as a liaison between the student body and Columbia Health by communicating students' needs, concerns, and feedback.",
           "Guided incoming and current students in navigating campus life, fostering meaningful connections and promoting an inclusive community.",
           "Mentored peers by answering questions, sharing personal experiences, and encouraging student involvement.",
@@ -938,7 +1100,8 @@
           "Researching and writing the first <cite>Computers and Society</cite> Wikipedia page.",
           "Collaborating with University of Toronto Emeritus Professor Ron Baecker, author of <cite>Computers and Society: Modern Perspectives (Oxford University Press, 2019)</cite> and <cite>Digital Dreams Have Become Nightmares: What We Must Do (2021)</cite>.",
           "Researching and drafting content on topics at the intersection of computing, technology, and society.",
-          "Editing and organizing materials to support the development of the Wikipedia page."
+          "Editing and organizing materials to support the development of the Wikipedia page.",
+          "Research included topics such as algorithmic biases, security, data breaches, identity theft, ransomware, deepfakes, fairness, truth, injustice, anthropomorphism, responsibility, accountability, government by algorithm, regulation of algorithms, AI being used prematurely, explainable AI, and computational trust"
         ],
         "skills":          [
           "Research",
@@ -956,17 +1119,6 @@
         "name":        "Out for Undergrad (O4U)",
         "role":        "Conference Alumnus",
         "membership":  {
-          "startDate":  "2022",
-          "startLabel": null,
-          "endDate":    null,
-          "endLabel":   null
-        },
-        "description": []
-      },
-      {
-        "name":        "Gamma Phi Beta (GPhi)",
-        "role":        "Lifetime Member",
-        "membership":  {
           "startDate":  "2021",
           "startLabel": null,
           "endDate":    null,
@@ -981,6 +1133,28 @@
           "startDate":  "2018",
           "startLabel": null,
           "endDate":    null,
+          "endLabel":   null
+        },
+        "description": []
+      },
+      {
+        "name":        "Gamma Phi Beta - Iota Chapter",
+        "role":        "Lifetime Member",
+        "membership":  {
+          "startDate":  "2021",
+          "startLabel": null,
+          "endDate":    null,
+          "endLabel":   null
+        },
+        "description": []
+      },
+      {
+        "name":        "Order of Omega - Nu Omicron Chapter (Greek Honor Society)",
+        "role":        "Member",
+        "membership":  {
+          "startDate":  "2022",
+          "startLabel": null,
+          "endDate":    "2023",
           "endLabel":   null
         },
         "description": []

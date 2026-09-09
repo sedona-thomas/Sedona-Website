@@ -98,6 +98,59 @@
 </div>
 {% endmacro %}
 
+{# Awards #}
+{% macro render_awards(awards) %}
+<div class="award-list">
+    {% for award in awards %}
+    <article class="award-item">
+        <h3>{{ award.name }}</h3>
+
+        <div class="award-info">
+            <div class="issuer dot-separator">
+                <span>{{ award.issuer }}</span>
+                <time datetime="{{ award.date }}">
+                    {% if award.dateLabel %}
+                    {{ award.dateLabel }}
+                    {% else %}
+                    {{ award.date }}
+                    {% endif %}
+                </time>
+            </div>
+        </div>
+
+        <details class="description">
+            <summary>Description</summary>
+
+            <div class="award-links">
+                {% if award.certificate %}
+                <a class="button button-tertiary" href="{{ award.certificate }}" download>Certificate</a>
+                {% endif %}
+
+                {% if award.acceptanceLetter %}
+                <a class="button button-tertiary" href="{{ award.acceptanceLetter }}" download>Acceptance
+                    Letter</a>
+                {% endif %}
+
+                {% if award.article %}
+                <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
+                {% endif %}
+
+                {% if award.sourceUrl %}
+                <a class="button button-tertiary" href="{{ award.sourceUrl }}" download>Source</a>
+                {% endif %}
+            </div>
+
+            <ul>
+                {% for paragraph in award.description %}
+                <li>{{ paragraph|safe }}</li>
+                {% endfor %}
+            </ul>
+        </details>
+    </article>
+    {% endfor %}
+</div>
+{% endmacro %}
+
 <!doctype html>
 <html lang="{{ metadata.language }}">
 <head>
@@ -411,55 +464,19 @@
     <section class="section" id="awards" aria-labelledby="awards-heading">
         <div class="container">
             {{ render_section(sections.awards | default(none)) }}
-            <div class="award-list">
-                {% for award in content.awards %}
-                <article class="award-item">
-                    <h3>{{ award.name }}</h3>
-
-                    <div class="award-info">
-                        <div class="issuer dot-separator">
-                            <span>{{ award.issuer }}</span>
-                            <time datetime="{{ award.date }}">
-                                {% if award.dateLabel %}
-                                {{ award.dateLabel }}
-                                {% else %}
-                                {{ award.date }}
-                                {% endif %}
-                            </time>
-                        </div>
-                    </div>
-
-                    <details class="description">
-                        <summary>Description</summary>
-
-                        <div class="award-links">
-                            {% if award.certificate %}
-                            <a class="button button-tertiary" href="{{ award.certificate }}" download>Certificate</a>
-                            {% endif %}
-
-                            {% if award.acceptanceLetter %}
-                            <a class="button button-tertiary" href="{{ award.acceptanceLetter }}" download>Acceptance
-                                Letter</a>
-                            {% endif %}
-
-                            {% if award.article %}
-                            <a class="button button-tertiary" href="{{ award.article }}" download>Article</a>
-                            {% endif %}
-
-                            {% if award.sourceUrl %}
-                            <a class="button button-tertiary" href="{{ award.sourceUrl }}" download>Source</a>
-                            {% endif %}
-                        </div>
-
-                        <ul>
-                            {% for paragraph in award.description %}
-                            <li>{{ paragraph|safe }}</li>
-                            {% endfor %}
-                        </ul>
-                    </details>
-                </article>
-                {% endfor %}
-            </div>
+            {{ render_awards(content.awards.primaryAwards) }}
+            {% if false and content.awards.secondaryAwards %}
+            <details class="extra-content">
+                <summary>Additional Awards</summary>
+                {{ render_awards(content.awards.secondaryAwards) }}
+            </details>
+            {% endif %}
+            {% if false and content.awards.collapsedScholarships %}
+            <details class="extra-content">
+                <summary>Academic Scholarships</summary>
+                {{ render_awards(content.awards.collapsedScholarships) }}
+            </details>
+            {% endif %}
         </div>
     </section>
     {% endif %}
